@@ -7,7 +7,7 @@ const config = {
         <span className="flex items-center">
             {/* <Logo className="mr-2 h-4 h-5 w-4 fill-brand sm:w-5 md:h-6 md:w-6" /> */}
             <span className="flex items-baseline">
-                <span className="font-poppins text-lg font-bold sm:text-xl md:text-2xl">LFG</span>
+                <span className="font-poppins text-lg font-bold sm:text-xl md:text-2xl">ABYA</span>
                 <span className="ml-1 font-poppins text-sm font-bold text-neutral-500 sm:text-base md:text-lg">
                     docs
                 </span>

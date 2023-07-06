@@ -9,74 +9,30 @@ If you are new to the project, you should read the [Getting Started](/getting-st
 and then check out the documentation of each of the libraries and frameworks mentioned before continuing.
 
 ```
-lfg
-├─ prisma
-│  └─ schema.prisma
+ABYA
 ├─ public
 │  └─ *
 ├─ src
-│  ├─ app
+│  ├─ assets
 │  │  └─ *
 │  ├─ components
+│  │  └─ common
 │  │  └─ *
 │  ├─ pages
-│  │  ├─ admin
-│  │  │  └─ *
 │  │  ├─ docs
 │  │  │  └─ *
 │  │  ├─ _app.tsx
-│  │  ├─ _document.tsx
 │  │  └─ index.tsx
-│  └─ server
-│     ├─ auth.ts
-│     └─ api
-│        ├─ routers
-│        │  └─ *
-│        └─ root.ts
-├─ .env
-├─ .env.example
 ├─ .gitignore
 ├─ env.mjs
 ├─ package.json
 └─ package-lock.json
 ```
 
-## `prisma`
-
-The `prisma` folder contains the database schema. It also contains the folders `generated` and `migrations`,
-but these should not be modified manually.
-
-The schema file `schema.prisma` is the only file of interest here.
-
-### `schema.prisma`
-
-The `model` and `enum` blocks define the tables and enums in the database respectively.
-Every line in the `model` block defines a column in the table.
-
-<Callout type="info" emoji="ℹ️">
-    Prisma maps `String` types to `VARCHAR(191)` in MySQL. If you need a longer string, append `@db.Text`
-    ([source](https://www.prisma.io/docs/concepts/database-connectors/mysql#type-mapping-between-mysql-to-prisma-schema)).
-
-    In addition, PlanetScale does not support foreign key constraints ([source](https://planetscale.com/docs/learn/operating-without-foreign-key-constraints)),
-    so you may need to create indexes manually with `@@index`.
-
-</Callout>
-
-The `datasource` block defines the database connection.
-We use PlanetScale as our database provider, which uses MySQL internally.
-
-<Callout type="warning" emoji="⚠️">
-    The database connection string required by `url` should **never** be written directly in this file. Instead, use the
-    environment variable `DATABASE_URL` which is defined in `.env`.
-</Callout>
-
-The `generator` blocks defines the output of the schema which transforms the Prisma schema and queries written
-in TypeScript into actionable SQL queries and TypeScript types. **These should not be modified.**
-
 ## `public`
 
 The `public` folder contains static files that are served to the client.
-This includes the LFG logo in `favicon.ico` and various images used in banners and promotions.
+This includes the ABYA logo in `favicon.ico` and various images used in banners and promotions.
 
 ## `src`
 
