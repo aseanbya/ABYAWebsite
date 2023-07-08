@@ -1,5 +1,3 @@
-import { Button } from "nextra/components"
-
 function LearnMoreButton() {
     return (
         <button
