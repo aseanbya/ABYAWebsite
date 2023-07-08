@@ -19,7 +19,7 @@ export default function Statistics() {
                     <h1 className="text-4xl pb-8">
                         With your support,
                         <br />
-                        Here's what we have achieved!
+                        Here&apos;s what we have achieved!
                     </h1>
                     <div className="grid grid-cols-2 gap-3">
                         <div className="text-end font-bold text-6xl">
