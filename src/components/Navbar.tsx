@@ -15,13 +15,33 @@ export default function Navbar() {
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>Get Involved</a></li>
-                    <li><a>Events</a></li>
-                    <li><a>Our Supporters</a></li>
-                    <li><a>About Us</a></li>
+                    <li>
+                        <a href="/home">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="getinvolved">
+                            Get Involved
+                        </a>
+                    </li>
+                    <li>
+                        <a href="events">
+                            Events
+                        </a>
+                    </li>
+                    <li>
+                        <a href="oursupporters">
+                            Our Supporters
+                        </a>
+                    </li>
+                    <li>
+                        <a href="aboutus">
+                            About Us
+                        </a>
+                    </li>
                 </ul>
             </div>
-        </div>
+        </div >
     )
 }
