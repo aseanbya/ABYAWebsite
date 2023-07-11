@@ -1,6 +1,9 @@
-import Hero from "~/components/Hero";
-import Navbar from "~/components/Navbar";
-import Statistics from "~/components/Statistics";
+import Navbar from "~/components/common/Navbar";
+import Hero from "~/components/index/Hero";
+import Statistics from "~/components/index/Statistics";
+import AboutUs from "~/components/index/AboutUs";
+import QuotesCarousel from "~/components/index/QuotesCarousel";
+import Footer from "~/components/common/Footer";
 
 export default function Home() {
     return (
@@ -8,6 +11,9 @@ export default function Home() {
             <Navbar />
             <Hero />
             <Statistics />
+            <AboutUs />
+            <QuotesCarousel />
+            <Footer />
         </>
     );
 }
