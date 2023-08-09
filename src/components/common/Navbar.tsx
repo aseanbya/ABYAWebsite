@@ -21,7 +21,7 @@ export default function Navbar() {
                         </a>
                     </li>
                     <li>
-                        <a href="getinvolved">
+                        <a href="getInvolved">
                             Get Involved
                         </a>
                     </li>
@@ -31,12 +31,12 @@ export default function Navbar() {
                         </a>
                     </li>
                     <li>
-                        <a href="oursupporters">
+                        <a href="ourSupporters">
                             Our Supporters
                         </a>
                     </li>
                     <li>
-                        <a href="aboutus">
+                        <a href="aboutUs">
                             About Us
                         </a>
                     </li>
