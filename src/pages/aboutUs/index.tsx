@@ -1,7 +1,7 @@
 import PageLayout from "~/components/common/PageLayout";
 
 
-export default function index() {
+export default function aboutUs() {
     return (
         <PageLayout>
             aboutUs

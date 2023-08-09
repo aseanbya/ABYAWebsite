@@ -1,10 +1,10 @@
 import PageLayout from "~/components/common/PageLayout";
 
 
-export default function ourSupporters() {
+export default function blog() {
     return (
         <PageLayout>
-            ourSupporters
+            blog
         </PageLayout>
     );
 }

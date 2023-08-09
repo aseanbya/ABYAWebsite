@@ -14,29 +14,11 @@ export default function Navbar() {
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link href="/"> Home </Link></li>
-                        <li>
-                            <a>Get Involved</a>
-                            <ul className="p-2">
-                                <li><Link href="/getInvolved/partner"> Partner </Link></li>
-                                <li><Link href="/getInvolved/executive"> Executive </Link></li>
-                                <li><Link href="/getInvolved/member"> Member </Link></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a>Our Events</a>
-                            <ul className="p-2">
-                                <li><Link href="/event/ABYAExplore"> ABYA Explore </Link></li>
-                                <li><Link href="/event/ABYALeaps"> ABYA Leaps </Link></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a>About Us</a>
-                            <ul className="p-2">
-                                <li><Link href="/aboutUs/ABYAHistory"> ABYA History </Link></li>
-                                <li><Link href="/aboutUs/ourImpact"> Our Impact </Link></li>
-                            </ul>
-                        </li>
+                        <li><Link href="/getInvolved"> Get Involved </Link></li>
+                        <li><Link href="/event"> Our Events </Link></li>
                         <li><Link href="/ourSupporters"> Our Supporters </Link></li>
+                        <li><Link href="/aboutUs"> About Us </Link></li>
+                        <li><Link href="/blog"> Blog </Link></li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-xl hidden lg:flex">
@@ -60,35 +42,11 @@ export default function Navbar() {
 
                 <ul className="menu menu-horizontal px-1">
                     <li><Link href="/"> Home </Link></li>
-                    <li tabIndex={0}>
-                        <details>
-                            <summary> Get Involved </summary>
-                            <ul className="p-2">
-                                <li><Link href="/getInvolved/partner"> Partner </Link></li>
-                                <li><Link href="/getInvolved/executive"> Executive </Link></li>
-                                <li><Link href="/getInvolved/member"> Member </Link></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li tabIndex={0}>
-                        <details>
-                            <summary> Our Events </summary>
-                            <ul className="p-2">
-                                <li><Link href="/event/ABYAExplore"> ABYA Explore </Link></li>
-                                <li><Link href="/event/ABYALeaps"> ABYA Leaps </Link></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li tabIndex={0}>
-                        <details>
-                            <summary> About Us </summary>
-                            <ul className="p-2">
-                                <li><Link href="/aboutUs/ABYAHistory"> ABYA History </Link></li>
-                                <li><Link href="/aboutUs/ourImpact"> Our Impact </Link></li>
-                            </ul>
-                        </details>
-                    </li>
+                    <li><Link href="/getInvolved"> Get Involved </Link></li>
+                    <li><Link href="/event"> Our Events </Link></li>
                     <li><Link href="/ourSupporters"> Our Supporters </Link></li>
+                    <li><Link href="/aboutUs"> About Us </Link></li>
+                    <li><Link href="/blog"> Blog </Link></li>
                 </ul>
             </div>
         </div>
