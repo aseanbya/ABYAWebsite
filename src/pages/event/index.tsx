@@ -1,10 +1,10 @@
 import PageLayout from "~/components/common/PageLayout";
 
 
-export default function ourSupporters() {
+export default function event() {
     return (
         <PageLayout>
-            ourSupporters
+            event
         </PageLayout>
     );
 }
