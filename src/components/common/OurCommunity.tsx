@@ -33,8 +33,8 @@ function CardCarouselComponent({
 }: CardCarouselComponentProps) {
     return (
         <div className="flex justify-center pb-24">
-            <div className="card flex h-[20vw] w-[60vw] justify-center justify-center border border-brandYellow bg-transparent">
-                <div className="p-8 text-center">
+            <div className="card flex h-1/2 w-2/3 justify-center justify-center border border-brandYellow bg-transparent">
+                <div className="overflow-hidden p-8 text-center">
                     <p className="text-white">{quote}</p>
                     <p className="mt-6 text-xl font-bold text-white">{name}</p>
                     <p className="text-sm text-brandYellow">{title}</p>
