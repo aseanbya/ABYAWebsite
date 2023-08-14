@@ -26,7 +26,6 @@ export default function Statistics() {
                 }}
             ></div>
 
-
             <div className="hero-content text-center py-16">
                 <div className='text-white'>
                     <h1 className="text-7xl pb-8 font-bold">
