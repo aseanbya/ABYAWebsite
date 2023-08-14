@@ -1,3 +1,5 @@
+import { PlusIcon } from '@heroicons/react/24/solid'
+
 function LearnMoreButton() {
     return (
         <button
@@ -19,11 +21,11 @@ export default function Statistics() {
                         <br />
                         Here&apos;s what we have achieved!
                     </h1>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-2 gap-3 items items-center">
                         <div className="text-end font-bold text-6xl">
-                            &gt;3500
+                            3500
                         </div>
-                        <div className="text-start justify-center">
+                        <div className="text-start">
                             <p>
                                 ASEAN Youth
                                 <br />
