@@ -1,13 +1,13 @@
 import Image from "next/image"
-import heroImage from "src/assets/heroImage.png"
+import singaporeAttractions from "src/assets/singaporeAttractions.png"
 
 function GetInvolvedButton() {
     return (
         <button
-            className="bg-brandBlue text-white rounded-xl py-2 px-4 text-sm
-                hover:bg-slate-700 uppercase"
+            className="bg-brandBlue text-white rounded-xl py-2 px-4
+                hover:bg-slate-700"
         >
-            <p className="font-bold text-xl">
+            <p className="font-bold text-xl uppercase">
                 Get Involved
             </p>
         </button>
@@ -26,7 +26,7 @@ export default function Hero() {
                             <GetInvolvedButton />
                         </div>
                         <Image
-                            src={heroImage}
+                            src={singaporeAttractions}
                             alt={""}
                             className="w-1/2"
                         />
