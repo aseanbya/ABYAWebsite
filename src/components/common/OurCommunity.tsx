@@ -46,18 +46,27 @@ function CardCarouselComponent({
 
 export default function OurCommunity() {
     return (
-        <div className="bg-gray-600 pb-4 pt-16">
-            <div className="w-full">
-                <p className="text-center text-4xl font-bold text-brandYellow">
-                    Hear from Our Community
-                </p>
-            </div>
-            <div className="flex pt-16">
-                <Carousel slideInterval={5000}>
-                    {cardData.map((componentDetails, i) => (
-                        <CardCarouselComponent key={i} {...componentDetails} />
-                    ))}
-                </Carousel>
+        <div
+            className="relative bg-cover bg-center pb-4 pt-16"
+            style={{ backgroundImage: "url('testimonialBG.png')" }}
+        >
+            <div className="absolute inset-0 h-full w-full bg-black opacity-70"></div>
+            <div className="relative z-10 w-full">
+                <div>
+                    <p className="text-center text-4xl font-bold text-brandYellow">
+                        Hear from Our Community
+                    </p>
+                </div>
+                <div className="flex pt-16">
+                    <Carousel slideInterval={5000}>
+                        {cardData.map((componentDetails, i) => (
+                            <CardCarouselComponent
+                                key={i}
+                                {...componentDetails}
+                            />
+                        ))}
+                    </Carousel>
+                </div>
             </div>
         </div>
     );
