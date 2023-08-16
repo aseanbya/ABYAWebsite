@@ -8,13 +8,13 @@ type PageTitleSectionProps = {
 
 export default function PageTitleSection({ title, subtitle }: PageTitleSectionProps) {
     return (
-        <div className="p-9 h-fit stack items-center">
-            <div className="flex">
+        <div className="p-9 stack items-center ">
+            <div className="flex justify-between">
                 <div className="w-0 sm:w-1/3"></div>
                 <Image
                     src={singaporeAttractionsGrey}
                     alt={""}
-                    className="w-full sm:w-2/3"
+                    className="w-full sm:w-2/3 max-w-2xl"
                 />
             </div>
             <div>
