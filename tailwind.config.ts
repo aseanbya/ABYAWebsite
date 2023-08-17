@@ -1,7 +1,10 @@
 import { type Config } from "tailwindcss";
 
 export default {
-    content: ["./src/**/*.{js,ts,jsx,tsx}"],
+    content: [
+        "./src/**/*.{js,ts,jsx,tsx}",
+        "./node_modules/flowbite-react/**/*.js",
+    ],
     theme: {
         extend: {
             colors: {
@@ -50,9 +53,7 @@ export default {
             },
         },
     },
-    plugins: [
-        require("daisyui")
-    ],
+    plugins: [require("daisyui"), require("flowbite/plugin")],
 
     daisyui: {
         themes: ["light"], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
