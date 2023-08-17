@@ -1,8 +1,8 @@
 import Navbar from "~/components/common/Navbar";
+import OurCommunity from "~/components/common/OurCommunity";
 import PageLayout from "~/components/common/PageLayout";
 import AboutUs from "~/components/homepage/AboutUs";
 import Hero from "~/components/homepage/Hero";
-import QuotesCarousel from "~/components/homepage/QuotesCarousel";
 import Statistics from "~/components/homepage/Statistics";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
             <Hero />
             <Statistics />
             <AboutUs />
-            <QuotesCarousel />
+            <OurCommunity />
         </PageLayout>
     );
 }
