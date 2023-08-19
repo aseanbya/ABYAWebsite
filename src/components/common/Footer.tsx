@@ -1,11 +1,11 @@
 export default function Footer() {
     return (
-        <footer className="footer footer-center rounded bg-neutral p-10 text-neutral-content">
+        <footer className="footer footer-center bg-brandBlue-70 p-10 text-white">
             <div className="flex flex-col items-center md:flex-row md:justify-center">
                 <div className="w-full md:w-2/3 md:pr-6">
                     <p className="mb-2 text-left text-3xl font-semibold">
                         Make a{" "}
-                        <span className="text-yellow-300">difference</span>{" "}
+                        <span className="text-brandYellow">difference</span>{" "}
                         today.
                     </p>
                     <p className="text-left text-sm">
@@ -13,7 +13,7 @@ export default function Footer() {
                         the latest news and updates.
                     </p>
                 </div>
-                <button className="btn border border-red-500 bg-red-500 hover:border-yellow-300 hover:bg-yellow-300">
+                <button className="btn border border-red-500 bg-red-500 hover:border-brandYellow hover:bg-brandYellow">
                     Subscribe
                 </button>
             </div>
@@ -21,7 +21,7 @@ export default function Footer() {
                 <div className="grid grid-flow-col gap-4">
                     <a
                         href="https://www.facebook.com/ASEANBYA/"
-                        className="text-red-500 transition-colors duration-300 hover:text-yellow-300"
+                        className="text-red-500 transition-colors duration-300 hover:text-brandYellow"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ export default function Footer() {
                     </a>
                     <a
                         href="https://www.linkedin.com/company/aseanbya"
-                        className="text-red-500 transition-colors duration-300 hover:text-yellow-300"
+                        className="text-red-500 transition-colors duration-300 hover:text-brandYellow"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ export default function Footer() {
                     </a>
                     <a
                         href="http://instagram.com/aseanbya/"
-                        className="text-red-500 transition-colors duration-300 hover:text-yellow-300"
+                        className="text-red-500 transition-colors duration-300 hover:text-brandYellow"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
