@@ -3,7 +3,7 @@ import PageLayout from "~/components/common/PageLayout";
 import AboutUs from "~/components/homepage/AboutUs";
 import Hero from "~/components/homepage/Hero";
 import Statistics from "~/components/homepage/Statistics";
-import Quotes from "~/components/common/Quotes";
+import OurCommunity from "~/components/common/OurCommunity";
 
 export default function Home() {
     return (
@@ -11,7 +11,7 @@ export default function Home() {
             <Hero />
             <Statistics />
             <AboutUs />
-            <Quotes />
+            <OurCommunity />
         </PageLayout>
     );
 }
