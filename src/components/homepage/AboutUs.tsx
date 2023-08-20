@@ -1,14 +1,24 @@
-type buttonProps = {
-    displayText: string;
-}
-
-function PageButton({ displayText }: buttonProps) {
+function AboutUsButton() {
     return (
         <a
             type="button"
-            className="flex justify-center bg-blue-950 w-fit text-white py-1 px-3 rounded-lg uppercase font-semibold"
+            className="bg-brandBlue text-white rounded-xl py-2 px-4
+            hover:bg-slate-700"
         >
-            {displayText}
+            <p className="font-bold text-xl uppercase">
+                About Us
+            </p>
+        </a >
+    )
+}
+
+function LearnMoreButton() {
+    return (
+        <a
+            type="button"
+            className="flex justify-center border-brandBlue border w-fit py-1 px-3 rounded-lg uppercase font-bold text-brandBlue"
+        >
+            Learn More
         </a >
     )
 }
@@ -36,15 +46,15 @@ type CardComponentProps = {
 function CardComponent({ quote, title }: CardComponentProps) {
     return (
         <div className="flex justify-center">
-            <div className="flex flex-col justify-center bg-orange-300 p-4">
-                <p className="font-bold text-2xl italic text-center p-3 h-24 uppercase">
+            <div className="flex flex-col justify-center border border-brandYellow-50 rounded-2xl p-4">
+                <p className="font-semibold text-3xl text-center h-16 text-brandBlue uppercase">
                     {title}
                 </p>
                 <p>
                     {quote}
                 </p>
                 <div className="py-6">
-                    <PageButton displayText="Learn more" />
+                    <LearnMoreButton />
                 </div>
             </div>
         </div>
@@ -56,17 +66,17 @@ export default function AboutUs() {
         <div className="p-24">
             <div className="grid grid-cols-2 gap-4">
                 <div>
-                    <div className="bg-orange-100 h-full">
+                    <div className="bg-[#C5C5C5] h-full">
                     </div>
                 </div>
                 <div>
-                    <h1 className=" text-xl">
-                        Established in ...
+                    <h1 className="text-5xl font-semibold">
+                        Established in XXXX
                     </h1>
                     <p className="py-4">
                         Proident nisi enim aute aliquip ullamco duis eiusmod sunt id et in voluptate laborum sint. Minim et nisi eu officia dolor. Fugiat exercitation veniam proident ex esse minim reprehenderit ex aute nostrud sunt mollit duis. Qui eiusmod exercitation aliquip magna aute ex dolor do proident excepteur.
                     </p>
-                    <PageButton displayText="about us" />
+                    <AboutUsButton />
                 </div>
             </div>
             <div className="grid grid-cols-3 gap-4 pt-12">

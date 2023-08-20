@@ -1,5 +1,7 @@
 import Button from "~/components/common/Button";
 import PageLayout from "~/components/common/PageLayout";
+import OurCommunity from "~/components/common/OurCommunity";
+import PageTitleSection from "~/components/common/PageTitleSection";
 
 type CardProps = {
     title: string;
@@ -28,22 +30,12 @@ const Card: React.FC<CardProps> = ({ title, description, href }) => {
 export default function getInvolved() {
     return (
         <PageLayout>
-            <div className="hero bg-base-200">
-                <div className="hero-content flex-col items-start text-start">
-                    <h1 className="text-5xl font-bold uppercase tracking-wide">
-                        Get Involved
-                    </h1>
-                    <p className="text-md py-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur ipsum mauris, scelerisque sed justo vel,
-                        hendrerit sagittis odio. Vestibulum quis convallis
-                        augue. Pellentesque vel viverra neque, eget aliquet
-                        nunc. Vivamus ornare sit amet ipsum ac consequat.
-                        Interdum et malesuada fames ac ante ipsum primis in
-                        faucibus.
-                    </p>
-                </div>
-            </div>
+            <PageTitleSection
+                title={"Get Involved"}
+                subtitle={
+                    "Amet ex ipsum adipisicing. Consectetur veniam officia pariatur officia in et dolor ex sint consectetur. Dolor aliqua ipsum et labore est. Enim ea tempor quis sint eu non commodo non id anim id non laborum labore. Veniam consequat pariatur duis. Dolor ut laborum in et esse anim commodo eu minim pariatur officia pariatur sit non. Sit aliquip anim sunt eiusmod proident labore Lorem est sit aliqua sunt minim minim occaecat ut."
+                }
+            />
             <section className="my-4 flex w-screen flex-col justify-center gap-5 px-2 lg:flex-row lg:px-10">
                 <Card
                     title="As a member"
@@ -61,6 +53,7 @@ export default function getInvolved() {
                     href="/getInvolved/partner"
                 />
             </section>
+            <OurCommunity />
         </PageLayout>
     );
 }
