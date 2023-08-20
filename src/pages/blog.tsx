@@ -1,10 +1,135 @@
+import React, { type PropsWithChildren } from "react";
 import PageLayout from "~/components/common/PageLayout";
+import PageTitleSection from "~/components/common/PageTitleSection";
+import { ClockIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
+import annualImpactReportImg from "src/assets/annualImpactReport.png";
 
+const TEST_CONTENT: BlogContent[] = [
+    {
+        title: "Title goes here",
+        date: new Date(),
+    },
+    {
+        title: "Title goes here",
+        date: new Date(),
+    },
+    {
+        title: "Title goes here",
+        date: new Date(),
+    },
+    {
+        title: "Title goes here",
+        date: new Date(),
+    },
+    {
+        title: "Title goes here",
+        date: new Date(),
+    },
+    {
+        title: "Title goes here",
+        date: new Date(),
+    },
+];
+
+type BlogContent = {
+    title: string;
+    date: Date;
+    image?: string;
+    imageAlt?: string;
+};
+
+const BlogCard: React.FC<BlogContent> = ({ title, date }) => {
+    const formattedDate = Intl.DateTimeFormat("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    }).format(date);
+    return (
+        <div className="card w-full border border-brandBlue-30 bg-base-100">
+            <figure className="aspect-[2/1] w-full bg-gray-300 lg:aspect-[4/3]"></figure>
+            <div className="card-body gap-4 p-4 pb-8 lg:pb-16">
+                <h2 className="card-title text-3xl font-semibold">{title}</h2>
+                <div className="flex items-center gap-1 text-gray-300">
+                    <ClockIcon className="h-4 w-4" />
+                    <p className="text-lg">{formattedDate}</p>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+type PageSubSectionProps = {
+    subtitle: string;
+};
+
+const PageSubSection = ({
+    children,
+    subtitle,
+}: PropsWithChildren<PageSubSectionProps>) => {
+    return (
+        <section className="px-4 lg:px-20">
+            <h2 className="mb-4 text-5xl font-semibold uppercase text-black lg:mb-12">
+                {subtitle}
+            </h2>
+            {children}
+        </section>
+    );
+};
+
+// Create placeholders for the missing components
+const ImpactReportSection = () => {
+    return (
+        <PageSubSection subtitle={"Impact Report"}>
+            <div className="flex items-center justify-center">
+                <Image
+                    src={annualImpactReportImg}
+                    alt={"Annual impact report"}
+                    className="w-full max-w-2xl sm:w-2/3"
+                />
+            </div>
+        </PageSubSection>
+    );
+};
+
+const ExperiencesSection = () => {
+    return (
+        <PageSubSection subtitle={"Experiences"}>
+            <div className="grid grid-cols-1 gap-x-6 gap-y-2 md:grid-cols-2 md:gap-y-6 lg:grid-cols-3 lg:gap-y-8">
+                {TEST_CONTENT.map((content) => (
+                    <BlogCard key={content.title} {...content} />
+                ))}
+            </div>
+        </PageSubSection>
+    );
+};
+
+const FutureInAseanSection = () => {
+    return (
+        <PageSubSection subtitle={"A Future in ASEAN Series"}>
+            <div className="grid grid-cols-1 gap-x-6 gap-y-2 md:grid-cols-2 md:gap-y-6 lg:grid-cols-3 lg:gap-y-8">
+                {TEST_CONTENT.map((content) => (
+                    <BlogCard key={content.title} {...content} />
+                ))}
+            </div>
+        </PageSubSection>
+    );
+};
 
 export default function blog() {
     return (
         <PageLayout>
-            blog
+            <PageTitleSection
+                title={"Blog"}
+                subtitle={
+                    "Amet ex ipsum adipisicing. Consectetur veniam officia pariatur officia in et dolor ex sint consectetur. Dolor aliqua ipsum et labore est. Enim ea tempor quis sint eu non commodo non id anim id non laborum labore. Veniam consequat pariatur duis. Dolor ut laborum in et esse anim commodo eu minim pariatur officia pariatur sit non. Sit aliquip anim sunt eiusmod proident labore Lorem est sit aliqua sunt minim minim occaecat ut."
+                }
+            />
+            <div className="mb-8 flex flex-col gap-8 lg:mb-24 lg:gap-24">
+                <ImpactReportSection />
+                <ExperiencesSection />
+                <FutureInAseanSection />
+            </div>
         </PageLayout>
     );
 }
