@@ -17,16 +17,19 @@ export default function getInvolved() {
                     title="As a member"
                     description="Our community seeks to bring together youths who seek to develop their competencies in becoming business savvy with a future in ASEAN."
                     href="/getInvolved/member"
+                    image=""
                 />
                 <Card
                     title="As an executive"
                     description="Our community seeks to bring together youths who seek to develop their competencies in becoming business savvy with a future in ASEAN."
                     href="/getInvolved/executive"
+                    image=""
                 />
                 <Card
                     title="As a partner"
                     description="Our community seeks to bring together youths who seek to develop their competencies in becoming business savvy with a future in ASEAN."
                     href="/getInvolved/partner"
+                    image="/ABYAteam.jpg"
                 />
             </section>
             <OurCommunity />
