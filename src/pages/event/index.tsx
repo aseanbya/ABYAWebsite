@@ -18,17 +18,14 @@ function AboutUsButton() {
 export default function event() {
     return (
         <PageLayout>
-            <PageTitleSection
-                title={"ABYA LEAPS"}
-                children={
-                    <div className="grid grid-rows-2">
-                        <h2>
-                            Discover connections with every new LEAP
-                        </h2>
-                        <AboutUsButton />
-                    </div>
-                }
-            />
+            <PageTitleSection title={"ABYA LEAPS"}>
+                <div className="grid grid-rows-2">
+                    <h2>
+                        Discover connections with every new LEAP
+                    </h2>
+                    <AboutUsButton />
+                </div>
+            </PageTitleSection>
         </PageLayout>
     );
 }
