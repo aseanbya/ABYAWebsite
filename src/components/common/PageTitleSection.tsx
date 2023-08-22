@@ -9,7 +9,7 @@ type PageTitleSectionProps = {
 
 export default function PageTitleSection({ title, children }: PageTitleSectionProps) {
     return (
-        <div className="p-9 stack items-center w-full">
+        <div className="px-9 py-5 stack items-center w-full">
             <div>
                 <h1 className="text-7xl font-bold text-black pb-2 uppercase ">
                     {title}
