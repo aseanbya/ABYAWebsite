@@ -11,7 +11,6 @@ type CardProps = {
 export const Card: React.FC<CardProps> = ({ title, description, href, image }) => {
     return (
         <div className="card max-w-lg border border-brandBlue bg-base-100 px-4 pt-6 shadow-xl lg:px-7 lg:pt-8 bg-slate">
-
             <Image
                 src={image ?? ""}
                 alt={""}
