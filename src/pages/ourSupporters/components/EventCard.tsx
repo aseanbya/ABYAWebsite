@@ -19,7 +19,7 @@ export default function EventCard({
 
             <p className="mb-8">{description}</p>
             <div className="mb-8 flex flex-wrap justify-center gap-8">
-                {partnerImageRef.map((ref, index) => (
+                {partnerImageRef?.map((ref, index) => (
                     <div key={index} className="h-[100px] w-[225px]">
                         <img src={ref} className="h-full w-full" />
                     </div>

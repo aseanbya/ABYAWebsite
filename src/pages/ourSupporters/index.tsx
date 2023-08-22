@@ -1,6 +1,5 @@
 import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
-import Quotes from "~/components/common/Quotes";
 import EventSection from "./components/EventSection";
 import Testimonials from "./components/Testimonials";
 
