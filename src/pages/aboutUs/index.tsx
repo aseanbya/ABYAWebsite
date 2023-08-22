@@ -7,10 +7,11 @@ import ABYAteam3 from "public/ABYAteam3.png"
 export default function aboutUs() {
     return (
         <PageLayout>
-            <PageTitleSection
-                title="About Us"
-                subtitle="Aliquip tempor culpa nulla aliqua ut in commodo non esse mollit quis adipisicing. Ipsum dolor duis pariatur ad Lorem aliquip ex minim aliquip do pariatur ut. Ad sint minim duis mollit culpa. Ea deserunt id ex esse veniam anim et deserunt commodo consectetur laborum id. Reprehenderit exercitation qui dolor magna consectetur proident aliqua nostrud eu aliquip. In consequat amet et deserunt do irure velit tempor ipsum occaecat."
-            />
+            <PageTitleSection title="About Us">
+                <h2>
+                    Aliquip tempor culpa nulla aliqua ut in commodo non esse mollit quis adipisicing. Ipsum dolor duis pariatur ad Lorem aliquip ex minim aliquip do pariatur ut. Ad sint minim duis mollit culpa. Ea deserunt id ex esse veniam anim et deserunt commodo consectetur laborum id. Reprehenderit exercitation qui dolor magna consectetur proident aliqua nostrud eu aliquip. In consequat amet et deserunt do irure velit tempor ipsum occaecat.
+                </h2>
+            </PageTitleSection>
             <Hero />
             <div className="grid grid-cols-2 gap-3 p-9">
                 <Image src={ABYAteam3} alt={""} />
