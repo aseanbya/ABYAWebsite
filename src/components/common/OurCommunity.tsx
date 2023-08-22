@@ -1,5 +1,3 @@
-// Hear from Our Community component
-
 import { Carousel } from "flowbite-react";
 
 const cardData = [
