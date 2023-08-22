@@ -1,7 +1,7 @@
 import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
-import EventSection from "./components/EventSection";
-import Testimonials from "./components/Testimonials";
+import EventSection from "../../components/ourSupporters/EventSection";
+import Testimonials from "../../components/ourSupporters/Testimonials";
 
 export default function ourSupporters() {
     return (
