@@ -9,8 +9,8 @@ export default function Footer() {
                         today.
                     </p>
                     <p className="text-left text-sm">
-                        Let's stay connected! Subscribe to our mailing list for
-                        the latest news and updates.
+                        Subscribe to our mailing list for the latest news and
+                        updates.
                     </p>
                 </div>
                 <button className="btn border border-red-500 bg-red-500 hover:border-brandYellow hover:bg-brandYellow">
