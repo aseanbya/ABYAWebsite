@@ -63,7 +63,7 @@ function CardComponent({ quote, title }: CardComponentProps) {
 
 export default function AboutUs() {
     return (
-        <div className="p-24">
+        <div className="py-12">
             <div className="grid grid-cols-2 gap-4">
                 <div>
                     <div className="bg-[#C5C5C5] h-full">
