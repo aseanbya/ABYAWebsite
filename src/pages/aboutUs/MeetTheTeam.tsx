@@ -92,8 +92,7 @@ interface MemberCardProps {
 function MemberCard({ member, color }: MemberCardProps) {
     return (
         <div
-            className={`card mb-10 flex w-96 border-2 border-${color} shadow-xl`}
-            style={{ maxHeight: "400px" }}
+            className={`card mb-10 flex max-h-[32rem] max-w-sm border-2 shadow-xl ${color}`}
         >
             <figure>
                 <Image src={personImage} alt="Member Photo" />
@@ -185,7 +184,7 @@ function MemberGrid({ members, color, groupName }: MemberGridProps) {
                     </svg>
                 </button>
             </div>
-            <div className="grid w-full grid-cols-3 gap-10">
+            <div className="grid w-full grid-cols-3 gap-3 sm:gap-5 md:gap-10">
                 {slicedMembers[currentIndex]?.map((member, index) => (
                     <MemberCard key={index} member={member} color={color} />
                 ))}
@@ -208,11 +207,9 @@ export default function MeetTheTeam() {
                         <MemberGrid
                             members={members}
                             color={
-                                groupName === "Management Committee"
-                                    ? "brandBlue"
-                                    : groupName === "Executives"
-                                    ? "brandYellow"
-                                    : "brandRed"
+                                groupName === "Management Committee" ? "border-brandBlue"
+                                    : groupName === "Executives" ? "border-brandYellow"
+                                        : "border-brandRed"
                             }
                             groupName={groupName}
                         />
