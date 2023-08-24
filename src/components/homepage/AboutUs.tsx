@@ -5,7 +5,7 @@ function AboutUsButton() {
             className="bg-brandBlue text-white rounded-xl py-2 px-4
             hover:bg-slate-700"
         >
-            <p className="font-bold text-xl uppercase">
+            <p className="font-bold text-md sm:text-xl uppercase">
                 About Us
             </p>
         </a >
@@ -18,7 +18,9 @@ function LearnMoreButton() {
             type="button"
             className="flex justify-center border-brandBlue border w-fit py-1 px-3 rounded-lg uppercase font-bold text-brandBlue"
         >
-            Learn More
+            <p className="text-md sm:text-xl">
+                Learn More
+            </p>
         </a >
     )
 }
@@ -64,13 +66,13 @@ function CardComponent({ quote, title }: CardComponentProps) {
 export default function AboutUs() {
     return (
         <div className="py-12">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-4">
                 <div>
                     <div className="bg-[#C5C5C5] h-full">
                     </div>
                 </div>
                 <div>
-                    <h1 className="text-5xl font-semibold">
+                    <h1 className="text-3xl sm:text-5xl font-semibold">
                         Established in XXXX
                     </h1>
                     <p className="py-4">
@@ -79,11 +81,11 @@ export default function AboutUs() {
                     <AboutUsButton />
                 </div>
             </div>
-            <div className="grid grid-cols-3 gap-4 pt-12">
+            {/* <div className="grid grid-cols-3 gap-4 pt-12">
                 {CARD_DETAILS.map((componentDetails, i) => (
                     <CardComponent key={i} {...componentDetails} />
                 ))}
-            </div>
+            </div> */}
         </div>
     )
 }

@@ -1,4 +1,3 @@
-import Navbar from "~/components/common/Navbar";
 import PageLayout from "~/components/common/PageLayout";
 import AboutUs from "~/components/homepage/AboutUs";
 import Hero from "~/components/homepage/Hero";
