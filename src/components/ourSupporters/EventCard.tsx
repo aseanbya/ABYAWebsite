@@ -12,9 +12,8 @@ export default function EventCard({
     partnerImageRef,
 }: EventCardProps) {
     return (
-        <div className="mx-24 my-8 flex flex-col items-center justify-center text-center">
+        <div className="sm:px-24 my-8 flex flex-col items-center justify-center text-center">
             <p className="text-3xl font-bold">{title}</p>
-
             <hr className="my-4 w-1/2 border-t-2 border-gray-400" />
 
             <p className="mb-8">{description}</p>

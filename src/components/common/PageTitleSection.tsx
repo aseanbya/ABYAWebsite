@@ -11,7 +11,7 @@ export default function PageTitleSection({ title, children }: PageTitleSectionPr
     return (
         <div className="px-9 py-5 stack items-center w-full">
             <div>
-                <h1 className="text-7xl font-bold text-black pb-2 uppercase ">
+                <h1 className="text-5xl sm:text-7xl font-bold text-black pb-2 uppercase ">
                     {title}
                 </h1>
                 {children}

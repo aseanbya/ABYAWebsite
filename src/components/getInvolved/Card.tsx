@@ -5,12 +5,13 @@ type CardProps = {
     title: string;
     description: string;
     href: string;
+    borderColor: string;
     image?: string | StaticImageData;
 };
 
-export const Card: React.FC<CardProps> = ({ title, description, href, image }) => {
+export const Card: React.FC<CardProps> = ({ title, description, href, borderColor, image }) => {
     return (
-        <div className="card max-w-lg border border-brandBlue bg-base-100 px-4 pt-6 shadow-xl lg:px-7 lg:pt-8 bg-slate">
+        <div className={`card max-w-xs border-2 bg-base-100 px-4 pt-6 shadow-xl lg:px-7 lg:pt-8 bg-slate ${borderColor}`}>
             <Image
                 src={image ?? ""}
                 alt={""}
