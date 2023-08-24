@@ -15,10 +15,10 @@ export default function aboutUs() {
             </PageTitleSection>
             <Hero />
             <PageContentContainer>
-                <div className="grid grid-cols-2 gap-3 py-9">
+                <div className="grid sm:grid-cols-2 gap-3 py-9">
                     <Image src={ABYAteam3} alt={""} />
                     <div className="flex flex-col justify-center gap-2">
-                        <h1 className="font-bold text-7xl text-black uppercase">Our Story</h1>
+                        <h1 className="font-bold text-5xl sm:text-7xl py-4 sm:py-0 text-black uppercase">Our Story</h1>
                         <p>Founded in 2020 by a group of seven enthusiastic youth, the ASEAN Business Youth Association (ABYA) aims to be the bridge for youths to increase their knowledge and gain a foothold in ASEAN through participating in our programmes. Officially legalised as a society in 2021, ABYA has a burgeoning network of aspiring entrepreneurs and is focused on fostering sustainable businesses.</p>
                     </div>
                 </div>
