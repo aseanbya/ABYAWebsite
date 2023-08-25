@@ -1,17 +1,21 @@
-import Image from "next/image";
-import singaporeAttractionsGrey from "src/assets/singaporeAttractionsGrey.png";
+import Image from "next/image"
+import { ReactNode } from "react"
+import singaporeAttractionsGrey from "src/assets/singaporeAttractionsGrey.png"
 
 type PageTitleSectionProps = {
-    title: string;
-    subtitle: string;
-};
+    title: string,
+    children: ReactNode,
+}
 
-export default function PageTitleSection({
-    title,
-    subtitle,
-}: PageTitleSectionProps) {
+export default function PageTitleSection({ title, children }: PageTitleSectionProps) {
     return (
-        <div className="stack items-center p-9">
+        <div className="px-9 py-5 stack items-center w-full">
+            <div>
+                <h1 className="text-5xl sm:text-7xl font-bold text-black pb-2 uppercase ">
+                    {title}
+                </h1>
+                {children}
+            </div>
             <div className="flex justify-between">
                 <div className="w-0 sm:w-1/3"></div>
                 <Image
@@ -19,12 +23,6 @@ export default function PageTitleSection({
                     alt={""}
                     className="w-full max-w-2xl sm:w-2/3"
                 />
-            </div>
-            <div>
-                <h1 className="pb-2 text-7xl font-bold uppercase text-black">
-                    {title}
-                </h1>
-                <h2>{subtitle}</h2>
             </div>
         </div>
     );
