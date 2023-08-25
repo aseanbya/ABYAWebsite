@@ -8,7 +8,7 @@ export const PageSubSection = ({
     title,
 }: PropsWithChildren<PageSubSectionProps>) => {
     return (
-        <section className="px-4 lg:px-20">
+        <section className="px-4 lg:px-9">
             <h2 className="mb-4 text-5xl font-semibold uppercase text-black lg:mb-12">
                 {title}
             </h2>
