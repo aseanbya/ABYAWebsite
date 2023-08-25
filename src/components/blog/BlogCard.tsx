@@ -6,16 +6,20 @@ export type BlogContent = {
     date: Date;
     image?: string;
     imageAlt?: string;
+    onClick?: () => void;
 };
 
-export const BlogCard: React.FC<BlogContent> = ({ title, date }) => {
+export const BlogCard: React.FC<BlogContent> = ({ title, date, onClick }) => {
     const formattedDate = Intl.DateTimeFormat("en-US", {
         year: "numeric",
         month: "long",
         day: "numeric",
     }).format(date);
     return (
-        <div className="card w-full border border-brandBlue-30 bg-base-100">
+        <div
+            className="card w-full border border-brandBlue-30 bg-base-100"
+            onClick={onClick}
+        >
             <figure className="aspect-[2/1] w-full bg-gray-300 lg:aspect-[4/3]"></figure>
             <div className="card-body gap-4 p-4 pb-8 lg:pb-16">
                 <h2 className="card-title text-3xl font-semibold">{title}</h2>

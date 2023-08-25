@@ -5,7 +5,7 @@ import { PageSubSection } from "../common/PageSubSection";
 
 export const ImpactReportSection = () => {
     return (
-        <PageSubSection title={"Impact Report"}>
+        <PageSubSection title={"Annual Impact Report"}>
             <div className="flex items-center justify-center">
                 <Image
                     src={annualImpactReportImg}
