@@ -21,9 +21,9 @@ export default function PageTitleSection({ title, children }: PageTitleSectionPr
                 <Image
                     src={singaporeAttractionsGrey}
                     alt={""}
-                    className="w-full sm:w-2/3 max-w-2xl"
+                    className="w-full max-w-2xl sm:w-2/3"
                 />
             </div>
         </div>
-    )
+    );
 }
