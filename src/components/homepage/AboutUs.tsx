@@ -1,3 +1,5 @@
+import PageContentContainer from "../common/PageContentContainer";
+
 function AboutUsButton() {
     return (
         <a
@@ -65,8 +67,8 @@ function CardComponent({ quote, title }: CardComponentProps) {
 
 export default function AboutUs() {
     return (
-        <div className="py-12">
-            <div className="grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-4">
+        <PageContentContainer className="py-12">
+            <div className="grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-4 pb-12">
                 <div>
                     <div className="bg-[#C5C5C5] h-full">
                     </div>
@@ -81,11 +83,11 @@ export default function AboutUs() {
                     <AboutUsButton />
                 </div>
             </div>
-            {/* <div className="grid grid-cols-3 gap-4 pt-12">
+            <div className="grid grid-cols-3 gap-4">
                 {CARD_DETAILS.map((componentDetails, i) => (
                     <CardComponent key={i} {...componentDetails} />
                 ))}
-            </div> */}
-        </div>
+            </div>
+        </PageContentContainer>
     )
 }

@@ -1,4 +1,5 @@
 import { Carousel } from "flowbite-react";
+import PageContentContainer from "./PageContentContainer";
 
 type QuoteCarouselComponentProps = {
     name: string;
@@ -36,23 +37,26 @@ export default function Quotes({ title, cardData }: QuoteComponentProps) {
             style={{ backgroundImage: "url('testimonialBG.png')" }}
         >
             <div className="absolute inset-0 h-full w-full bg-black opacity-70"></div>
-            <div className="relative z-10 w-full">
-                <div>
-                    <p className="text-center text-5xl font-bold text-brandYellow">
-                        {title}
-                    </p>
+            <PageContentContainer>
+
+                <div className="relative z-10 w-full">
+                    <div>
+                        <p className="text-center text-5xl font-bold text-brandYellow">
+                            {title}
+                        </p>
+                    </div>
+                    <div className="flex pt-16">
+                        <Carousel slideInterval={5000}>
+                            {cardData.map((componentDetails, i) => (
+                                <CardCarouselComponent
+                                    key={i}
+                                    {...componentDetails}
+                                />
+                            ))}
+                        </Carousel>
+                    </div>
                 </div>
-                <div className="flex pt-16">
-                    <Carousel slideInterval={5000}>
-                        {cardData.map((componentDetails, i) => (
-                            <CardCarouselComponent
-                                key={i}
-                                {...componentDetails}
-                            />
-                        ))}
-                    </Carousel>
-                </div>
-            </div>
+            </PageContentContainer>
         </div>
     );
 }

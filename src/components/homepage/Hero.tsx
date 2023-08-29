@@ -1,5 +1,6 @@
 import Image from "next/image"
 import singaporeAttractions from "src/assets/singaporeAttractions.png"
+import PageContentContainer from "../common/PageContentContainer"
 
 function GetInvolvedButton() {
     return (
@@ -16,8 +17,8 @@ function GetInvolvedButton() {
 
 export default function Hero() {
     return (
-        <div className="hero bg-base-200">
-            <div className="hero-content text-start">
+        <PageContentContainer className="bg-base-200">
+            <div className="text-start">
                 <div className="py-8">
                     <h1 className="text-5xl sm:text-7xl font-bold uppercase tracking-wide text-black">Shaping the future</h1>
                     <div className="flex flex-col sm:flex-row">
@@ -33,6 +34,6 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-        </div>
+        </PageContentContainer>
     )
 }

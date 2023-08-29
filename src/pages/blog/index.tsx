@@ -4,6 +4,7 @@ import PageTitleSection from "~/components/common/PageTitleSection";
 import { ImpactReportSection } from "../../components/blog/ImpactReportSection";
 import { ExperiencesSection } from "../../components/blog/ExperiencesSection";
 import { FutureInAseanSection } from "../../components/blog/FutureInAseanSection";
+import PageContentContainer from "~/components/common/PageContentContainer";
 
 export default function blog() {
     return (
@@ -20,11 +21,13 @@ export default function blog() {
                     minim occaecat ut.
                 </h2>
             </PageTitleSection>
-            <div className="mb-8 flex flex-col gap-8 lg:mb-24 lg:gap-24">
-                <ImpactReportSection />
-                <ExperiencesSection />
-                <FutureInAseanSection />
-            </div>
+            <PageContentContainer>
+                <div className="mb-8 flex flex-col gap-8 lg:mb-24 lg:gap-24">
+                    <ImpactReportSection />
+                    <ExperiencesSection />
+                    <FutureInAseanSection />
+                </div>
+            </PageContentContainer>
         </PageLayout>
     );
 }

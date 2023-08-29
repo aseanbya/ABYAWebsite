@@ -1,3 +1,5 @@
+import PageContentContainer from "../common/PageContentContainer"
+
 function LearnMoreButton() {
     return (
         <button
@@ -22,9 +24,8 @@ export default function Statistics() {
                     background: "linear-gradient(180deg, #E51414 0%, #E51414 0.01%, rgba(58, 43, 123, 0.0781257) 92.19%, rgba(43, 45, 132, 0) 100%)",
                     opacity: "0.45"
                 }}
-            ></div>
-
-            <div className="hero-content text-center py-16">
+            />
+            <PageContentContainer className="z-0 text-center py-16">
                 <div className='text-white'>
                     <h1 className="text-5xl sm:text-7xl pb-8 font-bold">
                         With your support,
@@ -91,7 +92,7 @@ export default function Statistics() {
                     </div>
                     <LearnMoreButton />
                 </div>
-            </div>
-        </div >
+            </PageContentContainer>
+        // </div >
     )
 }
