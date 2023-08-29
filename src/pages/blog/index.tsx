@@ -1,9 +1,9 @@
 import React from "react";
 import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
-import { ImpactReportSection } from "../components/blog/ImpactReportSection";
-import { ExperiencesSection } from "../components/blog/ExperiencesSection";
-import { FutureInAseanSection } from "../components/blog/FutureInAseanSection";
+import { ImpactReportSection } from "../../components/blog/ImpactReportSection";
+import { ExperiencesSection } from "../../components/blog/ExperiencesSection";
+import { FutureInAseanSection } from "../../components/blog/FutureInAseanSection";
 
 export default function blog() {
     return (
