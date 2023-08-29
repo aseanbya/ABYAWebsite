@@ -7,6 +7,10 @@ interface Member {
     role: string;
 }
 
+// im not sure what the large and small column widths are, are they standard or specified?
+const largeScreenWidth = 1024;
+const smallScreenWidth = 640;
+
 const memberList: Record<string, Member[]> = {
     "Management Committee": [
         {
@@ -114,9 +118,17 @@ interface MemberGridProps {
 function MemberGrid({ members, color, groupName }: MemberGridProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    // sm display to have 1, md to have 2, lg to have 3
+    const numberOfColumns =
+        window.innerWidth < smallScreenWidth
+            ? 1
+            : window.innerWidth < largeScreenWidth
+            ? 2
+            : 3;
+
     const slicedMembers = [];
-    for (let i = 0; i < members.length; i += 3) {
-        slicedMembers.push(members.slice(i, i + 3)); // push in an array of 3 members
+    for (let i = 0; i < members.length; i += numberOfColumns) {
+        slicedMembers.push(members.slice(i, i + numberOfColumns));
     }
 
     const handleNextClick = () => {
@@ -184,7 +196,7 @@ function MemberGrid({ members, color, groupName }: MemberGridProps) {
                     </svg>
                 </button>
             </div>
-            <div className="grid w-full grid-cols-3 gap-3 sm:gap-5 md:gap-10">
+            <div className="grid w-full grid-cols-3 gap-3 sm:grid-cols-1 sm:gap-5 md:grid-cols-2 md:gap-10 lg:grid-cols-3">
                 {slicedMembers[currentIndex]?.map((member, index) => (
                     <MemberCard key={index} member={member} color={color} />
                 ))}
@@ -207,9 +219,11 @@ export default function MeetTheTeam() {
                         <MemberGrid
                             members={members}
                             color={
-                                groupName === "Management Committee" ? "border-brandBlue"
-                                    : groupName === "Executives" ? "border-brandYellow"
-                                        : "border-brandRed"
+                                groupName === "Management Committee"
+                                    ? "border-brandBlue"
+                                    : groupName === "Executives"
+                                    ? "border-brandYellow"
+                                    : "border-brandRed"
                             }
                             groupName={groupName}
                         />
