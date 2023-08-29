@@ -93,6 +93,6 @@ export default function Statistics() {
                     <LearnMoreButton />
                 </div>
             </ContentContainer>
-        // </div >
+        </div >
     )
 }

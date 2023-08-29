@@ -1,5 +1,5 @@
+import type { ReactNode } from "react"
 import Image from "next/image"
-import { ReactNode } from "react"
 import singaporeAttractionsGrey from "src/assets/singaporeAttractionsGrey.png"
 import ContentContainer from "./ContentContainer"
 

@@ -1,5 +1,6 @@
+import type { StaticImageData } from "next/image"
 import Button from "~/components/common/Button";
-import Image, { StaticImageData } from "next/image"
+import Image from "next/image"
 
 type CardProps = {
     title: string;
