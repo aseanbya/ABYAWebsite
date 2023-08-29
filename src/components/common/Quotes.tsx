@@ -14,7 +14,7 @@ function CardCarouselComponent({
 }: QuoteCarouselComponentProps) {
     return (
         <div className="flex justify-center pb-24">
-            <div className="card flex h-1/2 w-2/3 justify-center justify-center border border-brandYellow bg-transparent">
+            <div className="card flex h-1/2 w-2/3 justify-center border border-brandYellow bg-transparent">
                 <div className="overflow-hidden p-8 text-center">
                     <p className="text-white">{quote}</p>
                     <p className="mt-6 text-xl font-bold text-white">{name}</p>
