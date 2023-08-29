@@ -2,7 +2,7 @@ import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
 import EventSection from "../../components/ourSupporters/EventSection";
 import Testimonials from "../../components/ourSupporters/Testimonials";
-import PageContentContainer from "~/components/common/PageContentContainer";
+import ContentContainer from "~/components/common/ContentContainer";
 
 export default function ourSupporters() {
     return (
@@ -14,9 +14,9 @@ export default function ourSupporters() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ipsum mauris, scelerisque sed justo vel, hendrerit sagittis odio. Vestibulum quis convallis augue. Pellentesque vel viverra neque, eget aliquet nunc. Vivamus ornare sit amet ipsum ac consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus.
                 </h2>
             </PageTitleSection>
-            <PageContentContainer>
+            <ContentContainer>
                 <EventSection events={eventData} />
-            </PageContentContainer>
+            </ContentContainer>
             <Testimonials />
         </PageLayout>
     );

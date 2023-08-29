@@ -3,7 +3,7 @@ import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
 import Image from "next/image"
 import ABYAteam3 from "public/ABYAteam3.png"
-import PageContentContainer from "~/components/common/PageContentContainer";
+import ContentContainer from "~/components/common/ContentContainer";
 
 export default function aboutUs() {
     return (
@@ -14,7 +14,7 @@ export default function aboutUs() {
                 </h2>
             </PageTitleSection>
             <Hero />
-            <PageContentContainer>
+            <ContentContainer>
                 <div className="grid sm:grid-cols-2 gap-3 py-9">
                     <Image src={ABYAteam3} alt={""} />
                     <div className="flex flex-col justify-center gap-2">
@@ -33,7 +33,7 @@ export default function aboutUs() {
                         Based on our Focus Group Discussions (FGDs) and survey, we have gained insights into the youths&apos; needs and identified the underlying gaps in the market. With the volatile coronavirus pandemic, many youths were left struggling to cope with a rapidly changing and increasingly challenging work environment. ABYA was born in the midst of the coronavirus pandemic and discovered the importance of youths upskilling themselves in these trying times. Our programmes started off to focus on three main pillars — Political, Economic, and Culture (PEC) — of the region.
                     </p>
                 </div>
-            </PageContentContainer>
+            </ContentContainer>
         </PageLayout>
     );
 }

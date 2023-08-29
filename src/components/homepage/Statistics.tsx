@@ -1,4 +1,4 @@
-import PageContentContainer from "../common/PageContentContainer"
+import ContentContainer from "../common/ContentContainer"
 
 function LearnMoreButton() {
     return (
@@ -25,7 +25,7 @@ export default function Statistics() {
                     opacity: "0.45"
                 }}
             />
-            <PageContentContainer className="z-0 text-center py-16">
+            <ContentContainer className="z-0 text-center py-16">
                 <div className='text-white'>
                     <h1 className="text-5xl sm:text-7xl pb-8 font-bold">
                         With your support,
@@ -92,7 +92,7 @@ export default function Statistics() {
                     </div>
                     <LearnMoreButton />
                 </div>
-            </PageContentContainer>
+            </ContentContainer>
         // </div >
     )
 }

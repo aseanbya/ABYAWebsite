@@ -5,7 +5,7 @@ import logo from 'src/assets/logo.png'
 export default function Navbar() {
     return (
 
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-neutral-50">
 
             <div className="navbar-start">
                 <div className="dropdown">

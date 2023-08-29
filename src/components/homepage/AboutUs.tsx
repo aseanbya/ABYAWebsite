@@ -1,4 +1,4 @@
-import PageContentContainer from "../common/PageContentContainer";
+import ContentContainer from "../common/ContentContainer";
 
 function AboutUsButton() {
     return (
@@ -67,7 +67,7 @@ function CardComponent({ quote, title }: CardComponentProps) {
 
 export default function AboutUs() {
     return (
-        <PageContentContainer className="py-12">
+        <ContentContainer className="py-12">
             <div className="grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-4 pb-12">
                 <div>
                     <div className="bg-[#C5C5C5] h-full">
@@ -88,6 +88,6 @@ export default function AboutUs() {
                     <CardComponent key={i} {...componentDetails} />
                 ))}
             </div>
-        </PageContentContainer>
+        </ContentContainer>
     )
 }
