@@ -1,7 +1,7 @@
 export default function Hero() {
     return (
         <div
-            className="hero h-screen max-h-screen sm:max-h-[36rem] bg-cover"
+            className="hero min-h-screen bg-cover"
             style={{ backgroundImage: 'url(ABYAteam2.png)' }}
         >
             <div
@@ -16,24 +16,26 @@ export default function Hero() {
                 <div className='text-white flex flex-wrap gap-4 justify-center'>
                     <div
                         className="
-                        border border-white rounded-xl flex items-center max-w-sm"
+                        border border-white rounded-xl
+                        h-80 w-96"
                     >
                         <div className="p-6">
                             <h1 className="text-5xl font-bold uppercase">Vision</h1>
                             <hr className="m-2 mx-9" />
-                            <p className="h-36">
+                            <p>
                                 To be the leading youth organisation that nurtures future ASEAN business leaders
                             </p>
                         </div>
                     </div>
                     <div
                         className="
-                        border border-white rounded-xl flex items-center max-w-sm"
+                        border border-white rounded-xl
+                        h-80 w-96"
                     >
                         <div className="p-6">
                             <h1 className="text-5xl font-bold uppercase">Mission</h1>
                             <hr className="m-2 mx-9" />
-                            <p className="h-36">
+                            <p>
                                 Empower a community of ASEAN youth to work and communicate effectively with people regionally, through cross-cultural training, exposure, application and networking.
                             </p>
                         </div>

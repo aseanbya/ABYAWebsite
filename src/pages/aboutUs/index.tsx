@@ -13,15 +13,12 @@ export default function aboutUs() {
                 subtitle="Aliquip tempor culpa nulla aliqua ut in commodo non esse mollit quis adipisicing. Ipsum dolor duis pariatur ad Lorem aliquip ex minim aliquip do pariatur ut. Ad sint minim duis mollit culpa. Ea deserunt id ex esse veniam anim et deserunt commodo consectetur laborum id. Reprehenderit exercitation qui dolor magna consectetur proident aliqua nostrud eu aliquip. In consequat amet et deserunt do irure velit tempor ipsum occaecat."
             />
             <Hero />
-            <PageContentContainer>
-                <div className="grid sm:grid-cols-2 gap-3 py-9">
-                    <Image src={ABYAteam3} alt={""} />
-                    <div className="flex flex-col justify-center gap-2">
-                        <h1 className="font-bold text-5xl sm:text-7xl py-4 sm:py-0 text-black uppercase">Our Story</h1>
-                        <p>Founded in 2020 by a group of seven enthusiastic youth, the ASEAN Business Youth Association (ABYA) aims to be the bridge for youths to increase their knowledge and gain a foothold in ASEAN through participating in our programmes. Officially legalised as a society in 2021, ABYA has a burgeoning network of aspiring entrepreneurs and is focused on fostering sustainable businesses.</p>
-                    </div>
-                </div>
-                <div>
+            <div className="grid grid-cols-2 gap-3 p-9">
+                <Image src={ABYAteam3} alt={""} />
+                <div className="flex flex-col justify-center gap-2">
+                    <h1 className="text-7xl font-bold uppercase text-black">
+                        Our Story
+                    </h1>
                     <p>
                         Founded in 2020 by a group of seven enthusiastic youth,
                         the ASEAN Business Youth Association (ABYA) aims to be
