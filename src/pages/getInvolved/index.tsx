@@ -2,7 +2,7 @@ import PageLayout from "~/components/common/PageLayout";
 import OurCommunity from "~/components/common/OurCommunity";
 import PageTitleSection from "~/components/common/PageTitleSection";
 import { Card } from "../../components/getInvolved/Card";
-import PageContentContainer from "~/components/common/PageContentContainer";
+import ContentContainer from "~/components/common/ContentContainer";
 
 export default function getInvolved() {
     return (
@@ -12,7 +12,7 @@ export default function getInvolved() {
                     Amet ex ipsum adipisicing. Consectetur veniam officia pariatur officia in et dolor ex sint consectetur. Dolor aliqua ipsum et labore est. Enim ea tempor quis sint eu non commodo non id anim id non laborum labore. Veniam consequat pariatur duis. Dolor ut laborum in et esse anim commodo eu minim pariatur officia pariatur sit non. Sit aliquip anim sunt eiusmod proident labore Lorem est sit aliqua sunt minim minim occaecat ut.
                 </h2>
             </PageTitleSection>
-            <PageContentContainer>
+            <ContentContainer>
                 <div className="flex flex-col items-center">
                     <section className="flex flex-col lg:flex-row gap-5 justify-center">
                         <Card
@@ -38,7 +38,7 @@ export default function getInvolved() {
                         />
                     </section>
                 </div>
-            </PageContentContainer>
+            </ContentContainer>
             <OurCommunity />
         </PageLayout>
     );

@@ -1,4 +1,5 @@
-import EventCard, { EventCardProps } from "./EventCard";
+import EventCard from "./EventCard";
+import type { EventCardProps } from "./EventCard";
 
 type EventSectionProps = { events: EventCardProps[] };
 

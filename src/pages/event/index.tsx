@@ -1,4 +1,4 @@
-import PageContentContainer from "~/components/common/PageContentContainer";
+import ContentContainer from "~/components/common/ContentContainer";
 import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
 import ABYAExploreCarousel from "~/components/event/ABYAExploreCarousel";
@@ -29,7 +29,7 @@ export default function event() {
                     <AboutUsButton />
                 </div>
             </PageTitleSection>
-            <PageContentContainer>
+            <ContentContainer>
                 <div className="pb-12">
                     <p>
                         LEAPS (Leadership, Exploration and Progress) is an ASEAN-focused industry immersion programme, designed to equip and groom students to become industry-relevant future ASEAN- savvy talents.
@@ -98,7 +98,7 @@ export default function event() {
                         </div>
                     </div>
                 </div>
-            </PageContentContainer>
+            </ContentContainer>
         </PageLayout>
     );
 }
