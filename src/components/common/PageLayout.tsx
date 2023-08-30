@@ -15,7 +15,7 @@ const PageLayout = (props: PageLayoutProps) => {
         children,
         title = "ASEAN Business Youth Association",
         description = "Fostering a community of like-minded youths to be business savvy in the ASEAN region.",
-        className = ""
+        className = "text-black bg-neutral-50"
     } = props;
 
     return (
