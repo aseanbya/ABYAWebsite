@@ -4,6 +4,7 @@ import PageTitleSection from "~/components/common/PageTitleSection";
 import Image from "next/image";
 import ABYAteam3 from "public/ABYAteam3.png";
 import ContentContainer from "~/components/common/ContentContainer";
+import MeetTheTeam from "./MeetTheTeam";
 
 export default function aboutUs() {
     return (
@@ -81,6 +82,7 @@ export default function aboutUs() {
                     </p>
                 </div>
             </ContentContainer>
+            <MeetTheTeam />
         </PageLayout>
     );
 }

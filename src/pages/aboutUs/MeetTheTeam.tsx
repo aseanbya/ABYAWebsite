@@ -1,6 +1,6 @@
 import personImage from "src/assets/person-image.jpg";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface Member {
     name: string;
@@ -117,14 +117,27 @@ interface MemberGridProps {
 
 function MemberGrid({ members, color, groupName }: MemberGridProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [numberOfColumns, setNumberOfColumns] = useState(3);
 
-    // sm display to have 1, md to have 2, lg to have 3
-    const numberOfColumns =
-        window.innerWidth < smallScreenWidth
-            ? 1
-            : window.innerWidth < largeScreenWidth
-            ? 2
-            : 3;
+    useEffect(() => {
+        // sm display to have 1, md to have 2, lg to have 3
+        const handleResize = () => {
+            if (window.innerWidth < smallScreenWidth) {
+                setNumberOfColumns(1);
+            } else if (window.innerWidth < largeScreenWidth) {
+                setNumberOfColumns(2);
+            } else {
+                setNumberOfColumns(3);
+            }
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     const slicedMembers = [];
     for (let i = 0; i < members.length; i += numberOfColumns) {
