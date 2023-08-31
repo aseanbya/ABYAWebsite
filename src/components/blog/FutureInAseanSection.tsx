@@ -1,7 +1,7 @@
 import React from "react";
-import { BlogCard } from "~/components/blog/BlogCard";
 import { PageSubSection } from "../common/PageSubSection";
 import { type BlogContent } from "~/components/blog/BlogCard";
+import { BlogGrid } from "./BlogGrid";
 
 const TEST_CONTENT: BlogContent[] = [
     {
@@ -33,11 +33,7 @@ const TEST_CONTENT: BlogContent[] = [
 export const FutureInAseanSection = () => {
     return (
         <PageSubSection title={"A Future in ASEAN Series"}>
-            <div className="grid grid-cols-1 gap-x-6 gap-y-2 md:grid-cols-2 md:gap-y-6 lg:grid-cols-3 lg:gap-y-8">
-                {TEST_CONTENT.map((content) => (
-                    <BlogCard key={content.title} {...content} />
-                ))}
-            </div>
+            <BlogGrid content={TEST_CONTENT} />
         </PageSubSection>
     );
 };
