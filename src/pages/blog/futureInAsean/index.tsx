@@ -1,7 +1,7 @@
-import React from "react";
-import { PageSubSection } from "../common/PageSubSection";
 import { type BlogContent } from "~/components/blog/BlogCard";
-import { BlogGrid } from "./BlogGrid";
+import { BlogGrid } from "~/components/blog/BlogGrid";
+import { BlogSubpageTemplate } from "~/components/blog/BlogSubpageTemplate";
+import ImpactReportImg from "src/assets/annualImpactReport.png";
 
 const TEST_CONTENT: BlogContent[] = [
     {
@@ -30,10 +30,15 @@ const TEST_CONTENT: BlogContent[] = [
     },
 ];
 
-export const ExperiencesSection = () => {
+export default function experiences() {
     return (
-        <PageSubSection title={"Experiences"} titleLink="/blog/experiences">
+        <BlogSubpageTemplate
+            title={"A Future in ASEAN Series"}
+            description={"lorem ipsum dolor sit amet"}
+            src={ImpactReportImg}
+            alt={"Future in ASEAN"}
+        >
             <BlogGrid content={TEST_CONTENT} />
-        </PageSubSection>
+        </BlogSubpageTemplate>
     );
-};
+}

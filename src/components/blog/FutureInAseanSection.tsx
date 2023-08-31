@@ -32,7 +32,10 @@ const TEST_CONTENT: BlogContent[] = [
 
 export const FutureInAseanSection = () => {
     return (
-        <PageSubSection title={"A Future in ASEAN Series"}>
+        <PageSubSection
+            title={"A Future in ASEAN Series"}
+            titleLink="/blog/futureInAsean"
+        >
             <BlogGrid content={TEST_CONTENT} />
         </PageSubSection>
     );
