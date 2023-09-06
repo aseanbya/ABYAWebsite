@@ -1,19 +1,22 @@
-import type { ReactNode } from "react"
-import Image from "next/image"
-import singaporeAttractionsGrey from "src/assets/singaporeAttractionsGrey.png"
-import ContentContainer from "./ContentContainer"
+import type { ReactNode } from "react";
+import Image from "next/image";
+import singaporeAttractionsGrey from "src/assets/singaporeAttractionsGrey.png";
+import ContentContainer from "./ContentContainer";
 
 type PageTitleSectionProps = {
-    title: string,
-    children: ReactNode,
-}
+    title: string;
+    children: ReactNode;
+};
 
-export default function PageTitleSection({ title, children }: PageTitleSectionProps) {
+export default function PageTitleSection({
+    title,
+    children,
+}: PageTitleSectionProps) {
     return (
         <ContentContainer>
-            <div className="px-9 py-5 stack items-center w-full">
+            <div className="stack w-full items-center px-9 py-5">
                 <div>
-                    <h1 className="text-5xl sm:text-7xl font-bold text-black pb-2 uppercase ">
+                    <h1 className="pb-2 text-5xl font-bold uppercase text-black sm:text-7xl ">
                         {title}
                     </h1>
                     {children}
@@ -28,5 +31,5 @@ export default function PageTitleSection({ title, children }: PageTitleSectionPr
                 </div>
             </div>
         </ContentContainer>
-    )
+    );
 }
