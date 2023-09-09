@@ -1,39 +1,12 @@
 import React from "react";
 import { PageSubSection } from "../common/PageSubSection";
-import { type BlogContent } from "~/components/blog/BlogCard";
 import { BlogGrid } from "./BlogGrid";
-
-const TEST_CONTENT: BlogContent[] = [
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-];
+import { BLOG_CONTENT } from "../details/BlogDetails";
 
 export const ExperiencesSection = () => {
     return (
         <PageSubSection title={"Experiences"} titleLink="/blog/experiences">
-            <BlogGrid content={TEST_CONTENT} />
+            <BlogGrid content={BLOG_CONTENT} contentType="blog" />
         </PageSubSection>
     );
 };

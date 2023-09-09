@@ -1,32 +1,34 @@
-enum BlogType {
-    blog = "Blog",
-    aseanSeries = "aseanSeries"
-}
+import { BlogContent } from "../blog/BlogCard";
 
 export const BLOG_CONTENT: BlogContent[] = [
     {
-        title: "Title goes here",
+        title: "Personal Blog",
         date: new Date(),
-        tag:
+        tag: "blog",
     },
     {
-        title: "Title goes here",
+        title: "Personal Blog",
         date: new Date(),
+        tag: "blog",
     },
     {
-        title: "Title goes here",
+        title: "Personal Blog",
         date: new Date(),
+        tag: "blog",
     },
     {
-        title: "Title goes here",
+        title: "aseanSeries post",
         date: new Date(),
+        tag: "aseanSeries",
     },
     {
-        title: "Title goes here",
+        title: "aseanSeries post",
         date: new Date(),
+        tag: "aseanSeries",
     },
     {
-        title: "Title goes here",
+        title: "aseanSeries post",
         date: new Date(),
+        tag: "aseanSeries",
     },
 ];
