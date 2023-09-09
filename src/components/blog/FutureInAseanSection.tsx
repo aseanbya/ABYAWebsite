@@ -9,7 +9,11 @@ export const FutureInAseanSection = () => {
             title={"A Future in ASEAN Series"}
             titleLink="/blog/futureInAsean"
         >
-            <BlogGrid content={BLOG_CONTENT} contentType="aseanSeries" />
+            <BlogGrid
+                content={BLOG_CONTENT}
+                contentType="aseanSeries"
+                length={6}
+            />
         </PageSubSection>
     );
 };

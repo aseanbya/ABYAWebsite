@@ -2,35 +2,9 @@ import { type BlogContent } from "~/components/blog/BlogCard";
 import { BlogGrid } from "~/components/blog/BlogGrid";
 import { BlogSubpageTemplate } from "~/components/blog/BlogSubpageTemplate";
 import ImpactReportImg from "src/assets/annualImpactReport.png";
+import { BLOG_CONTENT } from "~/components/details/BlogDetails";
 
-const TEST_CONTENT: BlogContent[] = [
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-];
-
-export default function experiences() {
+export default function futureInAsean() {
     return (
         <BlogSubpageTemplate
             title={"A Future in ASEAN Series"}
@@ -38,7 +12,7 @@ export default function experiences() {
             src={ImpactReportImg}
             alt={"Future in ASEAN"}
         >
-            <BlogGrid content={TEST_CONTENT} />
+            <BlogGrid content={BLOG_CONTENT} contentType="aseanSeries" />
         </BlogSubpageTemplate>
     );
 }
