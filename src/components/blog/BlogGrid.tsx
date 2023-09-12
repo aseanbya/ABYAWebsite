@@ -13,7 +13,7 @@ export const BlogGrid: React.FC<BlogGrid> = ({
     length,
 }) => {
     // Filter content based on the specified contentType
-    var filteredContent = content.filter(
+    let filteredContent = content.filter(
         (content) => content.tag === contentType
     );
 

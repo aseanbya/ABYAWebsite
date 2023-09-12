@@ -1,4 +1,3 @@
-import { type BlogContent } from "~/components/blog/BlogCard";
 import { BlogGrid } from "~/components/blog/BlogGrid";
 import { BlogSubpageTemplate } from "~/components/blog/BlogSubpageTemplate";
 import ImpactReportImg from "src/assets/annualImpactReport.png";
