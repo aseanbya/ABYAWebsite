@@ -1,9 +1,12 @@
 import React from "react";
 import { ClockIcon } from "@heroicons/react/24/solid";
 
+export type BlogType = "blog" | "aseanSeries";
+
 export type BlogContent = {
     title: string;
     date: Date;
+    tag: BlogType;
     image?: string;
     imageAlt?: string;
     onClick?: () => void;

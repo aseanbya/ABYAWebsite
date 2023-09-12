@@ -1,34 +1,7 @@
-import { type BlogContent } from "~/components/blog/BlogCard";
 import { BlogGrid } from "~/components/blog/BlogGrid";
 import { BlogSubpageTemplate } from "~/components/blog/BlogSubpageTemplate";
 import ImpactReportImg from "src/assets/annualImpactReport.png";
-
-const TEST_CONTENT: BlogContent[] = [
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-    {
-        title: "Title goes here",
-        date: new Date(),
-    },
-];
+import { BLOG_CONTENT } from "~/components/details/BlogDetails";
 
 export default function experiences() {
     return (
@@ -38,7 +11,7 @@ export default function experiences() {
             src={ImpactReportImg}
             alt={"Experiences"}
         >
-            <BlogGrid content={TEST_CONTENT} />
+            <BlogGrid content={BLOG_CONTENT} contentType="blog" />
         </BlogSubpageTemplate>
     );
 }
