@@ -3,6 +3,8 @@ import OurCommunity from "~/components/common/OurCommunity";
 import PageTitleSection from "~/components/common/PageTitleSection";
 import { Card } from "../../components/getInvolved/Card";
 import ContentContainer from "~/components/common/ContentContainer";
+import Image from "next/image";
+import World from "src/assets/World.png";
 
 export default function getInvolved() {
     return (
@@ -20,6 +22,20 @@ export default function getInvolved() {
                 </h2>
             </PageTitleSection>
             <ContentContainer>
+                <div className="grid grid-cols-3 grid-rows-3">
+                    <div>
+                        <Image src={World} alt={"the world"}/> 
+                    </div>
+                    
+                    <div>520 Members</div>
+                    <div>40 Affiliated Companies</div>
+                    <div>10 Member's Countries</div>
+                    <div>520 Members</div>
+                    <div>40 Affiliated Companies</div>
+                    <div>10 Member's Countries</div>
+                    <div>520 Members</div>
+                    <div>40 Affiliated Companies</div>
+                </div>
                 <div className="flex flex-col items-center">
                     <section className="flex flex-col justify-center gap-5 lg:flex-row">
                         <Card
