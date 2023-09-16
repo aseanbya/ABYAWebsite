@@ -220,7 +220,7 @@ function MemberGrid({ members, color, groupName }: MemberGridProps) {
 export default function MeetTheTeam() {
     return (
         <div className="mb-10">
-            <div className="ml-10 mt-10">
+            <div className="mt-10">
                 <h1 className="pb-2 text-7xl font-bold uppercase text-black">
                     Meet The Team
                 </h1>
@@ -234,8 +234,8 @@ export default function MeetTheTeam() {
                                 groupName === "Management Committee"
                                     ? "border-brandBlue"
                                     : groupName === "Executives"
-                                        ? "border-brandYellow"
-                                        : "border-brandRed"
+                                    ? "border-brandYellow"
+                                    : "border-brandRed"
                             }
                             groupName={groupName}
                         />

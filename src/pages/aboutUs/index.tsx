@@ -25,7 +25,7 @@ export default function aboutUs() {
             <ContentContainer>
                 <div className="grid gap-3 py-9 sm:grid-cols-2">
                     <Image src={ABYAteam3} alt={""} />
-                    <div className="flex flex-col justify-center gap-2">
+                    <div className="ml-10 flex flex-col justify-center gap-2">
                         <h1 className="py-4 text-5xl font-bold uppercase text-black sm:py-0 sm:text-7xl">
                             Our Story
                         </h1>
@@ -82,7 +82,9 @@ export default function aboutUs() {
                     </p>
                 </div>
             </ContentContainer>
-            <MeetTheTeam />
+            <ContentContainer>
+                <MeetTheTeam />
+            </ContentContainer>
         </PageLayout>
     );
 }
