@@ -156,7 +156,6 @@ function MemberGrid({ members, color, groupName }: MemberGridProps) {
         }
     };
 
-    console.log(slicedMembers);
     return (
         <div>
             <div className="flex items-center justify-center">
@@ -235,8 +234,8 @@ export default function MeetTheTeam() {
                                 groupName === "Management Committee"
                                     ? "border-brandBlue"
                                     : groupName === "Executives"
-                                    ? "border-brandYellow"
-                                    : "border-brandRed"
+                                        ? "border-brandYellow"
+                                        : "border-brandRed"
                             }
                             groupName={groupName}
                         />
