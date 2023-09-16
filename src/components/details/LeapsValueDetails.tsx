@@ -1,4 +1,4 @@
-import { ValueContent } from "../event/ABYALeaps/LeapsOurValueSection";
+import type { ValueContent } from "../event/ABYALeaps/LeapsOurValueSection";
 
 export const VALUE_DETAILS: ValueContent[] = [
     {

@@ -1,8 +1,8 @@
-import { BlogCard, type BlogType, type BlogContent } from "./BlogCard";
+import { BlogCard, type ContentType, type BlogContent } from "./BlogCard";
 
 type BlogGrid = {
     content: BlogContent[];
-    contentType: BlogType;
+    contentType: ContentType;
     length?: number;
 };
 

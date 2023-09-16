@@ -1,6 +1,5 @@
 import ContentContainer from "~/components/common/ContentContainer";
 import { PageSubSection } from "~/components/common/PageSubSection";
-import { VALUE_DETAILS } from "~/components/details/LeapsValueDetails";
 
 export type ValueContent = {
     title: string;
@@ -18,6 +17,7 @@ export default function LeapsOurValueSection({
                 <div className="grid grid-cols-1 gap-4 pb-12 lg:grid-cols-3">
                     {values.map((value) => (
                         <LeapsOurValueCards
+                            key={value.title}
                             title={value.title}
                             content={value.content}
                         ></LeapsOurValueCards>
