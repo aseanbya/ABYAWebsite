@@ -22,19 +22,10 @@ const config = {
         defaultLocale: "en",
     },
 
-    // handle pdf files
-    webpack: (config, { isServer }) => {
+    webpack: (config) => {
         config.module.rules.push({
-            test: /\.(pdf)$/,
-            use: [
-                {
-                    loader: "file-loader",
-                    options: {
-                        name: "[name].[ext]",
-                        outputPath: "static/pdf/",
-                    },
-                },
-            ],
+            test: /\.node/,
+            use: "raw-loader",
         });
 
         return config;
