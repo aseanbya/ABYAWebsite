@@ -18,6 +18,8 @@
     "next": "^13.4.8",
     "nextra": "^2.8.0",
     "nextra-theme-docs": "^2.8.0",
+    "pdfjs": "^2.5.2",
+    "pdfjs-dist": "^3.10.111",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-pageflip": "^2.0.3",
