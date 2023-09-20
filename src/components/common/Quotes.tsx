@@ -38,7 +38,6 @@ export default function Quotes({ title, cardData }: QuoteComponentProps) {
         >
             <div className="absolute inset-0 h-full w-full bg-black opacity-70"></div>
             <ContentContainer>
-
                 <div className="relative z-10 w-full">
                     <div>
                         <p className="text-center text-5xl font-bold text-brandYellow">
