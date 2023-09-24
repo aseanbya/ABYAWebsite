@@ -1,15 +1,12 @@
-import React from "react";
+import { ImpactReportSection } from "~/components/blog/ImpactReportSection";
 import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
-import { ImpactReportSection } from "../../components/blog/ImpactReportSection";
-import { ExperiencesSection } from "../../components/blog/ExperiencesSection";
-import { FutureInAseanSection } from "../../components/blog/FutureInAseanSection";
 import ContentContainer from "~/components/common/ContentContainer";
 
-export default function blog() {
+export default function index() {
     return (
         <PageLayout>
-            <PageTitleSection title={"Blog"}>
+            <PageTitleSection title={"Annual Impact Report"}>
                 <h2>
                     Amet ex ipsum adipisicing. Consectetur veniam officia
                     pariatur officia in et dolor ex sint consectetur. Dolor
@@ -21,6 +18,11 @@ export default function blog() {
                     minim occaecat ut.
                 </h2>
             </PageTitleSection>
+            <ContentContainer>
+                <div className="mb-8 flex flex-col gap-8 lg:mb-24 lg:gap-24">
+                    <ImpactReportSection />
+                </div>
+            </ContentContainer>
         </PageLayout>
     );
 }
