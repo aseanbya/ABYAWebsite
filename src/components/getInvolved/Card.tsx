@@ -27,7 +27,7 @@ export const Card: React.FC<CardProps> = ({ title, description, href, borderColo
                 </h2>
                 <p>{description}</p>
                 <div className="card-actions mt-4 justify-stretch">
-                    <Button href={href}>Learn More</Button>
+                    <Button href={href} type={"button"}>Learn More</Button>
                 </div>
             </div>
         </div>
