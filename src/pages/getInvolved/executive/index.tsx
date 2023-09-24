@@ -1,10 +1,5 @@
 import PageLayout from "~/components/common/PageLayout";
 
-
 export default function Home() {
-    return (
-        <PageLayout>
-            getinvolved
-        </PageLayout>
-    );
+    return <PageLayout>getInvolved/executive</PageLayout>;
 }
