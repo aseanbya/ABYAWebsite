@@ -1,11 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "src/assets/logo.png";
-import React, { useState } from "react";
+import React from "react";
 
 export default function Navbar() {
-    const [activeTab, setActiveTab] = useState(0);
-
     return (
         <div className="navbar bg-base-100">
             <div className="flex-1">
@@ -23,10 +21,47 @@ export default function Navbar() {
                         <Link href="/"> Home </Link>
                     </li>
                     <li>
-                        <Link href="/getInvolved"> Get Involved </Link>
+                        <details>
+                            <summary>
+                                <Link href="/getInvolved"> Get Involved </Link>
+                            </summary>
+                            <ul className="bg-base-100 p-2">
+                                <li>
+                                    <Link href="/getInvolved/member">
+                                        As a Member
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/getInvolved/executive">
+                                        As an Executive
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/getInvolved/partner">
+                                        As a Partner
+                                    </Link>
+                                </li>
+                            </ul>
+                        </details>
                     </li>
                     <li>
-                        <Link href="/event"> Our Events </Link>
+                        <details>
+                            <summary>
+                                <Link href="/event"> Our Events </Link>
+                            </summary>
+                            <ul className="bg-base-100 p-2">
+                                <li>
+                                    <Link href="/event/ABYALeaps">
+                                        ABYA Leaps
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/event/ABYAExplore">
+                                        ABYA Explore
+                                    </Link>
+                                </li>
+                            </ul>
+                        </details>
                     </li>
                     <li>
                         <Link href="/ourSupporters"> Our Supporters </Link>
@@ -51,7 +86,28 @@ export default function Navbar() {
                         </details>
                     </li>
                     <li>
-                        <Link href="/blog"> Blog </Link>
+                        <details>
+                            <summary>
+                                <Link href="/blog"> Blog </Link>
+                            </summary>
+                            <ul className="bg-base-100 p-2">
+                                <li>
+                                    <Link href="/blog/impact">
+                                        Impact Report
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/blog/experiences">
+                                        Experiences
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/blog/futureInAsean">
+                                        Future in ASEAN Series
+                                    </Link>
+                                </li>
+                            </ul>
+                        </details>
                     </li>
                 </ul>
             </div>
