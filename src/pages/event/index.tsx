@@ -3,18 +3,7 @@ import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
 import ABYAExploreCarousel from "~/components/event/ABYAExploreCarousel";
 import ABYALeapCarousel from "~/components/event/ABYALeapCarousel";
-
-function AboutUsButton() {
-    return (
-        <a
-            type="button"
-            className="w-fit rounded-xl bg-brandBlue px-4 py-2 text-white
-            hover:bg-slate-700"
-        >
-            <p className="text-xl font-bold">Upcoming LEAPS</p>
-        </a>
-    );
-}
+import UpcomingLeapsButton from "~/components/event/UpcomingLeapsButton";
 
 export default function event() {
     return (
@@ -22,7 +11,7 @@ export default function event() {
             <PageTitleSection title={"ABYA LEAPS"}>
                 <div className="grid grid-rows-2">
                     <h2>Discover connections with every new LEAP</h2>
-                    <AboutUsButton />
+                    <UpcomingLeapsButton />
                 </div>
             </PageTitleSection>
             <ContentContainer>
