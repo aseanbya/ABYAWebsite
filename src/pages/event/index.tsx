@@ -1,4 +1,5 @@
 import ContentContainer from "~/components/common/ContentContainer";
+import Heading1 from "~/components/common/textStyles/Heading1";
 import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
 import ABYAExploreCarousel from "~/components/event/ABYAExploreCarousel";
@@ -90,9 +91,9 @@ export default function event() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row">
-                    <h1 className="pb-4 text-5xl font-bold uppercase sm:pb-0 sm:text-7xl">
+                    <Heading1>
                         ABYA Explore
-                    </h1>
+                    </Heading1>
                     <div className="pl-0 sm:pl-12">
                         <p>
                             ABYA Explore provides a series of sharing and
