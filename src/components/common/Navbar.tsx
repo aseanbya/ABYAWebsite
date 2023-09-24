@@ -7,13 +7,15 @@ export default function Navbar() {
     return (
         <div className="navbar bg-base-100">
             <div className="flex-1">
-                <a className="btn-ghost btn hidden text-xl normal-case lg:flex">
-                    <Image
-                        src={logo}
-                        alt="ABYAlogo"
-                        className="h-[2.5rem] w-[2.5rem]"
-                    />
-                </a>
+                <Link href="/">
+                    <div className="btn-ghost btn hidden text-xl normal-case lg:flex">
+                        <Image
+                            src={logo}
+                            alt="ABYAlogo"
+                            className="h-[2.5rem] w-[2.5rem]"
+                        />
+                    </div>
+                </Link>
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
