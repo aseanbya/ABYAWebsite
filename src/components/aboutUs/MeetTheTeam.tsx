@@ -220,11 +220,6 @@ function MemberGrid({ members, color, groupName }: MemberGridProps) {
 export default function MeetTheTeam() {
     return (
         <div className="mb-10">
-            <div className="mt-10">
-                <h1 className="pb-2 text-7xl font-bold uppercase text-black">
-                    Meet The Team
-                </h1>
-            </div>
             <div className="flex min-h-screen flex-col items-center justify-center">
                 {Object.entries(memberList).map(([groupName, members]) => (
                     <div key={groupName}>
