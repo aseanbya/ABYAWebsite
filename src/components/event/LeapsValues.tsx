@@ -5,7 +5,7 @@ import { ValueContent } from "./ABYALeaps/LeapsOurValueSection";
 export default function LeapsValues() {
     return (
         <ContentContainer>
-            <div className="grid grid-cols-1 gap-4 pb-12 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
                 {LEAPS_VALUES_DETAILS.map((value) => (
                     <LeapsOurValueCards
                         key={value.title}

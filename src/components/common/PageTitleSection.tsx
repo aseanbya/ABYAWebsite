@@ -14,7 +14,7 @@ export default function PageTitleSection({
 }: PageTitleSectionProps) {
     return (
         <ContentContainer>
-            <div className="stack w-full items-center px-9 py-5">
+            <div className="stack w-full items-center">
                 <div>
                     <h1 className="pb-2 text-5xl font-bold uppercase text-black sm:text-7xl ">
                         {title}

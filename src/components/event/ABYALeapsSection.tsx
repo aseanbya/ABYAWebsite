@@ -1,11 +1,12 @@
 import ContentContainer from "../common/ContentContainer";
+import Heading2 from "../common/textStyles/Heading2";
 import LeapsValues from "./LeapsValues";
 
 export default function ABYALeapsSection() {
     return (
         <ContentContainer>
-            <h2>ABYA Leaps</h2>
-            <div className="pb-12">
+            <Heading2>ABYA Leaps</Heading2>
+            <div className="pb-12 pt-5">
                 <p>
                     LEAPS (Leadership, Exploration and Progress) is an
                     ASEAN-focused industry immersion programme, designed to
