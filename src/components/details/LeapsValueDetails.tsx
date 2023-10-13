@@ -1,6 +1,6 @@
 import type { ValueContent } from "../event/ABYALeaps/LeapsOurValueSection";
 
-export const VALUE_DETAILS: ValueContent[] = [
+export const LEAPS_VALUES_DETAILS: ValueContent[] = [
     {
         title: "LEADERSHIP",
         content:

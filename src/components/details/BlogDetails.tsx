@@ -56,4 +56,34 @@ export const BLOG_CONTENT: BlogContent[] = [
         date: new Date(),
         tag: "aseanSeries",
     },
+    {
+        title: "LEAPS: 2022",
+        date: new Date(),
+        tag: "leaps",
+    },
+    {
+        title: "How did the 2021 LEAPS go?",
+        date: new Date(),
+        tag: "leaps",
+    },
+    {
+        title: "ABYA LEAPS 2020",
+        date: new Date(),
+        tag: "leaps",
+    },
+    {
+        title: "ABYA EXPLORE 2022",
+        date: new Date(),
+        tag: "explore",
+    },
+    {
+        title: "What does Explore 2021 look like?",
+        date: new Date(),
+        tag: "explore",
+    },
+    {
+        title: "ABYA EXPLORE 2020",
+        date: new Date(),
+        tag: "explore",
+    },
 ];
