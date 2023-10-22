@@ -21,7 +21,7 @@ export default function Navbar() {
                         <li><Link href="/blog"> Blog </Link></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl hidden lg:flex">
+                <a className="btn btn-ghost normal-case text-xl hidden lg:flex" href="/">
                     <Image
                         src={logo}
                         alt={''}
@@ -31,11 +31,13 @@ export default function Navbar() {
             </div>
 
             <div className="navbar-end lg:hidden">
-                <Image
-                    src={logo}
-                    alt={''}
-                    className='h-[3rem] w-[3rem]'
-                />
+                <a href="/">
+                    <Image
+                        src={logo}
+                        alt={''}
+                        className='h-[3rem] w-[3rem]'
+                    />
+                </a>
             </div>
 
             <div className="navbar-end hidden lg:flex">
