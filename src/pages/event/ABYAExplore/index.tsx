@@ -1,10 +1,15 @@
 import PageLayout from "~/components/common/PageLayout";
+import PageTitleSection from "~/components/common/PageTitleSection";
+import ExplorePreviousEventsSection from "~/components/event/ABYAExplore/ExplorePreviousEventsSection";
+import ExploreTitleSection from "~/components/event/ABYAExplore/ExploreTitleSection";
+import WhatIsABYAExploreSection from "~/components/event/ABYAExplore/WhatIsABYAExploreSection";
 
-
-export default function Home() {
+export default function ABYAExplore() {
     return (
         <PageLayout>
-            getinvolved
+            <ExploreTitleSection />
+            <WhatIsABYAExploreSection />
+            <ExplorePreviousEventsSection />
         </PageLayout>
     );
 }

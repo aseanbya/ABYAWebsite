@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Image from "next/image";
 import singaporeAttractionsGrey from "src/assets/singaporeAttractionsGrey.png";
 import ContentContainer from "./ContentContainer";
+import Heading1 from "./textStyles/Heading1";
 
 type PageTitleSectionProps = {
     title: string;
@@ -16,9 +17,7 @@ export default function PageTitleSection({
         <ContentContainer>
             <div className="stack w-full items-center">
                 <div>
-                    <h1 className="pb-2 text-5xl font-bold uppercase text-black sm:text-7xl ">
-                        {title}
-                    </h1>
+                    <Heading1 className="pb-4">{title}</Heading1>
                     {children}
                 </div>
                 <div className="flex justify-between">
