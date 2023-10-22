@@ -1,5 +1,4 @@
 import ContentContainer from "~/components/common/ContentContainer";
-import Heading1 from "~/components/common/textStyles/Heading1";
 import PageLayout from "~/components/common/PageLayout";
 import ABYAExploreCarousel from "~/components/event/ABYAExploreCarousel";
 import ABYALeapCarousel from "~/components/event/ABYALeapCarousel";
