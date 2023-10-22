@@ -56,7 +56,7 @@ type ApplicationFormValues = InferType<typeof applcationFormSchema>;
 export const ApplicationForm: React.FC = () => {
     // TODO: use custom button for submit button
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center bg-neutral-200 py-12">
             <Heading2 className="mb-8 lg:mb-16">Application Form</Heading2>
             <Formik
                 initialValues={{
