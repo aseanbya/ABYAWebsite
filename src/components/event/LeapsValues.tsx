@@ -1,6 +1,6 @@
 import ContentContainer from "../common/ContentContainer";
 import { LEAPS_VALUES_DETAILS } from "../details/LeapsValueDetails";
-import { ValueContent } from "./ABYALeaps/LeapsOurValueSection";
+import type { ValueContent } from "./ABYALeaps/LeapsOurValueSection";
 
 export default function LeapsValues() {
     return (
