@@ -48,7 +48,7 @@ function CardCarouselComponent({
                         <h1 className="pb-3 text-4xl font-bold uppercase">
                             {name}
                         </h1>
-                        <Button href={href}>Learn More</Button>
+                        <Button href={href} type={"button"}>Learn More</Button>
                     </div>
                 </div>
             </div>
