@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export type EventCardProps = {
     title: string;
     description: string;
@@ -20,7 +18,7 @@ export default function EventCard({
             <div className="mb-8 flex flex-wrap justify-center gap-8">
                 {partnerImageRef?.map((ref, index) => (
                     <div key={index} className="h-[100px] w-[225px]">
-                        <Image src={ref} className="h-full w-full" alt={description} />
+                        <img src={ref} className="h-full w-full" alt={description} />
                     </div>
                 ))}
             </div>
