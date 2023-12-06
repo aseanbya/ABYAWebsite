@@ -1,3 +1,5 @@
+import Heading2 from "../common/textStyles/Heading2";
+
 export default function Hero() {
     return (
         <div
@@ -17,12 +19,12 @@ export default function Hero() {
                 <div className="flex flex-wrap justify-center gap-4 text-white">
                     <div
                         className="
-                        flex max-w-sm items-center rounded-xl border border-white"
+                        flex max-w-sm items-center rounded-xl border-2 border-white"
                     >
                         <div className="p-6">
-                            <h1 className="text-5xl font-bold uppercase">
+                            <Heading2 className="text-5xl font-bold uppercase">
                                 Vision
-                            </h1>
+                            </Heading2>
                             <hr className="m-2 mx-9" />
                             <p className="h-36">
                                 To be the leading youth organisation that
@@ -32,12 +34,12 @@ export default function Hero() {
                     </div>
                     <div
                         className="
-                        flex max-w-sm items-center rounded-xl border border-white"
+                        flex max-w-sm items-center rounded-xl border-2 border-white"
                     >
                         <div className="p-6">
-                            <h1 className="text-5xl font-bold uppercase">
+                            <Heading2 className="text-5xl font-bold uppercase">
                                 Mission
-                            </h1>
+                            </Heading2>
                             <hr className="m-2 mx-9" />
                             <p className="h-36">
                                 Empower a community of ASEAN youth to work and
