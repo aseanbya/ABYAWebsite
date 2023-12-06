@@ -22,6 +22,7 @@ const PageLayout = (props: PageLayoutProps) => {
         <div className={className}>
             <Head>
                 <title>{title}</title>
+
                 <meta content="width=device-width, initial-scale=1" name="viewport" />
                 <meta content={description} name="description" />
             </Head>

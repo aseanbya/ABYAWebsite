@@ -81,7 +81,7 @@ export default function AboutUs() {
                     <AboutUsButton />
                 </div>
             </div>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {CARD_DETAILS.map((componentDetails, i) => (
                     <CardComponent key={i} {...componentDetails} />
                 ))}

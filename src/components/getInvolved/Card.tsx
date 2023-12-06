@@ -1,5 +1,5 @@
 import type { StaticImageData } from "next/image"
-import Button from "~/components/common/Button";
+import Button from "~/components/common/buttons/CommonButton";
 import Image from "next/image"
 
 type CardProps = {
@@ -27,7 +27,12 @@ export const Card: React.FC<CardProps> = ({ title, description, href, borderColo
                 </h2>
                 <p>{description}</p>
                 <div className="card-actions mt-4 justify-stretch">
-                    <Button href={href} type={"button"}>Learn More</Button>
+                    <Button
+                        href={href}
+                        type={"button"}
+                        className="hover:bg-brandBlue hover:text-white border-brandBlue text-brandBlue">
+                        Learn More
+                    </Button>
                 </div>
             </div>
         </div>

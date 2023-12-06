@@ -5,6 +5,7 @@ import Image from "next/image";
 import ABYAteam3 from "public/ABYAteam3.png";
 import ContentContainer from "~/components/common/ContentContainer";
 import MeetTheTeam from "../../components/aboutUs/MeetTheTeam";
+import OurCommunity from "~/components/common/OurCommunity";
 
 export default function aboutUs() {
     return (
@@ -82,6 +83,7 @@ export default function aboutUs() {
                     </p>
                 </div>
             </ContentContainer>
+            <OurCommunity />
             <MeetTheTeam />
         </PageLayout>
     );

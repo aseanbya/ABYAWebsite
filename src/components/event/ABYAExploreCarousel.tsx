@@ -1,5 +1,5 @@
 import { Carousel } from "flowbite-react";
-import Button from "~/components/common/Button";
+import Button from "~/components/common/buttons/CommonButton";
 import Image from "next/image";
 import { AiOutlineLeftCircle, AiOutlineRightCircle } from "react-icons/ai";
 
@@ -48,7 +48,11 @@ function CardCarouselComponent({
                         <h1 className="pb-3 text-4xl font-bold uppercase">
                             {name}
                         </h1>
-                        <Button href={href} type={"button"}>Learn More</Button>
+                        <Button
+                            href={href} type={"button"}
+                            className="hover:bg-brandBlue hover:text-white border-brandBlue text-brandBlue">
+                            Learn More
+                        </Button>
                     </div>
                 </div>
             </div>
