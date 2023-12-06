@@ -1,11 +1,11 @@
 import ContentContainer from "~/components/common/ContentContainer";
-import Heading1 from "~/components/common/textStyles/Heading1";
+import Heading2 from "~/components/common/textStyles/Heading2";
 
 export default function ABYAExploreSection() {
     return (
         <ContentContainer>
             <div className="flex flex-row">
-                <Heading1>ABYA Explore</Heading1>
+                <Heading2 className=" whitespace-normal md:whitespace-nowrap">ABYA Explore</Heading2>
                 <div className="pl-0 sm:pl-12">
                     <p>
                         ABYA Explore provides a series of sharing and networking
