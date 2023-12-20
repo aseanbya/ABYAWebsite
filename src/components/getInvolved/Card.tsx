@@ -1,5 +1,5 @@
 import type { StaticImageData } from "next/image"
-import Button from "~/components/common/buttons/CommonButton";
+import Button from "~/components/common/buttons/BlueFilledButton";
 import Image from "next/image"
 
 type CardProps = {

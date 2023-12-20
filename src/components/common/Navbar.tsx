@@ -32,7 +32,7 @@ export default function Navbar() {
                 <ul className="menu menu-horizontal">
                     <li><Link href="/"> Home </Link></li>
                     <li><Link href="/getInvolved"> Get Involved </Link></li>
-                    <li><Link href="/event"> Our Events </Link></li>
+                    <li><Link href="/ourEvent"> Our Events </Link></li>
                     <li><Link href="/ourSupporters"> Our Supporters </Link></li>
                     <li><Link href="/aboutUs"> About Us </Link></li>
                     <li><Link href="/blog"> Blog </Link></li>

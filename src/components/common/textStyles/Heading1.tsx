@@ -7,7 +7,7 @@ type Heading1Props = {
 
 export default function Heading1(props: Heading1Props) {
     return (
-        <h1 className={`text-6xl font-bold sm:text-7xl ${props.className ?? ""}`}>
+        <h1 className={`text-5xl font-bold sm:text-6xl md:text-7xl ${props.className ?? ""}`}>
             {props.children}
         </h1>
     )

@@ -2,7 +2,7 @@ import { Form, Formik, type FormikHelpers } from "formik";
 import React from "react";
 import { type InferType, object, string } from "yup";
 import Heading2 from "../common/textStyles/Heading2";
-import Button from "../common/buttons/CommonButton";
+import Button from "../common/buttons/BlueFilledButton";
 import TextInput from "../common/form/TextInput";
 import TextAreaInput from "../common/form/TextAreaInput";
 import { isValid, parse } from "date-fns";

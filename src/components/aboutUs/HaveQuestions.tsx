@@ -1,4 +1,4 @@
-import CommonButton from "../common/buttons/CommonButton"
+import CommonButton from "../common/buttons/BlueFilledButton"
 import Heading1 from "../common/textStyles/Heading1"
 
 function ContactUsButton() {

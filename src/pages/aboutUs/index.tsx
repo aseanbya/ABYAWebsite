@@ -3,10 +3,10 @@ import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
 import MeetTheTeam from "../../components/aboutUs/MeetTheTeam";
 import OurCommunity from "~/components/common/OurCommunity";
-import AboutUs from "~/components/aboutUs/AboutUs";
+import AboutUsHero from "~/components/aboutUs/AboutUsHero";
 import HaveQuestions from "~/components/aboutUs/HaveQuestions";
 
-export default function aboutUs() {
+export default function AboutUs() {
     return (
         <PageLayout>
             <PageTitleSection title="About Us">
@@ -15,7 +15,7 @@ export default function aboutUs() {
                 </h2>
             </PageTitleSection>
             <Hero />
-            <AboutUs />
+            <AboutUsHero />
             <OurCommunity />
             <MeetTheTeam />
             <HaveQuestions />

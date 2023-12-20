@@ -22,11 +22,7 @@ export default function PageTitleSection({
                 </div>
                 <div className="flex justify-between">
                     <div className="w-0 sm:w-1/3"></div>
-                    <Image
-                        src={singaporeAttractionsGrey}
-                        alt={""}
-                        className="w-full max-w-2xl sm:w-2/3"
-                    />
+                    <Image src={singaporeAttractionsGrey} alt={""} className="w-full max-w-2xl sm:w-2/3" />
                 </div>
             </div>
         </ContentContainer>

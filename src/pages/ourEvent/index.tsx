@@ -1,14 +1,14 @@
 import ContentContainer from "~/components/common/ContentContainer";
 import PageLayout from "~/components/common/PageLayout";
-import ABYAExploreCarousel from "~/components/event/ABYAExploreCarousel";
-import ABYALeapCarousel from "~/components/event/ABYALeapCarousel";
-import ABYAExploreSection from "~/components/event/ABYALeaps/ABYAExploreSection";
-import ABYALeapsSection from "~/components/event/ABYALeapsSection";
-import EventTitleSection from "~/components/event/EventTitleSection";
+import ABYAExploreCarousel from "~/components/ourEvent/ABYAExploreCarousel";
+import ABYALeapCarousel from "~/components/ourEvent/ABYALeapCarousel";
+import ABYAExploreSection from "~/components/ourEvent/ABYALeaps/ABYAExploreSection";
+import ABYALeapsSection from "~/components/ourEvent/ABYALeapsSection";
+import EventTitleSection from "~/components/ourEvent/EventTitleSection";
 import Heading3 from "~/components/common/textStyles/Heading3";
-import CommonButton from "~/components/common/buttons/CommonButton";
+import CommonButton from "~/components/common/buttons/BlueFilledButton";
 
-export default function event() {
+export default function OurEvent() {
     return (
         <PageLayout>
             <EventTitleSection />

@@ -1,5 +1,5 @@
 import { Carousel } from "flowbite-react";
-import Button from "~/components/common/buttons/CommonButton";
+import Button from "~/components/common/buttons/BlueFilledButton";
 import Image from "next/image";
 import { AiOutlineLeftCircle, AiOutlineRightCircle } from "react-icons/ai";
 
@@ -60,7 +60,7 @@ function CardCarouselComponent({
     );
 }
 
-export default function ABYAExploreCarousel() {
+export default function ABYALeapCarousel() {
     return (
         <div className="px-20">
             <Carousel

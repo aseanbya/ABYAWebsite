@@ -1,10 +1,7 @@
-import ContentContainer from "../common/ContentContainer";
 import { LEAPS_VALUES_DETAILS } from "../details/LeapsValueDetails";
 import type { ValueContent } from "./ABYALeaps/LeapsOurValueSection";
-
 export default function LeapsValues() {
     return (
-
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
             {LEAPS_VALUES_DETAILS.map((value) => (
                 <LeapsOurValueCards

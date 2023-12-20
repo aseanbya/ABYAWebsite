@@ -3,7 +3,7 @@ import Image from "next/image";
 import ABYAteam3 from "public/ABYAteam3.png";
 import Heading1 from "~/components/common/textStyles/Heading1";
 
-export default function AboutUs() {
+export default function AboutUsHero() {
     return (
         <ContentContainer>
             <div className="grid gap-3 py-9 sm:grid-cols-2">

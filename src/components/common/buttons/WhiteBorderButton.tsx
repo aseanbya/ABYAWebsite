@@ -14,11 +14,11 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
     return (
         <button
-            className={`w-fit rounded-xl border px-4 py-2 font-bold uppercase transition ${className ?? ""}`}
+            className={`w-fit border-2 py-1 px-2 rounded-xl bg-transparent transition hover:bg-neutral-600 ${className ?? ""}`}
             type={type ?? "button"}
             {...rest}
         >
-            <Link href={href ?? ""}>{children}</Link>
+            <Link href={href ?? ""} className="text-sm sm:text-md uppercase font-bold text-white">{children}</Link>
         </button>
     );
 };

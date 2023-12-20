@@ -4,7 +4,7 @@ import EventSection from "../../components/ourSupporters/EventSection";
 import Testimonials from "../../components/ourSupporters/Testimonials";
 import ContentContainer from "~/components/common/ContentContainer";
 
-export default function ourSupporters() {
+export default function OurSupporters() {
     return (
         <PageLayout>
             <PageTitleSection
