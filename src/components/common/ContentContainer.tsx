@@ -11,7 +11,7 @@ export default function ContentContainer({
     className,
 }: PageContentContainerProps) {
     return (
-        <div className={`flex justify-center ${className || ""}`}>
+        <div className={`flex justify-center ${className ?? ""}`}>
             <div className="w-full max-w-7xl items-center p-9">{children}</div>
         </div>
     );

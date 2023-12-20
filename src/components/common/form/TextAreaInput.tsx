@@ -18,7 +18,7 @@ const TextAreaInput: React.FC<TextAreaInputProps> = ({
     return (
         <div className="flex flex-col">
             <label
-                htmlFor={props.id || props.name}
+                htmlFor={props.id ?? props.name}
                 className="text-xl font-semibold"
             >
                 <span className="mr-1">{label}</span>

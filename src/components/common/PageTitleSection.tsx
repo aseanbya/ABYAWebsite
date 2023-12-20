@@ -17,7 +17,7 @@ export default function PageTitleSection({
         <ContentContainer>
             <div className="stack w-full items-center">
                 <div>
-                    <Heading1 className="pb-4">{title}</Heading1>
+                    <Heading1 className="pb-4 uppercase">{title}</Heading1>
                     {children}
                 </div>
                 <div className="flex justify-between">

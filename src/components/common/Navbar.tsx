@@ -4,9 +4,7 @@ import logo from 'src/assets/logo.png'
 
 export default function Navbar() {
     return (
-
-        <div className="navbar bg-neutral-50">
-
+        <div className="navbar bg-neutral-50 sticky top-0 z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -21,28 +19,17 @@ export default function Navbar() {
                         <li><Link href="/blog"> Blog </Link></li>
                     </ul>
                 </div>
-                <Link className="btn btn-ghost normal-case text-xl hidden lg:flex" href="/">
-                    <Image
-                        src={logo}
-                        alt={''}
-                        className='h-[3rem] w-[3rem]'
-                    />
+                <Link className="btn btn-ghost hidden lg:flex" href="/">
+                    <Image src={logo} alt={'ABYA Logo'} className='h-[3rem] w-[3rem]' />
                 </Link>
             </div>
-
             <div className="navbar-end lg:hidden">
-                <Link href="/">
-                    <Image
-                        src={logo}
-                        alt={''}
-                        className='h-[3rem] w-[3rem]'
-                    />
+                <Link href="/" className='btn btn-ghost'>
+                    <Image src={logo} alt={''} className='h-[3rem] w-[3rem]' />
                 </Link>
             </div>
-
-            <div className="navbar-end hidden lg:flex">
-
-                <ul className="menu menu-horizontal px-1">
+            <div className="navbar-end w-full hidden lg:flex">
+                <ul className="menu menu-horizontal">
                     <li><Link href="/"> Home </Link></li>
                     <li><Link href="/getInvolved"> Get Involved </Link></li>
                     <li><Link href="/event"> Our Events </Link></li>

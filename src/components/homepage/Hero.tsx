@@ -1,17 +1,18 @@
 import Image from "next/image"
 import singaporeAttractions from "src/assets/singaporeAttractions.png"
 import ContentContainer from "../common/ContentContainer"
+import CommonButton from "../common/buttons/CommonButton"
 
 function GetInvolvedButton() {
     return (
-        <button
-            className="bg-brandBlue text-white rounded-xl py-2 px-4
-            hover:bg-slate-700"
-        >
-            <p className="font-bold text-md sm:text-xl uppercase">
+        <CommonButton
+            href={""}
+            type={"button"}
+            className="bg-brandBlue text-white hover:bg-brandBlue-50">
+            <p className="uppercase">
                 Get Involved
             </p>
-        </button>
+        </CommonButton>
     )
 }
 
@@ -20,10 +21,14 @@ export default function Hero() {
         <ContentContainer className="bg-neutral-100">
             <div className="text-start">
                 <div className="py-8">
-                    <h1 className="text-5xl sm:text-7xl font-bold uppercase tracking-wide text-black">Shaping the future</h1>
+                    <h1 className="text-5xl sm:text-7xl font-bold uppercase tracking-wide text-black">
+                        Shaping the future
+                    </h1>
                     <div className="flex flex-col sm:flex-row">
                         <div className="w-full sm:w-1/2">
-                            <p className="py-4 text-md sm:text-xl">We believe in supporting Youths in ASEAN as we navigate through diverse cultures and the future of business opportunity</p>
+                            <h2 className="py-4 text-md sm:text-xl">
+                                We believe in supporting Youths in ASEAN as we navigate through diverse cultures and the future of business opportunity
+                            </h2>
                             <GetInvolvedButton />
                         </div>
                         <Image

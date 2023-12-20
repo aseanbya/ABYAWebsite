@@ -5,7 +5,7 @@ import LeapsValues from "./LeapsValues";
 export default function ABYALeapsSection() {
     return (
         <ContentContainer>
-            <Heading2>ABYA Leaps</Heading2>
+            <Heading2 className="uppercase">ABYA Leaps</Heading2>
             <div className="pb-12 pt-5">
                 <p>
                     LEAPS (Leadership, Exploration and Progress) is an

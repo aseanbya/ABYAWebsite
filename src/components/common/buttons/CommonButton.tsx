@@ -14,9 +14,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
     return (
         <button
-            className={`rounded-xl border border-brandBlue px-4 py-2 font-bold uppercase text-brandBlue transition hover:bg-brandBlue hover:text-white ${
-                className ?? ""
-            }`}
+            className={`w-fit rounded-xl border px-4 py-2 font-bold uppercase transition ${className ?? ""}`}
             type={type ?? "button"}
             {...rest}
         >

@@ -1,5 +1,6 @@
 import React, { type PropsWithChildren } from "react";
 import Link from "next/link";
+import Heading2 from "./textStyles/Heading2";
 
 type PageSubSectionProps = {
     title: string;
@@ -11,8 +12,8 @@ export const PageSubSection = ({
     titleLink,
 }: PropsWithChildren<PageSubSectionProps>) => {
     return (
-        <section className="px-4 lg:px-9">
-            <h2 className="mb-4 text-5xl font-semibold uppercase text-black lg:mb-12">
+        <>
+            <Heading2 className="uppercase">
                 {titleLink ? (
                     <Link
                         href={titleLink}
@@ -23,8 +24,8 @@ export const PageSubSection = ({
                 ) : (
                     title
                 )}
-            </h2>
+            </Heading2>
             {children}
-        </section>
+        </>
     );
 };

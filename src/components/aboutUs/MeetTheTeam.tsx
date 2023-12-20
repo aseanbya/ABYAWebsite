@@ -1,6 +1,8 @@
 import personImage from "src/assets/person-image.jpg";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Heading1 from "../common/textStyles/Heading1";
+import ContentContainer from "../common/ContentContainer";
 
 interface Member {
     name: string;
@@ -219,29 +221,29 @@ function MemberGrid({ members, color, groupName }: MemberGridProps) {
 
 export default function MeetTheTeam() {
     return (
-        <div className="mb-10">
-            <div className="ml-10 mt-10">
-                <h1 className="pb-2 text-7xl font-bold uppercase text-black">
+        <ContentContainer>
+            <div className="pt-20 pb-10">
+                <Heading1 className="uppercase">
                     Meet The Team
-                </h1>
+                </Heading1>
+                <div className="flex min-h-screen flex-col items-center justify-center">
+                    {Object.entries(memberList).map(([groupName, members]) => (
+                        <div key={groupName}>
+                            <MemberGrid
+                                members={members}
+                                color={
+                                    groupName === "Management Committee"
+                                        ? "border-brandBlue"
+                                        : groupName === "Executives"
+                                            ? "border-brandYellow"
+                                            : "border-brandRed"
+                                }
+                                groupName={groupName}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div className="flex min-h-screen flex-col items-center justify-center">
-                {Object.entries(memberList).map(([groupName, members]) => (
-                    <div key={groupName}>
-                        <MemberGrid
-                            members={members}
-                            color={
-                                groupName === "Management Committee"
-                                    ? "border-brandBlue"
-                                    : groupName === "Executives"
-                                        ? "border-brandYellow"
-                                        : "border-brandRed"
-                            }
-                            groupName={groupName}
-                        />
-                    </div>
-                ))}
-            </div>
-        </div>
+        </ContentContainer>
     );
 }

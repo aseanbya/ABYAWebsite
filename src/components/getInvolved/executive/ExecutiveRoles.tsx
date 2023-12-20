@@ -121,7 +121,7 @@ function generateBulletPoints(bulletPoints: BulletPoint[]) {
 
 export default function ExecutiveRoles() {
     const [selectedRole, setSelectedRole] = useState<Role>(
-        allTestRoles[0] as Role
+        allTestRoles[0]!
     );
 
     // Generate clickable list of roles for a department in the left column
@@ -131,11 +131,10 @@ export default function ExecutiveRoles() {
             .map((role) => (
                 <div
                     key={role.name}
-                    className={`cursor-pointer ${
-                        Object.is(selectedRole, role)
-                            ? "text-neutral-100"
-                            : "text-neutral-400"
-                    }`}
+                    className={`cursor-pointer ${Object.is(selectedRole, role)
+                        ? "text-neutral-100"
+                        : "text-neutral-400"
+                        }`}
                     onClick={() => setSelectedRole(role)}
                 >
                     {role.name}
