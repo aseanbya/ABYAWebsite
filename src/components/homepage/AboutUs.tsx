@@ -53,7 +53,7 @@ export default function AboutUs() {
         <ContentContainer className="py-12">
             <div className="flex flex-col gap-4 pb-12 sm:flex-row">
                 <Image src={"https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/IndexEstablishedDate.png?alt=media&token=311fe441-2f50-4c38-93b3-fb4ecec1eaba"} width={1600} height={1600} alt={""} />
-                <div className="gap-3 flex flex-col justify-center bg-slate-200">
+                <div className="gap-3 flex flex-col justify-center">
                     <Heading2 className="font-semibold">
                         Established in XXXX
                     </Heading2>

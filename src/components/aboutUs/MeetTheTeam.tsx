@@ -1,18 +1,15 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from "next/image"
+import Heading1 from "../common/textStyles/Heading1";
+import Heading3 from '../common/textStyles/Heading3';
+import ContentContainer from "../common/ContentContainer";
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-// import required modules
-import { Pagination } from 'swiper/modules';
-
-import Heading1 from "../common/textStyles/Heading1";
-import ContentContainer from "../common/ContentContainer";
-import Image from "next/image"
 import { api } from '~/utils/api';
-import Heading3 from '../common/textStyles/Heading3';
 import { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
 
 export default function MeetTheTeam() {
 

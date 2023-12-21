@@ -1,11 +1,14 @@
-import { Carousel } from "flowbite-react";
-import Button from "~/components/common/buttons/BlueFilledButton";
 import Image from "next/image";
-import { AiOutlineLeftCircle, AiOutlineRightCircle } from "react-icons/ai";
+import BlueFilledButton from "~/components/common/buttons/BlueFilledButton";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+import Heading3 from "../common/textStyles/Heading3";
 
 const cardData = [
     {
-        name: "Abya Leaps 2022",
+        name: "Abya Leaps 2313",
         href: "",
         imageUrl: "/ABYAteam.jpg",
     },
@@ -29,31 +32,11 @@ function CardCarouselComponent({
 }: CardCarouselComponentProps) {
     return (
         <div className="flex justify-center">
-            <div
-                className="
-                    card grid
-                    grid-cols-2 items-center gap-5
-                    border-2 border-brandBlue-50 bg-transparent p-8
-                    "
-            >
-                <Image
-                    src={imageUrl}
-                    alt={""}
-                    width={800}
-                    height={800}
-                    className="rounded-lg"
-                />
-                <div className="flex flex-col justify-center">
-                    <div>
-                        <h1 className="pb-3 text-4xl font-bold uppercase">
-                            {name}
-                        </h1>
-                        <Button
-                            href={href} type={"button"}
-                            className="hover:bg-brandBlue hover:text-white border-brandBlue text-brandBlue">
-                            Learn More
-                        </Button>
-                    </div>
+            <div className="card grid grid-cols-2 items-center gap-5 border-2 border-brandBlue-50 bg-transparent p-4">
+                <Image src={imageUrl} alt={""} width={800} height={800} className="rounded-lg" />
+                <div className="flex flex-col justify-center gap-4">
+                    <Heading3 className="uppercase">{name}</Heading3>
+                    <BlueFilledButton href={href} type={"button"}>Learn More</BlueFilledButton>
                 </div>
             </div>
         </div>
@@ -62,26 +45,12 @@ function CardCarouselComponent({
 
 export default function ABYAExploreCarousel() {
     return (
-        <div className="px-20">
-            <Carousel
-                slideInterval={5000}
-                indicators={false}
-                leftControl={
-                    <div className="relative -left-20">
-                        <AiOutlineLeftCircle className="h-14 w-14 transition duration-150 hover:fill-gray-400" />
-                    </div>
-                }
-                rightControl={
-                    <div className="relative -right-20">
-                        <AiOutlineRightCircle className="h-14 w-14 transition duration-150 hover:fill-gray-400" />
-                    </div>
-                }
-                className=" max-w-4xl"
-            >
-                {cardData.map((componentDetails, i) => (
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+            {cardData.map((componentDetails, i) => (
+                <SwiperSlide className="px-12">
                     <CardCarouselComponent key={i} {...componentDetails} />
-                ))}
-            </Carousel>
-        </div>
+                </SwiperSlide>
+            ))}
+        </Swiper>
     );
 }
