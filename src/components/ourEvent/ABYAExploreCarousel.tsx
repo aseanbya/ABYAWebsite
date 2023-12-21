@@ -31,13 +31,11 @@ function CardCarouselComponent({
     imageUrl,
 }: CardCarouselComponentProps) {
     return (
-        <div className="flex justify-center">
-            <div className="card grid grid-cols-2 items-center gap-5 border-2 border-brandBlue-50 bg-transparent p-4">
-                <Image src={imageUrl} alt={""} width={800} height={800} className="rounded-lg" />
-                <div className="flex flex-col justify-center gap-4">
-                    <Heading3 className="uppercase">{name}</Heading3>
-                    <BlueFilledButton href={href} type={"button"}>Learn More</BlueFilledButton>
-                </div>
+        <div className="card grid grid-cols-1 sm:grid-cols-2 items-center gap-5 border-2 border-brandBlue-50 p-4">
+            <Image src={imageUrl} alt={""} width={800} height={800} className="rounded-lg" />
+            <div className="flex flex-col justify-center gap-4">
+                <Heading3 className="uppercase">{name}</Heading3>
+                <BlueFilledButton href={href} type={"button"}>Learn More</BlueFilledButton>
             </div>
         </div>
     );

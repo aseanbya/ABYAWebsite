@@ -1,6 +1,10 @@
 // Hear from Our Community component
 
 import { Carousel } from "flowbite-react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 
 const cardData = [
     {
@@ -58,14 +62,13 @@ export default function OurCommunity() {
                     </p>
                 </div>
                 <div className="flex pt-16">
-                    <Carousel slideInterval={5000}>
+                    <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                         {cardData.map((componentDetails, i) => (
-                            <CardCarouselComponent
-                                key={i}
-                                {...componentDetails}
-                            />
+                            <SwiperSlide className="pt-4">
+                                <CardCarouselComponent key={i} {...componentDetails} />
+                            </SwiperSlide>
                         ))}
-                    </Carousel>
+                    </Swiper>
                 </div>
             </div>
         </div>
