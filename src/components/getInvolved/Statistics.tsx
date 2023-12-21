@@ -1,38 +1,29 @@
 import Image from "next/image";
+
 import World from "src/assets/World.png";
 import Member from "src/assets/Member.png";
 import Building from "src/assets/Building.png";
 
+import Heading1 from "../common/textStyles/Heading1";
+import Heading4 from "../common/textStyles/Heading4";
+
 export default function Statistics() {
     return (
-
-        <div className="grid grid-cols-3 pt-8 pb-32">
-            <div className="flex flex-col justify-top items-center border-r-2 border-neutral-400">
-                <Image src={World} alt={"the world"} className="pb-5" />
-                <h3 className="text-brandBlue text-7xl font-bold pb-2">
-                    10
-                </h3>
-                <h4 className="text-neutral-900 text-2xl font-semibold text-center">
-                    Member&apos;s <br /> Countries
-                </h4>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-7 pt-4 pb-12">
+            <div className="flex flex-col gap-3 justify-top items-center">
+                <Image src={World} alt={"the world"} />
+                <Heading1 className="text-brandBlue">10</Heading1>
+                <Heading4 className="font-semibold text-center">Member&apos;s<br />Countries</Heading4>
             </div>
-            <div className="flex flex-col justify-top items-center">
-                <Image src={Member} alt={"Members"} className="pb-5" />
-                <h3 className="text-brandBlue text-7xl font-bold pb-2">
-                    520
-                </h3>
-                <h4 className="text-neutral-900 text-2xl font-semibold text-center">
-                    Member&apos;s
-                </h4>
+            <div className="flex flex-col gap-3 justify-top items-center sm:border-r-2 sm:border-l-2 border-neutral-400">
+                <Image src={Member} alt={"Members"} />
+                <Heading1 className="text-brandBlue">520</Heading1>
+                <Heading4 className="font-semibold text-center">Member&apos;s</Heading4>
             </div>
-            <div className="flex flex-col justify-top items-center border-l-2 border-neutral-400">
-                <Image src={Building} alt={"Building"} className="pb-5" />
-                <h3 className="text-brandBlue text-7xl font-bold pb-2">
-                    40
-                </h3>
-                <h4 className="text-neutral-900 text-2xl font-semibold text-center">
-                    Affiliated <br /> Companies
-                </h4>
+            <div className="flex flex-col gap-3 justify-top items-center">
+                <Image src={Building} alt={"Building"} />
+                <Heading1 className="text-brandBlue">40</Heading1>
+                <Heading4 className="font-semibold text-center">Affiliated<br />Companies</Heading4>
             </div>
         </div>
     )

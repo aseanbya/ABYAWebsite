@@ -7,8 +7,8 @@ type Heading2Props = {
 
 export default function Heading2(props: Heading2Props) {
     return (
-        <h1 className={`text-3xl font-bold sm:text-4xl md:text-5xl ${props.className ?? ""}`}>
+        <p className={`text-3xl font-bold sm:text-4xl md:text-5xl ${props.className ?? ""}`}>
             {props.children}
-        </h1>
+        </p>
     )
 }

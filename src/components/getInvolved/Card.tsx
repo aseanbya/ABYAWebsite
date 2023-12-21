@@ -1,6 +1,6 @@
 import type { StaticImageData } from "next/image"
-import Button from "~/components/common/buttons/BlueFilledButton";
 import Image from "next/image"
+import BlueBorderButton from "../common/buttons/BlueBorderButton";
 
 type CardProps = {
     title: string;
@@ -20,19 +20,15 @@ export const Card: React.FC<CardProps> = ({ title, description, href, borderColo
                 height={800}
                 className="aspect-[4/3] w-full rounded-xl bg-gray-300 object-cover"
             />
-
             <div className="card-body px-0">
                 <h2 className="card-title text-2xl font-bold uppercase">
                     {title}
                 </h2>
                 <p>{description}</p>
                 <div className="card-actions mt-4 justify-stretch">
-                    <Button
-                        href={href}
-                        type={"button"}
-                        className="hover:bg-brandBlue hover:text-white border-brandBlue text-brandBlue">
+                    <BlueBorderButton href={href} type={"button"}>
                         Learn More
-                    </Button>
+                    </BlueBorderButton>
                 </div>
             </div>
         </div>
