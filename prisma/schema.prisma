@@ -36,15 +36,17 @@ model Tag {
 
 // executive
 
-model Executive {
+model Team {
     id       String @id @default(cuid())
     name     String @db.Text
     position String @db.Text
+    level    String @db.Text
+    image    String @db.Text
 }
 
 // testimonial carousel
 
-model Testimonaial {
+model Testimonial {
     id       String @id @default(cuid())
     name     String @db.Text
     position String @db.Text

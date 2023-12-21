@@ -1,4 +1,3 @@
-import personImage from "src/assets/person-image.jpg";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Heading1 from "../common/textStyles/Heading1";
@@ -101,7 +100,7 @@ function MemberCard({ member, color }: MemberCardProps) {
             className={`card mb-10 flex max-h-[32rem] max-w-sm border-2 shadow-xl ${color}`}
         >
             <figure>
-                <Image src={personImage} alt="Member Photo" />
+                <Image src={""} alt="Member Photo" />
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{member.name}</h2>
@@ -132,10 +131,8 @@ function MemberGrid({ members, color, groupName }: MemberGridProps) {
                 setNumberOfColumns(3);
             }
         };
-
         handleResize();
         window.addEventListener("resize", handleResize);
-
         return () => {
             window.removeEventListener("resize", handleResize);
         };
@@ -145,13 +142,11 @@ function MemberGrid({ members, color, groupName }: MemberGridProps) {
     for (let i = 0; i < members.length; i += numberOfColumns) {
         slicedMembers.push(members.slice(i, i + numberOfColumns));
     }
-
     const handleNextClick = () => {
         if (currentIndex < slicedMembers.length - 1) {
             setCurrentIndex(currentIndex + 1);
         }
     };
-
     const handlePrevClick = () => {
         if (currentIndex > 0) {
             setCurrentIndex(currentIndex - 1);
@@ -194,8 +189,7 @@ function MemberGrid({ members, color, groupName }: MemberGridProps) {
                                 : 1,
                     }}
                 >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                         className="h-6 w-6"
                         fill="none"
                         viewBox="0 0 24 24"
