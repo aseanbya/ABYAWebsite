@@ -7,18 +7,14 @@ import ContentContainer from "~/components/common/ContentContainer";
 export default function OurSupporters() {
     return (
         <PageLayout>
-            <PageTitleSection
-                title={"Our Partners"}
-            >
-                <h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ipsum mauris, scelerisque sed justo vel, hendrerit sagittis odio. Vestibulum quis convallis augue. Pellentesque vel viverra neque, eget aliquet nunc. Vivamus ornare sit amet ipsum ac consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                </h2>
+            <PageTitleSection title={"Our Partners"}>
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ipsum mauris, scelerisque sed justo vel, hendrerit sagittis odio. Vestibulum quis convallis augue. Pellentesque vel viverra neque, eget aliquet nunc. Vivamus ornare sit amet ipsum ac consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus.</h2>
             </PageTitleSection>
             <ContentContainer>
                 <EventSection events={eventData} />
             </ContentContainer>
             <Testimonials />
-        </PageLayout>
+        </PageLayout >
     );
 }
 
@@ -28,7 +24,7 @@ const eventData = [
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ipsum mauris, scelerisque sed justo vel, hendrerit sagittis odio. Vestibulum quis convallis augue. Pellentesque vel viverra neque, eget aliquet nunc. Vivamus ornare sit amet ipsum ac consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
         partnerImageRef: [
-            "YoungNTUCLogo.png"
+            "https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/Organisation%20Logo%2FYoungNTUCLogo.png?alt=media&token=c8cd1d75-b478-4e4c-8bf7-6fff066afb38",
         ],
     },
     {
@@ -36,11 +32,11 @@ const eventData = [
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ipsum mauris, scelerisque sed justo vel, hendrerit sagittis odio. Vestibulum quis convallis augue. Pellentesque vel viverra neque, eget aliquet nunc. Vivamus ornare sit amet ipsum ac consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
         partnerImageRef: [
-            "SGGlobalNetworkLogo.png",
-            "ScapeLogo.png",
-            "YoungNTUCLogo.png",
-            "ABYAteam2.png",
-            "ABYAteam3.png",
+            "https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/Organisation%20Logo%2FSGGlobalNetworkLogo.png?alt=media&token=5d301f27-d88b-4982-ba1e-7ab20d0c1f57",
+            "https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/Organisation%20Logo%2FScapeLogo.png?alt=media&token=c8dc85dc-8a58-4297-8c8d-ea2437eed2f2",
+            "https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/Organisation%20Logo%2FYoungNTUCLogo.png?alt=media&token=c8cd1d75-b478-4e4c-8bf7-6fff066afb38",
+            "https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/Organisation%20Logo%2FYoungNTUCLogo.png?alt=media&token=c8cd1d75-b478-4e4c-8bf7-6fff066afb38",
+            "https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/Organisation%20Logo%2FYoungNTUCLogo.png?alt=media&token=c8cd1d75-b478-4e4c-8bf7-6fff066afb38",
         ],
     },
 ];

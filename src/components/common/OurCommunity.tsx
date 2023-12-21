@@ -33,7 +33,7 @@ function CardCarouselComponent({
 }: CardCarouselComponentProps) {
     return (
         <div className="flex justify-center pb-24">
-            <div className="card flex h-1/2 w-2/3 justify-center justify-center border border-brandYellow bg-transparent">
+            <div className="card flex h-1/2 w-2/3 justify-center border border-brandYellow bg-transparent">
                 <div className="overflow-hidden p-8 text-center">
                     <p className="text-white">{quote}</p>
                     <p className="mt-6 text-xl font-bold text-white">{name}</p>
@@ -48,7 +48,7 @@ export default function OurCommunity() {
     return (
         <div
             className="relative bg-cover bg-center pb-4 pt-16"
-            style={{ backgroundImage: "url('testimonialBG.png')" }}
+            style={{ backgroundImage: "url(https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/HearFromOurCommunity.png?alt=media&token=9c5977fc-2606-432d-9f79-77e59a2718e9)" }}
         >
             <div className="absolute inset-0 h-full w-full bg-black opacity-70"></div>
             <div className="relative z-10 w-full">

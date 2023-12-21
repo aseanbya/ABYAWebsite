@@ -34,7 +34,7 @@ export default function Quotes({ title, cardData }: QuoteComponentProps) {
     return (
         <div
             className="relative bg-cover bg-center pb-4 pt-16"
-            style={{ backgroundImage: "url('testimonialBG.png')" }}
+            style={{ backgroundImage: "url(https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/HearFromOurCommunity.png?alt=media&token=9c5977fc-2606-432d-9f79-77e59a2718e9)" }}
         >
             <div className="absolute inset-0 h-full w-full bg-black opacity-70"></div>
             <ContentContainer>

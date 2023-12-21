@@ -4,7 +4,7 @@ import MeetTheTeam from "../../components/aboutUs/MeetTheTeam";
 import OurCommunity from "~/components/common/OurCommunity";
 import AboutUsHero from "~/components/aboutUs/AboutUsHero";
 import HaveQuestions from "~/components/aboutUs/HaveQuestions";
-import Hero from "~/components/homepage/Hero";
+import Hero from "~/components/aboutUs/Hero";
 
 export default function AboutUs() {
     return (

@@ -13,9 +13,30 @@ datasource db {
 
 model Post {
     id        Int      @id @default(autoincrement())
-    name      String
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
-    @@index([name])
+    title       String  @unique
+    author      String
+    summary     String? @db.Text
+    content     String? @db.Text
+    readingtime Int?
+    image       String? @db.Text
+    authorimage String? @db.Text
+    views       Int     @default(0)
+    tags        Tag[]
+
+    @@index([title])
+}
+
+model Tag {
+    id   String @id @default(cuid())
+    tag  String
+    post Post[]
+}
+
+model Executive {
+    id       String @id @default(cuid())
+    name     String @db.Text
+    position String @db.Text
 }

@@ -1,13 +1,12 @@
 import ContentContainer from "../common/ContentContainer";
 import Image from "next/image";
-import ABYAteam3 from "public/ABYAteam3.png";
 import Heading1 from "~/components/common/textStyles/Heading1";
 
 export default function AboutUsHero() {
     return (
         <ContentContainer>
             <div className="grid gap-3 py-9 sm:grid-cols-2">
-                <Image src={ABYAteam3} alt={""} />
+                <Image src={"https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/OurStory.png?alt=media&token=028dc58b-c1c7-4914-a239-1d2b479f7167"} width={1600} height={1600} alt={""} />
                 <div className="flex flex-col justify-center gap-2">
                     <Heading1 className="py-4 text-5xl font-bold uppercase text-black sm:py-0 sm:text-7xl">
                         Our Story
