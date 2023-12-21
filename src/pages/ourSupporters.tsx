@@ -1,14 +1,14 @@
 import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
-import EventSection from "../../components/ourSupporters/EventSection";
-import Testimonials from "../../components/ourSupporters/Testimonials";
+import EventSection from "../components/ourSupporters/EventSection";
+import Testimonials from "../components/ourSupporters/Testimonials";
 import ContentContainer from "~/components/common/ContentContainer";
 
 export default function OurSupporters() {
     return (
         <PageLayout>
             <PageTitleSection title={"Our Partners"}>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ipsum mauris, scelerisque sed justo vel, hendrerit sagittis odio. Vestibulum quis convallis augue. Pellentesque vel viverra neque, eget aliquet nunc. Vivamus ornare sit amet ipsum ac consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ipsum mauris, scelerisque sed justo vel, hendrerit sagittis odio. Vestibulum quis convallis augue. Pellentesque vel viverra neque, eget aliquet nunc. Vivamus ornare sit amet ipsum ac consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
             </PageTitleSection>
             <ContentContainer>
                 <EventSection events={eventData} />
