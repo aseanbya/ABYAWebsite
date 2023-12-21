@@ -8,8 +8,7 @@ function GetInvolvedButton() {
     return (
         <BlueFilledButton
             href={""}
-            type={"button"}
-            className="bg-brandBlue text-white hover:bg-brandBlue-50">
+            type={"button"}>
             <p className="uppercase">
                 Get Involved
             </p>

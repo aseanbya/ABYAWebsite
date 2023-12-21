@@ -11,20 +11,19 @@ datasource db {
     relationMode = "prisma"
 }
 
+// blog
+
 model Post {
     id        Int      @id @default(autoincrement())
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
-    title       String  @unique
-    author      String
-    summary     String? @db.Text
-    content     String? @db.Text
-    readingtime Int?
-    image       String? @db.Text
-    authorimage String? @db.Text
-    views       Int     @default(0)
-    tags        Tag[]
+    title   String  @unique
+    author  String
+    content String? @db.Text
+    image   String? @db.Text
+    views   Int     @default(0)
+    tags    Tag[]
 
     @@index([title])
 }
@@ -35,8 +34,28 @@ model Tag {
     post Post[]
 }
 
+// executive
+
 model Executive {
     id       String @id @default(cuid())
     name     String @db.Text
     position String @db.Text
+}
+
+// testimonial carousel
+
+model Testimonaial {
+    id       String @id @default(cuid())
+    name     String @db.Text
+    position String @db.Text
+    quote    String @db.Text
+}
+
+// hear from ourn community carousel
+
+model HearFromOurCommunity {
+    id       String @id @default(cuid())
+    name     String @db.Text
+    position String @db.Text
+    quote    String @db.Text
 }

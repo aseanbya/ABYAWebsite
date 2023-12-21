@@ -1,16 +1,16 @@
-import CommonButton from "../common/buttons/BlueFilledButton"
+import BlueFilledButton from "../common/buttons/BlueFilledButton"
 import Heading1 from "../common/textStyles/Heading1"
 
 function ContactUsButton() {
     return (
-        <CommonButton
+        <BlueFilledButton
             href={""}
             type={"button"}
             className="bg-transparent text-white hover:bg-neutral-600 mt-7">
             <p className="uppercase">
                 Contact Us
             </p>
-        </CommonButton>
+        </BlueFilledButton>
     )
 }
 
