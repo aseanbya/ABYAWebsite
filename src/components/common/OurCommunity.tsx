@@ -1,10 +1,7 @@
-// Hear from Our Community component
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
-
 
 export default function OurCommunity() {
     return (
@@ -26,7 +23,7 @@ export default function OurCommunity() {
                             disableOnInteraction: false,
                         }}>
                         {cardData.map((componentDetails, i) => (
-                            <SwiperSlide className="">
+                            <SwiperSlide >
                                 <CardCarouselComponent key={i} {...componentDetails} />
                             </SwiperSlide>
                         ))}
@@ -50,7 +47,7 @@ function CardCarouselComponent({
 }: CardCarouselComponentProps) {
     return (
         <div className="flex justify-center">
-            <div className="card flex h-1/2 w-2/3 justify-center border border-brandYellow bg-transparent">
+            <div className="card flex h-1/2 w-2/3 justify-center border border-brandYellow">
                 <div className="overflow-hidden p-8 text-center">
                     <p className="text-white">{quote}</p>
                     <p className="mt-6 text-xl font-bold text-white">{name}</p>

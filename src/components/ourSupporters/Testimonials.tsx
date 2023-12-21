@@ -1,10 +1,65 @@
-import Quotes from "~/components/common/Quotes";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 export default function Testimonials() {
-    return <Quotes title="Testimonials" cardData={testimonialData} />;
+    return (
+        <div
+            className="relative bg-cover bg-center pb-4 pt-16"
+            style={{ backgroundImage: "url(https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/HearFromOurCommunity.png?alt=media&token=9c5977fc-2606-432d-9f79-77e59a2718e9)" }}
+        >
+            <div className="absolute inset-0 h-full w-full bg-black opacity-70"></div>
+            <div className="relative z-10 w-full">
+                <div>
+                    <p className="text-center text-5xl font-bold text-brandYellow">Testimonials
+                    </p>
+                </div>
+                <div className="flex pt-16 pb-24">
+                    <Swiper
+                        navigation={true}
+                        modules={[Navigation, Autoplay]}
+                        autoplay={{
+                            delay: 2000,
+                            disableOnInteraction: false,
+                        }}>
+                        {cardData.map((componentDetails, i) => (
+                            <SwiperSlide>
+                                <CardCarouselComponent key={i} {...componentDetails} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </div>
+        </div>
+    );
 }
 
-const testimonialData = [
+type QuoteCarouselComponentProps = {
+    name: string;
+    quote: string;
+    title: string;
+};
+
+function CardCarouselComponent({
+    name,
+    quote,
+    title,
+}: QuoteCarouselComponentProps) {
+    return (
+        <div className="flex justify-center">
+            <div className="card flex h-1/2 w-2/3 justify-center border border-brandYellow">
+                <div className="overflow-hidden p-8 text-center">
+                    <p className="text-white">{quote}</p>
+                    <p className="mt-6 text-xl font-bold text-white">{name}</p>
+                    <p className="text-sm text-brandYellow">{title}</p>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+const cardData = [
     {
         name: "Mr. David Chua",
         quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor magna aliquet mollis accumsan. Mauris faucibus molestie fringilla. Ut quis sodales lorem, eu dictum turpis. Mauris consectetur lacus non risus sodales, at dictum nisi dapibus. Aenean vehicula eleifend ante luctus feugiat. Phasellus lacinia nisi vitae lectus rhoncus elementum. Morbi vehicula fringilla vulputate.",
