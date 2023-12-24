@@ -21,7 +21,8 @@ export default function OurCommunity() {
                         autoplay={{
                             delay: 2000,
                             disableOnInteraction: false,
-                        }}>
+                        }}
+                    >
                         {cardData.map((componentDetails, i) => (
                             <SwiperSlide >
                                 <CardCarouselComponent key={i} {...componentDetails} />
@@ -46,7 +47,7 @@ function CardCarouselComponent({
     title,
 }: CardCarouselComponentProps) {
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-center pb-4">
             <div className="card flex h-1/2 w-2/3 justify-center border border-brandYellow">
                 <div className="overflow-hidden p-8 text-center">
                     <p className="text-white">{quote}</p>

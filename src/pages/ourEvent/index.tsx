@@ -6,7 +6,7 @@ import EventTitleSection from "~/components/ourEvent/EventTitleSection";
 import Heading3 from "~/components/common/textStyles/Heading3";
 import Heading2 from "~/components/common/textStyles/Heading2";
 import BlueFilledButton from "~/components/common/buttons/BlueFilledButton";
-import { ValueContent } from "~/components/ourEvent/ABYALeaps/LeapsOurValueSection";
+import { LEAPS_VALUES_DETAILS, LeapsOurValueCards } from "../../components/ourEvent/LeapsOurValueCards";
 
 
 export default function OurEvent() {
@@ -84,38 +84,7 @@ export default function OurEvent() {
                         <ABYAExploreCarousel />
                     </div>
                 </div>
-
-
             </ContentContainer>
         </PageLayout>
     );
 }
-
-function LeapsOurValueCards({ title, content }: ValueContent) {
-    return (
-        <div className="card border-2 border-brandBlue">
-            <div className="card-body">
-                <Heading3>{title}</Heading3>
-                <p>{content}</p>
-            </div>
-        </div>
-    );
-}
-
-const LEAPS_VALUES_DETAILS: ValueContent[] = [
-    {
-        title: "LEADERSHIP",
-        content:
-            "Our community seeks to bring together youths who seek to develop their competencies in becoming business savvy with a future in ASEAN.",
-    },
-    {
-        title: "EXPLORATION",
-        content:
-            "Our community seeks to bring together youths who seek to develop their competencies in becoming business savvy with a future in ASEAN.",
-    },
-    {
-        title: "PROGRESSION",
-        content:
-            "Our community seeks to bring together youths who seek to develop their competencies in becoming business savvy with a future in ASEAN.",
-    },
-];
