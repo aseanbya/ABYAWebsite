@@ -8,7 +8,7 @@ datasource db {
   relationMode = "prisma"
 }
 
-model Post {
+model Blog {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -24,16 +24,30 @@ model Post {
 
 model Tag {
   id   String @id @default(cuid())
-  tag  String
-  post Post[]
+  tag  TagTag
+  post Blog[]
+}
+
+enum TagTag {
+  EXPERIENCES
+  PR_ANNOUNCEMENT
+  A_FUTURE_IN_ASEAN_SERIES
+  ABYA_EXPLORE
+  ABYA_LEAPS
+}
+
+enum TeamLevel {
+  MANAGEMENT
+  ADVISORYBOARD
+  EXECUTIVES
 }
 
 model Team {
-  id       String @id @default(cuid())
-  name     String @db.Text
-  position String @db.Text
-  level    String @db.Text
-  image    String @db.Text
+  id       String    @id @default(cuid())
+  name     String    @db.Text
+  position String    @db.Text
+  level    TeamLevel
+  image    String    @db.Text
 }
 
 model Testimonial {

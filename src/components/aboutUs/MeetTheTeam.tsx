@@ -5,11 +5,13 @@ import ContentContainer from "../common/ContentContainer";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import { api } from '~/utils/api';
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+
 
 export default function MeetTheTeam() {
 
@@ -66,7 +68,13 @@ export default function MeetTheTeam() {
                     pagination={{
                         clickable: true,
                     }}
-                    modules={[Pagination]}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    navigation={true}
+                    modules={[Pagination, Navigation, Autoplay]}
                     className="mySwiper h-fit"
                 >
                     {managementData?.map((data) => (
@@ -133,7 +141,9 @@ function ProfileCard({ name, position, image }: ProfileCardProps) {
         <div className='flex justify-center'>
             <div className={`card h-fit max-w-xs border-2 p-3`}>
                 <div className='card'>
-                    <Image src={image ?? ""} alt={''} width={1600} height={1600} className='object-cover card' />
+                    <div className="h-96 flex">
+                        <Image src={image ?? ""} alt={''} width={1600} height={1600} className='object-cover card' />
+                    </div>
                     <div className='py-3'>
                         <p className='text-2xl capitalize'>
                             {name}

@@ -7,7 +7,7 @@ export const teamRouter = createTRPCRouter({
         return await ctx.db.team.findMany({
             where: {
                 level: {
-                    contains: "management",
+                    equals: "MANAGEMENT",
                 },
             },
         });
@@ -16,7 +16,7 @@ export const teamRouter = createTRPCRouter({
         return await ctx.db.team.findMany({
             where: {
                 level: {
-                    contains: "Executives",
+                    equals: "EXECUTIVES",
                 },
             },
         });
@@ -25,7 +25,7 @@ export const teamRouter = createTRPCRouter({
         return await ctx.db.team.findMany({
             where: {
                 level: {
-                    contains: "AdvisoryBoard",
+                    equals: "ADVISORYBOARD",
                 },
             },
         });
