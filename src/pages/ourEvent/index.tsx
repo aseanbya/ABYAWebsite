@@ -14,7 +14,6 @@ export default function OurEvent() {
         <PageLayout>
             <EventTitleSection />
             <ContentContainer>
-
                 <Heading2 className="uppercase">ABYA Leaps</Heading2>
                 <div className="flex flex-col gap-4 py-6">
                     <p>

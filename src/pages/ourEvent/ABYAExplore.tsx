@@ -1,5 +1,3 @@
-import { BlogGrid } from "~/components/blog/BlogGrid";
-import { BLOG_CONTENT } from "~/components/details/BlogDetails";
 import PageLayout from "~/components/common/PageLayout";
 import Heading2 from "~/components/common/textStyles/Heading2";
 import ContentContainer from "~/components/common/ContentContainer";
@@ -25,7 +23,7 @@ export default function ABYAExplore() {
                         business and cultures of the region.
                     </p>
                     <Heading2>See the previous events</Heading2>
-                    <BlogGrid content={BLOG_CONTENT} contentType="explore" length={3} />
+                    asd
                 </div>
             </ContentContainer>
         </PageLayout>

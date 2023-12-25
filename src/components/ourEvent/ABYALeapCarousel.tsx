@@ -5,19 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import Heading3 from "../common/textStyles/Heading3";
-
-const cardData = [
-    {
-        name: "Abya Leaps 2022",
-        href: "",
-        imageUrl: "/ABYAteam.jpg",
-    },
-    {
-        name: "Abya Leaps 2022",
-        href: "",
-        imageUrl: "/ABYAteam.jpg",
-    },
-];
+import { api } from "~/utils/api";
 
 type CardCarouselComponentProps = {
     name: string;
@@ -42,11 +30,12 @@ function CardCarouselComponent({
 }
 
 export default function ABYALeapCarousel() {
+    const { data: abyaleapsData } = api.blog.retrieveThree.useQuery({ tag: "ABYA_LEAPS" });
     return (
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-            {cardData.map((componentDetails, i) => (
+            {abyaleapsData?.map((blog, i) => (
                 <SwiperSlide className="px-12">
-                    <CardCarouselComponent key={i} {...componentDetails} />
+                    <CardCarouselComponent key={i} name={blog.title} href="" imageUrl={blog.image as string} />
                 </SwiperSlide>
             ))}
         </Swiper>

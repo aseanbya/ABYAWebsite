@@ -2,7 +2,6 @@ import PageLayout from "~/components/common/PageLayout";
 import Heading2 from "~/components/common/textStyles/Heading2";
 import ContentContainer from "~/components/common/ContentContainer";
 import LeapsTitleSection from "~/components/ourEvent/ABYALeaps/LeapsTitleSection";
-import { BlogGrid } from "~/components/blog/BlogGrid";
 import { LEAPS_CONTENT } from "~/components/details/LeapsEventDetails";
 import { LEAPS_VALUES_DETAILS, LeapsOurValueCards } from "../../components/ourEvent/LeapsOurValueCards";
 
@@ -43,11 +42,7 @@ export default function ABYALeaps() {
                     <Heading2 className="capitalize">
                         See the previous events
                     </Heading2>
-                    <BlogGrid
-                        content={LEAPS_CONTENT}
-                        contentType="leaps"
-                        length={3}
-                    />
+                    .
                 </div>
             </ContentContainer>
         </PageLayout>

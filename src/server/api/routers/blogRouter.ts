@@ -1,0 +1,56 @@
+import { TagTag } from "@prisma/client";
+import { z } from "zod";
+
+import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
+
+export const blogRouter = createTRPCRouter({
+    retrieveThree: publicProcedure
+        .input(
+            z.object({
+                tag: z.string(),
+            }),
+        )
+        .query(async ({ ctx, input }) => {
+            const { tag } = input;
+            const post = await ctx.db.blog.findMany({
+                where: {
+                    tags: {
+                        some: {
+                            tag: {
+                                equals: tag as TagTag,
+                            },
+                        },
+                    },
+                },
+                take: 3,
+            });
+            if (!post || post.length === 0) {
+                throw new Error("Posts not found for this tag");
+            }
+            return post;  // No need for await here
+        }),
+    getAll: publicProcedure
+        .input(
+            z.object({
+                tag: z.string(),
+            }),
+        )
+        .query(async ({ ctx, input }) => {
+            const { tag } = input;
+            const post = await ctx.db.blog.findMany({
+                where: {
+                    tags: {
+                        some: {
+                            tag: {
+                                equals: tag as TagTag,
+                            },
+                        },
+                    },
+                },
+            });
+            if (!post || post.length === 0) {
+                throw new Error("Posts not found for this tag");
+            }
+            return post;  // No need for await here
+        }),
+});
