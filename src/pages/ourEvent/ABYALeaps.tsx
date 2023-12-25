@@ -45,7 +45,7 @@ export default function ABYALeaps() {
                         See the previous events
                     </Heading2>
                     <div className="grid grid-cols-1 gap-x-6 gap-y-2 md:grid-cols-2 md:gap-y-6 lg:grid-cols-3 lg:gap-y-8">
-                        {abyaleapsData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} image={blog.image ?? ""} imageAlt={blog.title} />))}
+                        {abyaleapsData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} href={blog.title} image={blog.image ?? ""} imageAlt={blog.title} />))}
                     </div>
                 </div>
             </ContentContainer>

@@ -53,4 +53,22 @@ export const blogRouter = createTRPCRouter({
             }
             return post;  // No need for await here
         }),
+    readByTitle: publicProcedure
+        .input(
+            z.object({
+                title: z.string(),
+            }),
+        )
+        .query(async ({ ctx, input }) => {
+            // const { title } = input;
+            const post = await ctx.db.blog.findUnique({
+                where: { title: input.title, },
+            });
+            if (!post) {
+                throw new Error("Post not found");
+            }
+            return post;
+        }),
 });
+
+

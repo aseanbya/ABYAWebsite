@@ -23,7 +23,7 @@ function CardCarouselComponent({
             <Image src={imageUrl} alt={""} width={800} height={800} className="rounded-lg" />
             <div className="flex flex-col justify-center gap-4">
                 <Heading3 className="uppercase">{name}</Heading3>
-                <BlueFilledButton href={href} type={"button"}>Learn More</BlueFilledButton>
+                <BlueFilledButton href={`/blog/${encodeURIComponent(href)}`} type={"button"}>Learn More</BlueFilledButton>
             </div>
         </div>
     );
@@ -35,7 +35,7 @@ export default function ABYALeapCarousel() {
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
             {abyaleapsData?.map((blog, i) => (
                 <SwiperSlide className="px-12">
-                    <CardCarouselComponent key={i} name={blog.title} href="" imageUrl={blog.image ?? ""} />
+                    <CardCarouselComponent key={i} name={blog.title} href={blog.title} imageUrl={blog.image ?? ""} />
                 </SwiperSlide>
             ))}
         </Swiper>
