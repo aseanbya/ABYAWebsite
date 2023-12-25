@@ -22,7 +22,7 @@ export default function blog() {
                     <ImpactReportSection />
                     <Heading2 className="uppercase">Experiences</Heading2>
                     <div className="grid grid-cols-1 gap-x-6 gap-y-2 md:grid-cols-2 md:gap-y-6 lg:grid-cols-3 lg:gap-y-8">
-                        {experiencesData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} image={blog.image as string} imageAlt={blog.title} />))}
+                        {experiencesData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} image={blog.image ?? ""} imageAlt={blog.title} />))}
                     </div>
                     <div className="flex w-full justify-center pb-6">
                         <BlueBorderButton type={"button"} href="/blog/experiences">See More</BlueBorderButton>
@@ -30,7 +30,7 @@ export default function blog() {
 
                     <Heading2 className="uppercase">PR Announcement</Heading2>
                     <div className="grid grid-cols-1 gap-x-6 gap-y-2 md:grid-cols-2 md:gap-y-6 lg:grid-cols-3 lg:gap-y-8">
-                        {prannouncementData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} image={blog.image as string} imageAlt={blog.title} />))}
+                        {prannouncementData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} image={blog.image ?? ""} imageAlt={blog.title} />))}
                     </div>
                     <div className="flex w-full justify-center pb-6">
                         <BlueBorderButton type={"button"} href="/blog/prannouncement">See More</BlueBorderButton>
@@ -38,7 +38,7 @@ export default function blog() {
 
                     <Heading2 className="uppercase">A Future in ASEAN Series</Heading2>
                     <div className="grid grid-cols-1 gap-x-6 gap-y-2 md:grid-cols-2 md:gap-y-6 lg:grid-cols-3 lg:gap-y-8">
-                        {futureinaseanData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} image={blog.image as string} imageAlt={blog.title} />))}
+                        {futureinaseanData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} image={blog.image ?? ""} imageAlt={blog.title} />))}
                     </div>
                     <div className="flex w-full justify-center">
                         <BlueBorderButton type={"button"} href="/blog/futureInAsean">See More</BlueBorderButton>

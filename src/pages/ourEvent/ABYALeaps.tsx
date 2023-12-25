@@ -2,10 +2,12 @@ import PageLayout from "~/components/common/PageLayout";
 import Heading2 from "~/components/common/textStyles/Heading2";
 import ContentContainer from "~/components/common/ContentContainer";
 import LeapsTitleSection from "~/components/ourEvent/ABYALeaps/LeapsTitleSection";
-import { LEAPS_CONTENT } from "~/components/details/LeapsEventDetails";
 import { LEAPS_VALUES_DETAILS, LeapsOurValueCards } from "../../components/ourEvent/LeapsOurValueCards";
+import { api } from "~/utils/api";
+import { BlogCard } from "~/components/blog/BlogCard";
 
 export default function ABYALeaps() {
+    const { data: abyaleapsData } = api.blog.retrieveThree.useQuery({ tag: "ABYA_LEAPS" });
     return (
         <PageLayout>
             <LeapsTitleSection />
@@ -42,10 +44,12 @@ export default function ABYALeaps() {
                     <Heading2 className="capitalize">
                         See the previous events
                     </Heading2>
-                    .
+                    <div className="grid grid-cols-1 gap-x-6 gap-y-2 md:grid-cols-2 md:gap-y-6 lg:grid-cols-3 lg:gap-y-8">
+                        {abyaleapsData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} image={blog.image ?? ""} imageAlt={blog.title} />))}
+                    </div>
                 </div>
             </ContentContainer>
-        </PageLayout>
+        </PageLayout >
     );
 }
 

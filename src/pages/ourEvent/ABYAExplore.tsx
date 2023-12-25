@@ -2,8 +2,11 @@ import PageLayout from "~/components/common/PageLayout";
 import Heading2 from "~/components/common/textStyles/Heading2";
 import ContentContainer from "~/components/common/ContentContainer";
 import ExploreTitleSection from "~/components/ourEvent/ABYAExplore/ExploreTitleSection";
+import { api } from "~/utils/api";
+import { BlogCard } from "~/components/blog/BlogCard";
 
 export default function ABYAExplore() {
+    const { data: abyaexploreData } = api.blog.retrieveThree.useQuery({ tag: "ABYA_EXPLORE" });
     return (
         <PageLayout>
             <ExploreTitleSection />
@@ -22,8 +25,12 @@ export default function ABYAExplore() {
                         issues, ABYA hopes to broaden the youths’ macro-knowledge of
                         business and cultures of the region.
                     </p>
-                    <Heading2>See the previous events</Heading2>
-                    asd
+                    <Heading2 className="capitalize">
+                        See the previous events
+                    </Heading2>
+                    <div className="grid grid-cols-1 gap-x-6 gap-y-2 md:grid-cols-2 md:gap-y-6 lg:grid-cols-3 lg:gap-y-8">
+                        {abyaexploreData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} image={blog.image ?? ""} imageAlt={blog.title} />))}
+                    </div>
                 </div>
             </ContentContainer>
         </PageLayout>

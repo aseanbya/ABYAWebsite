@@ -26,7 +26,7 @@ export default function experiences() {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 gap-x-6 gap-y-2 md:grid-cols-2 md:gap-y-6 lg:grid-cols-3 lg:gap-y-8">
-                    {experiencesData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} image={blog.image as string} imageAlt={blog.title} />))}
+                    {experiencesData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} image={blog.image ?? ""} imageAlt={blog.title} />))}
                 </div>
             </ContentContainer>
         </PageLayout>

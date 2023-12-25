@@ -35,7 +35,7 @@ export default function ABYAExploreCarousel() {
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
             {abyaexploreData?.map((blog, i) => (
                 <SwiperSlide className="px-12">
-                    <CardCarouselComponent key={i} name={blog.title} href="" imageUrl={blog.image as string} />
+                    <CardCarouselComponent key={i} name={blog.title} href="" imageUrl={blog.image ?? ""} />
                 </SwiperSlide>
             ))}
         </Swiper>
