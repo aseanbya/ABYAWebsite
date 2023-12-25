@@ -15,7 +15,7 @@ function LearnMoreButton() {
 
 export default function Statistics() {
     return (
-        <div className="hero max-h-fit bg-cover" style={{ backgroundImage: "url(ABYAteam.jpg)" }}>
+        <div className="hero max-h-fit bg-cover" style={{ backgroundImage: "url(https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/IndexStatistics.jpg?alt=media&token=fd9a8a7e-3835-4aac-a78b-7a3356a5053c)" }}>
             <div
                 className="hero-overlay"
                 style={{

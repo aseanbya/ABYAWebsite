@@ -12,10 +12,10 @@ export default function Navbar() {
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-white rounded-box w-52">
                         <li><Link href="/"> Home </Link></li>
+                        <li><Link href="/aboutUs"> About Us </Link></li>
                         <li><Link href="/getInvolved"> Get Involved </Link></li>
                         <li><Link href="/event"> Our Events </Link></li>
                         <li><Link href="/ourSupporters"> Our Supporters </Link></li>
-                        <li><Link href="/aboutUs"> About Us </Link></li>
                         <li><Link href="/blog"> Blog </Link></li>
                     </ul>
                 </div>
@@ -31,10 +31,10 @@ export default function Navbar() {
             <div className="navbar-end w-full hidden lg:flex">
                 <ul className="menu menu-horizontal">
                     <li><Link href="/"> Home </Link></li>
+                    <li><Link href="/aboutUs"> About Us </Link></li>
                     <li><Link href="/getInvolved"> Get Involved </Link></li>
                     <li><Link href="/ourEvent"> Our Events </Link></li>
                     <li><Link href="/ourSupporters"> Our Supporters </Link></li>
-                    <li><Link href="/aboutUs"> About Us </Link></li>
                     <li><Link href="/blog"> Blog </Link></li>
                 </ul>
             </div>

@@ -1,21 +1,65 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-    provider     = "mysql"
-    url          = env("DATABASE_URL")
-    relationMode = "prisma"
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
-model Post {
-    id        Int      @id @default(autoincrement())
-    name      String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+model Blog {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  author    String
+  content   String?  @db.Text
+  image     String?  @db.Text
+  title     String   @unique
+  views     Int      @default(0)
+  tags      Tag[]
 
-    @@index([name])
+  @@index([title])
+}
+
+model Tag {
+  id   String @id @default(cuid())
+  tag  TagTag
+  post Blog[]
+}
+
+enum TagTag {
+  EXPERIENCES
+  PR_ANNOUNCEMENT
+  A_FUTURE_IN_ASEAN_SERIES
+  ABYA_EXPLORE
+  ABYA_LEAPS
+}
+
+enum TeamLevel {
+  MANAGEMENT
+  ADVISORYBOARD
+  EXECUTIVES
+}
+
+model Team {
+  id       String    @id @default(cuid())
+  name     String    @db.Text
+  position String    @db.Text
+  level    TeamLevel
+  image    String    @db.Text
+}
+
+model Testimonial {
+  id       String @id @default(cuid())
+  name     String @db.Text
+  position String @db.Text
+  quote    String @db.Text
+}
+
+model HearFromOurCommunity {
+  id       String @id @default(cuid())
+  name     String @db.Text
+  position String @db.Text
+  quote    String @db.Text
 }

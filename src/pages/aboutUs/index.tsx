@@ -1,10 +1,10 @@
-import Hero from "~/components/aboutUs/Hero";
 import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
 import MeetTheTeam from "../../components/aboutUs/MeetTheTeam";
 import OurCommunity from "~/components/common/OurCommunity";
 import AboutUsHero from "~/components/aboutUs/AboutUsHero";
 import HaveQuestions from "~/components/aboutUs/HaveQuestions";
+import Hero from "~/components/aboutUs/Hero";
 
 export default function AboutUs() {
     return (

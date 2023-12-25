@@ -44,7 +44,8 @@
     "**/*.cjs",
     "**/*.js",
     ".next/types/**/*.ts",
-    "src/components/common/buttons"
+    "src/components/common/buttons",
+    "next.config.mjs"
   ],
   "exclude": [
     "node_modules"

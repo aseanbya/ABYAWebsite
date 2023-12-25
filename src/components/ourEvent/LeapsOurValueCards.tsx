@@ -1,4 +1,20 @@
-import type { ValueContent } from "../ourEvent/ABYALeaps/LeapsOurValueSection";
+import Heading3 from "~/components/common/textStyles/Heading3";
+
+type ValueContent = {
+    title: string;
+    content: string;
+};
+
+export function LeapsOurValueCards({ title, content }: ValueContent) {
+    return (
+        <div className="card border-2 border-brandBlue">
+            <div className="card-body">
+                <Heading3>{title}</Heading3>
+                <p>{content}</p>
+            </div>
+        </div>
+    );
+}
 
 export const LEAPS_VALUES_DETAILS: ValueContent[] = [
     {

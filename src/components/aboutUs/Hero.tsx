@@ -4,7 +4,7 @@ export default function Hero() {
     return (
         <div
             className="hero h-screen max-h-screen bg-cover sm:max-h-[36rem]"
-            style={{ backgroundImage: "url(ABYAteam2.png)" }}
+            style={{ backgroundImage: "url(https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/AboutUsHero.png?alt=media&token=146a08b8-7d44-4596-bce1-7ceb6a6217ea)" }}
         >
             <div
                 className="hero-overlay"

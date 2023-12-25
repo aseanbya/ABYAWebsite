@@ -1,16 +1,15 @@
-import CommonButton from "../common/buttons/BlueFilledButton"
+import WhiteBorderButton from "../common/buttons/WhiteBorderButton"
 import Heading1 from "../common/textStyles/Heading1"
 
 function ContactUsButton() {
     return (
-        <CommonButton
+        <WhiteBorderButton
             href={""}
-            type={"button"}
-            className="bg-transparent text-white hover:bg-neutral-600 mt-7">
+            type={"button"}>
             <p className="uppercase">
                 Contact Us
             </p>
-        </CommonButton>
+        </WhiteBorderButton>
     )
 }
 
@@ -19,10 +18,10 @@ export default function HaveQuestions() {
         <div>
             <div
                 className="hero h-screen max-h-screen bg-cover sm:max-h-[36rem]"
-                style={{ backgroundImage: "url(testimonialBG2.jpg)" }}
+                style={{ backgroundImage: "url(https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/HaveAnyQuestions.jpg?alt=media&token=6cc195fd-dd8e-4c01-a060-8b73ecbec263)" }}
             >
                 <div className="hero-content">
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col gap-5 items-center">
                         <Heading1 className="text-5xl font-bold text-brandYellow">
                             Have any questions?
                         </Heading1>
