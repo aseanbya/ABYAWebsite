@@ -1,7 +1,7 @@
 import React from "react";
 import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
-import { ImpactReportSection } from "../../components/blog/ImpactReportSection";
+
 import ContentContainer from "~/components/common/ContentContainer";
 import Heading2 from "~/components/common/textStyles/Heading2";
 import BlueBorderButton from "~/components/common/buttons/BlueBorderButton";
@@ -19,7 +19,7 @@ export default function blog() {
             </PageTitleSection>
             <ContentContainer>
                 <div className="mb-8 flex flex-col gap-8">
-                    <ImpactReportSection />
+
                     <Heading2 className="uppercase">Experiences</Heading2>
                     <div className="grid grid-cols-1 gap-x-6 gap-y-2 md:grid-cols-2 md:gap-y-6 lg:grid-cols-3 lg:gap-y-8">
                         {experiencesData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} image={blog.image ?? ""} href={blog.title} imageAlt={blog.title} />))}

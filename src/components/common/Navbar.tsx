@@ -4,7 +4,6 @@ import logo from 'src/assets/logo.png'
 
 export default function Navbar() {
     return (
-
         <div className="drawer">
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col">
@@ -28,45 +27,37 @@ export default function Navbar() {
                     <div className="flex-none  hidden lg:block">
                         <ul className="menu menu-horizontal">
                             <li><Link href="/"> Home </Link></li>
-                            <li>
-                                <details>
-                                    <summary><Link href="/aboutUs"> About Us </Link></summary>
-                                    <ul className="bg-base-100 p-2">
-                                        <li><Link href="/aboutUs/ABYAHistory">ABYA History</Link></li>
-                                        <li><Link href="/aboutUs/ourImpact">Our Impact</Link></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li>
-                                <details>
-                                    <summary><Link href="/getInvolved">Get Involved</Link></summary>
-                                    <ul className="bg-base-100 p-2">
-                                        <li><Link href="/getInvolved/member">As a Member</Link></li>
-                                        <li><Link href="/getInvolved/executive">As an Executive</Link></li>
-                                        <li><Link href="/getInvolved/partner">As a Partner</Link></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li>
-                                <details>
-                                    <summary><Link href="/ourEvent">Our Events</Link></summary>
-                                    <ul className="bg-base-100 p-2">
-                                        <li><Link href="/ourEvent/ABYALeaps">ABYA Leaps</Link></li>
-                                        <li><Link href="/ourEvent/ABYAExplore">ABYA Explore</Link></li>
-                                    </ul>
-                                </details>
-                            </li>
+                            <li><details>
+                                <summary><Link href="/aboutUs"> About Us </Link></summary>
+                                <ul className="bg-base-100 p-2">
+                                    <li><Link href="/aboutUs/ABYAHistory">ABYA History</Link></li>
+                                    <li><Link href="/aboutUs/ourImpact">Our Impact</Link></li>
+                                </ul>
+                            </details></li>
+                            <li><details>
+                                <summary><Link href="/getInvolved">Get Involved</Link></summary>
+                                <ul className="bg-base-100 p-2">
+                                    <li><Link href="/getInvolved/member">As a Member</Link></li>
+                                    <li><Link href="/getInvolved/executive">As an Executive</Link></li>
+                                    <li><Link href="/getInvolved/partner">As a Partner</Link></li>
+                                </ul>
+                            </details></li>
+                            <li><details>
+                                <summary><Link href="/ourEvent">Our Events</Link></summary>
+                                <ul className="bg-base-100 p-2">
+                                    <li><Link href="/ourEvent/ABYALeaps">ABYA Leaps</Link></li>
+                                    <li><Link href="/ourEvent/ABYAExplore">ABYA Explore</Link></li>
+                                </ul>
+                            </details></li>
                             <li><Link href="/ourSupporters"> Our Supporters </Link></li>
-                            <li>
-                                <details>
-                                    <summary><Link href="/blog">Blog</Link></summary>
-                                    <ul className="bg-base-100 p-2">
-                                        <li><Link href="/blog/prannouncement">PR Announcement</Link></li>
-                                        <li><Link href="/blog/experiences">Experiences</Link></li>
-                                        <li><Link href="/blog/futureInAsean">Future in ASEAN Series</Link></li>
-                                    </ul>
-                                </details>
-                            </li>
+                            <li><details>
+                                <summary><Link href="/blog">Blog</Link></summary>
+                                <ul className="bg-base-100 p-2">
+                                    <li><Link href="/blog/prannouncement">PR Announcement</Link></li>
+                                    <li><Link href="/blog/experiences">Experiences</Link></li>
+                                    <li><Link href="/blog/futureInAsean">Future in ASEAN Series</Link></li>
+                                </ul>
+                            </details></li>
                         </ul>
                     </div>
                 </div>
