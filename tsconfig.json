@@ -34,7 +34,8 @@
       "~/*": [
         "./src/*"
       ]
-    }
+    },
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     ".eslintrc.cjs",

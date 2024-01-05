@@ -25,7 +25,7 @@ export default function OurCommunity() {
                     >
                         {cardData.map((componentDetails, i) => (
                             <SwiperSlide >
-                                <CardCarouselComponent key={i} {...componentDetails} />
+                                <CardCarouselComponent key={btoa(componentDetails.name)} {...componentDetails} />
                             </SwiperSlide>
                         ))}
                     </Swiper>
