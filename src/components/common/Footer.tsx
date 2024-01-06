@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
     return (
         <footer className="footer footer-center bg-brandBlue-70 p-10 text-white">
@@ -13,9 +15,11 @@ export default function Footer() {
                         updates.
                     </p>
                 </div>
-                <button className="btn border border-red-500 bg-red-500 hover:border-brandYellow hover:bg-brandYellow">
-                    Subscribe
-                </button>
+                <Link href={"https://airtable.com/appt5opZxZjWqQd1s/shrj1flTgvURknuKr"}>
+                    <button className="btn border border-red-500 bg-red-500 hover:border-brandYellow hover:bg-brandYellow">
+                        Subscribe
+                    </button>
+                </Link>
             </div>
             <div>
                 <div className="grid grid-flow-col gap-4">

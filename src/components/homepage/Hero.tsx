@@ -7,7 +7,7 @@ import Heading1 from "../common/textStyles/Heading1"
 function GetInvolvedButton() {
     return (
         <BlueFilledButton
-            href={""}
+            href="/getInvolved"
             type={"button"}>
             <p className="uppercase">
                 Get Involved

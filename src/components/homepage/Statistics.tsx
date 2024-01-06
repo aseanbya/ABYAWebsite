@@ -7,7 +7,7 @@ import Heading4 from "../common/textStyles/Heading4";
 
 function LearnMoreButton() {
     return (
-        <WhiteBorderButton href={""} type={"button"}>
+        <WhiteBorderButton href="/aboutUs/ourImpact" type={"button"}>
             Learn More About <span className="whitespace-nowrap">Our Impact</span>
         </WhiteBorderButton>
     );
