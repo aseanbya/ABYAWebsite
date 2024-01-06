@@ -5,7 +5,7 @@ import Heading3 from "../common/textStyles/Heading3";
 import Image from "next/image"
 
 function AboutUsButton() {
-    return (<BlueBorderButton type="button">About Us</ BlueBorderButton >);
+    return (<BlueBorderButton type="button" href="/aboutUs">About Us</ BlueBorderButton >);
 }
 
 function LearnMoreButton() {
@@ -41,9 +41,9 @@ function CardComponent({ quote, title }: CardComponentProps) {
             <div className="flex items-start">
                 <p>{quote}</p>
             </div>
-            <div className="flex items-end pt-2">
+            {/* <div className="flex items-end pt-2">
                 <LearnMoreButton />
-            </div>
+            </div> */}
         </div>
     );
 }
@@ -55,7 +55,7 @@ export default function AboutUs() {
                 <Image src={"https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/IndexEstablishedDate.png?alt=media&token=311fe441-2f50-4c38-93b3-fb4ecec1eaba"} width={1600} height={1600} alt={""} />
                 <div className="gap-3 flex flex-col justify-center">
                     <Heading2 className="font-semibold">
-                        Established in XXXX
+                        Established in 2020
                     </Heading2>
                     <p>
                         Proident nisi enim aute aliquip ullamco duis eiusmod
