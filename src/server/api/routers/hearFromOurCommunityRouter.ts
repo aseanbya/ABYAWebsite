@@ -1,7 +1,7 @@
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
-export const testimonialRouter = createTRPCRouter({
+export const hearFromOurCommunityRouter = createTRPCRouter({
     getAll: publicProcedure.query(({ ctx }) => {
-        return ctx.db.testimonial.findMany();
+        return ctx.db.hearFromOurCommunity.findMany();
     }),
 });

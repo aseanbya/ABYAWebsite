@@ -2,8 +2,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
+import { api } from '~/utils/api';
 
 export default function OurCommunity() {
+    const { data } = api.hearFromOurCommunity.getAll.useQuery();
     return (
         <div
             className="relative bg-cover bg-center pb-24 pt-16"
@@ -23,9 +25,9 @@ export default function OurCommunity() {
                             disableOnInteraction: false,
                         }}
                     >
-                        {cardData.map((componentDetails, i) => (
+                        {data?.map((data) => (
                             <SwiperSlide >
-                                <CardCarouselComponent key={btoa(componentDetails.name)} {...componentDetails} />
+                                <CardCarouselComponent key={data?.id} name={data?.name} quote={data?.quote} title={data?.position} />
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -41,11 +43,7 @@ type CardCarouselComponentProps = {
     title: string;
 };
 
-function CardCarouselComponent({
-    name,
-    quote,
-    title,
-}: CardCarouselComponentProps) {
+function CardCarouselComponent({ name, quote, title, }: CardCarouselComponentProps) {
     return (
         <div className="flex justify-center pb-4">
             <div className="card flex h-1/2 w-2/3 justify-center border border-brandYellow">
@@ -58,21 +56,3 @@ function CardCarouselComponent({
         </div>
     );
 }
-
-const cardData = [
-    {
-        name: "Udin",
-        quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor magna aliquet mollis accumsan. Mauris faucibus molestie fringilla. Ut quis sodales lorem, eu dictum turpis. Mauris consectetur lacus non risus sodales, at dictum nisi dapibus. Aenean vehicula eleifend ante luctus feugiat. Phasellus lacinia nisi vitae lectus rhoncus elementum. Morbi vehicula fringilla vulputate.",
-        title: "ABYA Member",
-    },
-    {
-        name: "Nadia",
-        quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor magna aliquet mollis accumsan. Mauris faucibus molestie fringilla. Ut quis sodales lorem, eu dictum turpis. Mauris consectetur lacus non risus sodales, at dictum nisi dapibus. Aenean vehicula eleifend ante luctus feugiat. Phasellus lacinia nisi vitae lectus rhoncus elementum. Morbi vehicula fringilla vulputate.",
-        title: "ABYA Member",
-    },
-    {
-        name: "Lyssa",
-        quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor magna aliquet mollis accumsan. Mauris faucibus molestie fringilla. Ut quis sodales lorem, eu dictum turpis. Mauris consectetur lacus non risus sodales, at dictum nisi dapibus. Aenean vehicula eleifend ante luctus feugiat. Phasellus lacinia nisi vitae lectus rhoncus elementum. Morbi vehicula fringilla vulputate.",
-        title: "ABYA Executive",
-    },
-];

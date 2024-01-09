@@ -1,15 +1,7 @@
+import { ClockIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import Image from "next/image"
-import { ClockIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
-
-export type BlogContent = {
-    title: string;
-    date: Date;
-    image?: string;
-    imageAlt?: string;
-    href?: string;
-};
 
 export const BlogCard: React.FC<BlogContent> = ({ title, image, imageAlt, date, href }) => {
     const formattedDate = Intl.DateTimeFormat("en-US", {
@@ -31,4 +23,12 @@ export const BlogCard: React.FC<BlogContent> = ({ title, image, imageAlt, date, 
             </div>
         </Link>
     );
+};
+
+export type BlogContent = {
+    title: string;
+    date: Date;
+    image?: string;
+    imageAlt?: string;
+    href?: string;
 };

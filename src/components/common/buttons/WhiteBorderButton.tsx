@@ -1,17 +1,6 @@
 import Link from "next/link";
 
-type ButtonProps = {
-    href?: string;
-    type: "button" | "submit" | "reset";
-} & React.HTMLAttributes<HTMLButtonElement>;
-
-const Button: React.FC<ButtonProps> = ({
-    children,
-    href,
-    type,
-    className,
-    ...rest
-}) => {
+export default function Button({ children, href, type, className, ...rest }: ButtonProps) {
     return (
         <button
             className={`w-fit border-2 py-1 px-2 rounded-xl bg-transparent transition hover:bg-neutral-600 ${className ?? ""}`}
@@ -23,4 +12,7 @@ const Button: React.FC<ButtonProps> = ({
     );
 };
 
-export default Button;
+type ButtonProps = {
+    href?: string;
+    type: "button" | "submit" | "reset";
+} & React.HTMLAttributes<HTMLButtonElement>;
