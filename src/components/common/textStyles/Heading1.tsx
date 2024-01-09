@@ -1,10 +1,5 @@
 import type { ReactNode } from "react";
 
-type Heading1Props = {
-    children: ReactNode;
-    className?: string;
-};
-
 export default function Heading1(props: Heading1Props) {
     return (
         <p className={`text-5xl font-bold sm:text-6xl md:text-7xl ${props.className ?? ""}`}>
@@ -12,3 +7,8 @@ export default function Heading1(props: Heading1Props) {
         </p>
     )
 }
+
+type Heading1Props = {
+    children: ReactNode;
+    className?: string;
+};

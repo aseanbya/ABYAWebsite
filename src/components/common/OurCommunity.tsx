@@ -1,8 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
+
+import { api } from '~/utils/api';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation, Autoplay } from 'swiper/modules';
-import { api } from '~/utils/api';
 
 export default function OurCommunity() {
     const { data } = api.hearFromOurCommunity.getAll.useQuery();

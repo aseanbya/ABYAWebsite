@@ -4,14 +4,6 @@ import Heading2 from "../common/textStyles/Heading2";
 import Heading3 from "../common/textStyles/Heading3";
 import Image from "next/image"
 
-function AboutUsButton() {
-    return (<BlueBorderButton type="button" href="/aboutUs">About Us</ BlueBorderButton >);
-}
-
-function LearnMoreButton() {
-    return (<BlueBorderButton type="button">Learn More</BlueBorderButton>);
-}
-
 const CARD_DETAILS = [
     {
         title: "Advocacy",
@@ -26,27 +18,6 @@ const CARD_DETAILS = [
         quote: "Provide a platform for exposure surrounding business & cross-cultural competence in the ASEAN region",
     },
 ];
-
-type CardComponentProps = {
-    title: string;
-    quote: string;
-};
-
-function CardComponent({ quote, title }: CardComponentProps) {
-    return (
-        <div className="grid grid-col-1 gap-3 rounded-2xl border-2 border-brandYellow-50 p-4">
-            <div className="flex w-full justify-center items-center h-20">
-                <Heading3 className="text-center font-semibold uppercase text-brandBlue">{title}</Heading3>
-            </div>
-            <div className="flex items-start">
-                <p>{quote}</p>
-            </div>
-            {/* <div className="flex items-end pt-2">
-                <LearnMoreButton />
-            </div> */}
-        </div>
-    );
-}
 
 export default function AboutUs() {
     return (
@@ -74,5 +45,34 @@ export default function AboutUs() {
                 ))}
             </div>
         </ContentContainer>
+    );
+}
+
+function AboutUsButton() {
+    return (<BlueBorderButton type="button" href="/aboutUs">About Us</ BlueBorderButton >);
+}
+
+function LearnMoreButton() {
+    return (<BlueBorderButton type="button">Learn More</BlueBorderButton>);
+}
+
+type CardComponentProps = {
+    title: string;
+    quote: string;
+};
+
+function CardComponent({ quote, title }: CardComponentProps) {
+    return (
+        <div className="grid grid-col-1 gap-3 rounded-2xl border-2 border-brandYellow-50 p-4">
+            <div className="flex w-full justify-center items-center h-20">
+                <Heading3 className="text-center font-semibold uppercase text-brandBlue">{title}</Heading3>
+            </div>
+            <div className="flex items-start">
+                <p>{quote}</p>
+            </div>
+            {/* <div className="flex items-end pt-2">
+                <LearnMoreButton />
+            </div> */}
+        </div>
     );
 }

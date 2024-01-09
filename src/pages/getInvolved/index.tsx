@@ -9,15 +9,7 @@ export default function GetInvolved() {
     return (
         <PageLayout>
             <PageTitleSection title={"Get Involved"}>
-                <p>
-                    Amet ex ipsum adipisicing. Consectetur veniam officia
-                    pariatur officia in et dolor ex sint consectetur. Dolor
-                    aliqua ipsum et labore est. Enim ea tempor quis sint eu non
-                    commodo non id anim id non laborum labore. Veniam consequat
-                    pariatur duis. Dolor ut laborum in et esse anim commodo eu
-                    minim pariatur officia pariatur sit non. Sit aliquip anim
-                    sunt eiusmod proident labore Lorem est sit aliqua sunt minim minim occaecat ut.
-                </p>
+                <p>Pariatur irure consequat consectetur aliquip ad ea laborum exercitation. Cillum nisi aliquip tempor Lorem. Aliquip est ea non minim. Velit occaecat nulla excepteur dolore nisi sit ex incididunt laborum aliquip. Aliquip esse dolore eiusmod velit ipsum eiusmod incididunt id exercitation voluptate duis adipisicing minim occaecat.</p>
             </PageTitleSection>
             <ContentContainer>
                 <Statistics />

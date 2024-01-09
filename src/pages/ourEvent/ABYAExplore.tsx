@@ -13,21 +13,8 @@ export default function ABYAExplore() {
             <ContentContainer>
                 <div className="flex flex-col gap-8">
                     <Heading2>What is ABYA Explore?</Heading2>
-                    <p>
-                        ABYA Explore provides a series of sharing and networking
-                        sessions that enable ASEAN youths to engage with, and be
-                        inspired, by industry professionals. In line with ABYA’s
-                        commitment to its vision and mission, ABYA Explore was conducted
-                        in the form of webinars, small-group networking sessions with
-                        professionals and business leaders in ASEAN. ABYA Explore
-                        imparts insights and knowledge to the youth on current industry
-                        trends across ASEAN. By gaining different perspectives on these
-                        issues, ABYA hopes to broaden the youths’ macro-knowledge of
-                        business and cultures of the region.
-                    </p>
-                    <Heading2 className="capitalize">
-                        See the previous events
-                    </Heading2>
+                    <p>ABYA Explore provides a series of sharing and networkingsessions that enable ASEAN youths to engage with, and be inspired, by industry professionals. In line with ABYA&apos;s commitment to its vision and mission, ABYA Explore was conducted in the form of webinars, small-group networking sessions with professionals and business leaders in ASEAN. ABYA Explore imparts insights and knowledge to the youth on current industry trends across ASEAN. By gaining different perspectives on these issues, ABYA hopes to broaden the youths&apos; macro-knowledge of business and cultures of the region.</p>
+                    <Heading2 className="capitalize">See the previous events</Heading2>
                     <div className="grid grid-cols-1 gap-x-6 gap-y-2 md:grid-cols-2 md:gap-y-6 lg:grid-cols-3 lg:gap-y-8">
                         {abyaexploreData?.map((blog) => (<BlogCard key={blog.id} date={blog.createdAt} title={blog.title} href={blog.title} image={blog.image ?? ""} imageAlt={blog.title} />))}
                     </div>
