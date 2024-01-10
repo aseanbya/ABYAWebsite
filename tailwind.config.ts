@@ -1,9 +1,7 @@
 import { type Config } from "tailwindcss";
 
 export default {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -52,8 +50,7 @@ export default {
       },
     },
   },
-  plugins: [require("daisyui")],
-
+  plugins: [require("daisyui"), require("@tailwindcss/typography")],
   daisyui: {
     themes: ["light"], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
     darkTheme: "dark", // name of one of the included themes for dark mode
