@@ -17,9 +17,7 @@ const options = {
 };
 
 const resizeObserverOptions = {};
-
-const maxWidth = 800;
-
+const maxWidth = 700;
 type PDFFile = string | File | null;
 
 export default function Sample() {
@@ -32,91 +30,49 @@ export default function Sample() {
 
     const onResize = useCallback<ResizeObserverCallback>((entries) => {
         const [entry] = entries;
-
-        if (entry) {
-            setContainerWidth(entry.contentRect.width);
-        }
+        if (entry) { setContainerWidth(entry.contentRect.width); }
     }, []);
 
     useResizeObserver(containerRef, resizeObserverOptions, onResize);
 
     function onFileChange(event: React.ChangeEvent<HTMLInputElement>): void {
         const { files } = event.target;
-
-        if (files?.[0]) {
-            setFile(files[0] || null);
-        }
+        if (files?.[0]) { setFile(files[0] || null); }
     }
 
-    function onDocumentLoadSuccess({
-        numPages: nextNumPages,
-    }: PDFDocumentProxy): void {
-        setNumPages(nextNumPages);
-    }
+    function onDocumentLoadSuccess({ numPages: nextNumPages, }: PDFDocumentProxy): void { setNumPages(nextNumPages); }
 
-    function changePage(offset: number) {
-        setPageNumber((prevPageNumber) => prevPageNumber + offset);
-    }
+    function changePage(offset: number) { setPageNumber((prevPageNumber) => prevPageNumber + offset); }
 
-    function previousPage() {
-        changePage(-1);
-    }
+    function previousPage() { changePage(-1); }
 
-    function nextPage() {
-        changePage(1);
-    }
+    function nextPage() { changePage(1); }
 
     return (
         <div className="Example">
-            <header>
-                <h1>react-pdf sample page</h1>
-            </header>
             <div className="mx-2 flex flex-col items-center p-2">
                 {/* FOR TESTING: Should not allow users to choose input file - can remove */}
                 <div className="mt-1 flex flex-col justify-center gap-2">
                     {/* <label htmlFor="file">Load from file:</label>{" "}
-          <input
-            onChange={onFileChange}
-            type="file"
-            className="file-input file-input-bordered file-input-primary w-full max-w-xs"
-          /> */}
-                    <h1 className="text-center text-lg font-semibold">
-                        Page {pageNumber || (numPages ? 1 : "--")} of {numPages ?? "--"}
-                    </h1>
+                    <input
+                        onChange={onFileChange}
+                        type="file"
+                        className="file-input file-input-bordered file-input-primary w-full max-w-xs"
+                    /> */}
+                    <h1 className="text-center text-lg font-semibold">Page {pageNumber || (numPages ? 1 : "--")} of {numPages ?? "--"}</h1>
                     <div className="flex gap-2 lg:gap-12">
-                        <button
-                            disabled={pageNumber <= 1}
-                            onClick={previousPage}
-                            className="btn"
-                        >
-                            Prev
-                        </button>
-                        <button
-                            disabled={numPages ? pageNumber >= numPages : false}
-                            onClick={nextPage}
-                            className="btn"
-                        >
-                            Next
-                        </button>
+                        <button disabled={pageNumber <= 1} onClick={previousPage} className="btn">{"<"}</button>
+                        <button disabled={numPages ? pageNumber >= numPages : false} onClick={nextPage} className="btn">{">"}</button>
                     </div>
                 </div>
-                <div
-                    className="m-w-[calc(100%-2em)] h-screen w-full"
-                    ref={setContainerRef}
-                >
+                <div className="m-w-[calc(100%-2em)] h-screen w-full" ref={setContainerRef}>
                     <Document
                         file={file}
                         onLoadSuccess={onDocumentLoadSuccess}
                         options={options}
                         className="flex flex-col items-center"
                     >
-                        <Page
-                            pageNumber={pageNumber}
-                            width={
-                                containerWidth ? Math.min(containerWidth, maxWidth) : maxWidth
-                            }
-                            className="m-2 shadow-md"
-                        />
+                        <Page pageNumber={pageNumber} width={containerWidth ? Math.min(containerWidth, maxWidth) : maxWidth} className="m-2 shadow-md" />
                     </Document>
                 </div>
             </div>

@@ -9,7 +9,7 @@ export default function GetInvolved() {
     return (
         <PageLayout>
             <PageTitleSection title={"Get Involved"}>
-                <p>Pariatur irure consequat consectetur aliquip ad ea laborum exercitation. Cillum nisi aliquip tempor Lorem. Aliquip est ea non minim. Velit occaecat nulla excepteur dolore nisi sit ex incididunt laborum aliquip. Aliquip esse dolore eiusmod velit ipsum eiusmod incididunt id exercitation voluptate duis adipisicing minim occaecat.</p>
+                <p>At the ASEAN Business Youth Association, we&apos;re always on the lookout for synergies – whether you&apos;re an undergraduate, young professional, or in senior management, we&apos;ve got a place for you.</p>
             </PageTitleSection>
             <ContentContainer>
                 <Statistics />
