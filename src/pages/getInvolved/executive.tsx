@@ -2,7 +2,6 @@ import ContentContainer from "~/components/common/ContentContainer";
 import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
 import Heading3 from "~/components/common/textStyles/Heading3";
-import { ApplicationForm } from "~/components/getInvolved/ApplicationForm";
 import ExecutiveRoles from "~/components/getInvolved/executive/ExecutiveRoles";
 import ExecutiveStatistics from "~/components/getInvolved/executive/ExecutiveStatistics";
 
@@ -16,7 +15,6 @@ export default function Home() {
                 <ExecutiveStatistics />
                 <Heading3 className="">Get to know each role</Heading3>
                 <ExecutiveRoles />
-                <ApplicationForm />
             </ContentContainer>
         </PageLayout>
     );
