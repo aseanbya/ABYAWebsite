@@ -46,8 +46,9 @@
     "**/*.js",
     ".next/types/**/*.ts",
     "src/components/common/buttons",
-    "next.config.mjs"
-, "src/components/pdf-sample.tsx"  ],
+    "next.config.mjs",
+    "src/components/blog/AnnualImpactReport2022.tsx"
+  ],
   "exclude": [
     "node_modules"
   ]

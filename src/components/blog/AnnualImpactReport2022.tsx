@@ -20,14 +20,12 @@ const resizeObserverOptions = {};
 const maxWidth = 700;
 type PDFFile = string | File | null;
 
-export default function Sample() {
+export default function AnnualImpactReport2022() {
     const [file, setFile] = useState<PDFFile>("/pdfs/report.pdf");
     const [numPages, setNumPages] = useState<number>();
     const [pageNumber, setPageNumber] = useState(1);
-
     const [containerRef, setContainerRef] = useState<HTMLElement | null>(null);
     const [containerWidth, setContainerWidth] = useState<number>();
-
     const onResize = useCallback<ResizeObserverCallback>((entries) => {
         const [entry] = entries;
         if (entry) { setContainerWidth(entry.contentRect.width); }
@@ -36,11 +34,8 @@ export default function Sample() {
     useResizeObserver(containerRef, resizeObserverOptions, onResize);
 
     function onDocumentLoadSuccess({ numPages: nextNumPages, }: PDFDocumentProxy): void { setNumPages(nextNumPages); }
-
     function changePage(offset: number) { setPageNumber((prevPageNumber) => prevPageNumber + offset); }
-
     function previousPage() { changePage(-1); }
-
     function nextPage() { changePage(1); }
 
     return (
@@ -56,9 +51,9 @@ export default function Sample() {
                 </Document>
             </div>
 
-            <div className="mt-1 flex flex-col justify-center gap-2">
-                <h1 className="text-center text-lg font-semibold">Page {pageNumber || (numPages ? 1 : "--")} of {numPages ?? "--"}</h1>
-                <div className="flex gap-2 lg:gap-12">
+            <div className="mt-1 flex items-center justify-center gap-8">
+                <h1 className="text-center text-lg font-semibold">Page {pageNumber || (numPages ? 1 : "--")} / {numPages ?? "--"}</h1>
+                <div className="flex gap-2">
                     <button disabled={pageNumber <= 1} onClick={previousPage} className="btn">{"<"}</button>
                     <button disabled={numPages ? pageNumber >= numPages : false} onClick={nextPage} className="btn">{">"}</button>
                 </div>
