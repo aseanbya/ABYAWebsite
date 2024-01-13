@@ -70,7 +70,7 @@ export const blogRouter = createTRPCRouter({
             return post;
         }),
     getAllTypes: publicProcedure
-        .query(async ({ ctx, input }) => {
+        .query(async ({ ctx }) => {
             const post = await ctx.db.blog.findMany(
                 {
                     include: {
