@@ -14,12 +14,8 @@ export default function experiences() {
             <ContentContainer>
                 <div className="flex sm:flex-row flex-col gap-10 pb-12">
                     <div className="flex flex-col justify-center w-full sm:w-[45%]">
-                        <Heading1 className="capitalize">
-                            Experiences
-                        </Heading1>
-                        <p>
-                            Description
-                        </p>
+                        <Heading1 className="capitalize">Experiences</Heading1>
+                        <p>Description</p>
                     </div>
                     <div className="flex h-96">
                         <Image src={test} alt={""} className=" object-cover" />

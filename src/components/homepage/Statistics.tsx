@@ -5,14 +5,6 @@ import Heading2 from "../common/textStyles/Heading2";
 import Heading3 from "../common/textStyles/Heading3";
 import Heading4 from "../common/textStyles/Heading4";
 
-function LearnMoreButton() {
-    return (
-        <WhiteBorderButton href="/aboutUs/ourImpact" type={"button"}>
-            Learn More About <span className="whitespace-nowrap">Our Impact</span>
-        </WhiteBorderButton>
-    );
-}
-
 export default function Statistics() {
     return (
         <div className="hero max-h-fit bg-cover" style={{ backgroundImage: "url(https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/IndexStatistics.jpg?alt=media&token=fd9a8a7e-3835-4aac-a78b-7a3356a5053c)" }}>
@@ -60,5 +52,13 @@ export default function Statistics() {
                 </div>
             </ContentContainer>
         </div>
+    );
+}
+
+function LearnMoreButton() {
+    return (
+        <WhiteBorderButton href="/aboutUs/ourImpact" type={"button"}>
+            Learn More About <span className="whitespace-nowrap">Our Impact</span>
+        </WhiteBorderButton>
     );
 }

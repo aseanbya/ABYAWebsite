@@ -34,7 +34,8 @@
       "~/*": [
         "./src/*"
       ]
-    }
+    },
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     ".eslintrc.cjs",
@@ -46,7 +47,7 @@
     ".next/types/**/*.ts",
     "src/components/common/buttons",
     "next.config.mjs"
-  ],
+, "src/components/pdf-sample.tsx"  ],
   "exclude": [
     "node_modules"
   ]

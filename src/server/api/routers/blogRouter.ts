@@ -69,6 +69,20 @@ export const blogRouter = createTRPCRouter({
             }
             return post;
         }),
+    getAllTypes: publicProcedure
+        .query(async ({ ctx }) => {
+            const post = await ctx.db.blog.findMany(
+                {
+                    include: {
+                        tags: true,
+                    },
+                }
+            );
+            if (!post || post.length === 0) {
+                throw new Error("Posts not found for this tag");
+            }
+            return post;  // No need for await here
+        }),
 });
 
 

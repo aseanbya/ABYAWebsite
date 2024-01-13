@@ -4,15 +4,7 @@ import singaporeAttractionsGrey from "src/assets/singaporeAttractionsGrey.png";
 import ContentContainer from "./ContentContainer";
 import Heading1 from "./textStyles/Heading1";
 
-type PageTitleSectionProps = {
-    title: string;
-    children: ReactNode;
-};
-
-export default function PageTitleSection({
-    title,
-    children,
-}: PageTitleSectionProps) {
+export default function PageTitleSection({ title, children, }: PageTitleSectionProps) {
     return (
         <ContentContainer>
             <div className="stack w-full items-center">
@@ -28,3 +20,8 @@ export default function PageTitleSection({
         </ContentContainer>
     );
 }
+
+type PageTitleSectionProps = {
+    title: string;
+    children: ReactNode;
+};

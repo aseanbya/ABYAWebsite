@@ -2,8 +2,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
+import { api } from '~/utils/api';
 
 export default function Testimonials() {
+    const { data } = api.testimonial.getAll.useQuery();
     return (
         <div
             className="relative bg-cover bg-center pb-4 pt-16"
@@ -12,8 +14,7 @@ export default function Testimonials() {
             <div className="absolute inset-0 h-full w-full bg-black opacity-70"></div>
             <div className="relative z-10 w-full">
                 <div>
-                    <p className="text-center text-5xl font-bold text-brandYellow">Testimonials
-                    </p>
+                    <p className="text-center text-5xl font-bold text-brandYellow">Testimonials</p>
                 </div>
                 <div className="flex pt-16 pb-24">
                     <Swiper
@@ -23,9 +24,9 @@ export default function Testimonials() {
                             delay: 2000,
                             disableOnInteraction: false,
                         }}>
-                        {cardData.map((componentDetails, i) => (
+                        {data?.map((data) => (
                             <SwiperSlide>
-                                <CardCarouselComponent key={i} {...componentDetails} />
+                                <CardCarouselComponent key={data?.id} name={data.name} quote={data?.quote} title={data?.position} />
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -41,11 +42,7 @@ type QuoteCarouselComponentProps = {
     title: string;
 };
 
-function CardCarouselComponent({
-    name,
-    quote,
-    title,
-}: QuoteCarouselComponentProps) {
+function CardCarouselComponent({ name, quote, title, }: QuoteCarouselComponentProps) {
     return (
         <div className="flex justify-center">
             <div className="card flex h-1/2 w-2/3 justify-center border border-brandYellow">
@@ -58,21 +55,3 @@ function CardCarouselComponent({
         </div>
     );
 }
-
-const cardData = [
-    {
-        name: "Mr. David Chua",
-        quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor magna aliquet mollis accumsan. Mauris faucibus molestie fringilla. Ut quis sodales lorem, eu dictum turpis. Mauris consectetur lacus non risus sodales, at dictum nisi dapibus. Aenean vehicula eleifend ante luctus feugiat. Phasellus lacinia nisi vitae lectus rhoncus elementum. Morbi vehicula fringilla vulputate.",
-        title: "CEO of the National Youth Council Singapore",
-    },
-    {
-        name: "Mrs. Nancy Tan",
-        quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor magna aliquet mollis accumsan. Mauris faucibus molestie fringilla. Ut quis sodales lorem, eu dictum turpis. Mauris consectetur lacus non risus sodales, at dictum nisi dapibus. Aenean vehicula eleifend ante luctus feugiat. Phasellus lacinia nisi vitae lectus rhoncus elementum. Morbi vehicula fringilla vulputate.",
-        title: "Executive Director of XXX",
-    },
-    {
-        name: "Mr. Damien Ng",
-        quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor magna aliquet mollis accumsan. Mauris faucibus molestie fringilla. Ut quis sodales lorem, eu dictum turpis. Mauris consectetur lacus non risus sodales, at dictum nisi dapibus. Aenean vehicula eleifend ante luctus feugiat. Phasellus lacinia nisi vitae lectus rhoncus elementum. Morbi vehicula fringilla vulputate.",
-        title: "Director of the YYY",
-    },
-];

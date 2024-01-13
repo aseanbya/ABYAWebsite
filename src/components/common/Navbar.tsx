@@ -52,7 +52,7 @@ export default function Navbar() {
                             <li><Link href="/ourSupporters"> Our Supporters </Link></li>
                             <li><details>
                                 <summary><Link href="/blog">Blog</Link></summary>
-                                <ul className="bg-base-100 p-2">
+                                <ul className="bg-base-100 p-2 absolute right-0">
                                     <li><Link href="/blog/prannouncement">PR Announcement</Link></li>
                                     <li><Link href="/blog/experiences">Experiences</Link></li>
                                     <li><Link href="/blog/futureInAsean">Future in ASEAN Series</Link></li>

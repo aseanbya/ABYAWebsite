@@ -2,14 +2,6 @@ import type { StaticImageData } from "next/image"
 import Image from "next/image"
 import BlueBorderButton from "../common/buttons/BlueBorderButton";
 
-type CardProps = {
-    title: string;
-    description: string;
-    href: string;
-    borderColor: string;
-    image?: string | StaticImageData;
-};
-
 export const Card: React.FC<CardProps> = ({ title, description, href, borderColor, image }) => {
     return (
         <div className={`card  border-2 bg-base-100 px-4 pt-6 shadow-xl lg:px-7 lg:pt-8 bg-slate ${borderColor}`}>
@@ -33,4 +25,12 @@ export const Card: React.FC<CardProps> = ({ title, description, href, borderColo
             </div>
         </div>
     );
+};
+
+type CardProps = {
+    title: string;
+    description: string;
+    href: string;
+    borderColor: string;
+    image?: string | StaticImageData;
 };
