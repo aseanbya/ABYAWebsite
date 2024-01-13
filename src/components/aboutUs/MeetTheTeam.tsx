@@ -81,7 +81,13 @@ export default function MeetTheTeam() {
                     pagination={{
                         clickable: true,
                     }}
-                    modules={[Pagination]}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    navigation={true}
+                    modules={[Pagination, Navigation, Autoplay]}
                     className="mySwiper h-fit"
                 >
                     {executiveData?.map((data) => (
@@ -99,7 +105,13 @@ export default function MeetTheTeam() {
                     pagination={{
                         clickable: true,
                     }}
-                    modules={[Pagination]}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    navigation={true}
+                    modules={[Pagination, Navigation, Autoplay]}
                     className="mySwiper h-fit"
                 >
                     {advisoryBoardData?.map((data) => (
