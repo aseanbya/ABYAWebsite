@@ -8,7 +8,6 @@ import Heading2 from "~/components/common/textStyles/Heading2";
 import BlueFilledButton from "~/components/common/buttons/BlueFilledButton";
 import { LEAPS_VALUES_DETAILS, LeapsOurValueCards } from "../../components/ourEvent/LeapsOurValueCards";
 
-
 export default function OurEvent() {
     return (
         <PageLayout>
@@ -34,12 +33,7 @@ export default function OurEvent() {
                         invited to the challenge!
                     </p>
                     <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-                        {LEAPS_VALUES_DETAILS.map((value) => (
-                            <LeapsOurValueCards
-                                key={value.title}
-                                title={value.title}
-                                content={value.content} />
-                        ))}
+                        {LEAPS_VALUES_DETAILS.map((value) => (<LeapsOurValueCards key={value.title} title={value.title} content={value.content} />))}
                     </div>
                 </div>
 
@@ -76,8 +70,7 @@ export default function OurEvent() {
 
                 <div className="flex flex-col items-center justify-between sm:flex-row gap-4">
                     <div className="w-full sm:w-1/3">
-                        <Heading3>Interested in finding out how the previous ABYA
-                            Explore Series went?</Heading3>
+                        <Heading3>Interested in finding out how the previous ABYA Explore Series went?</Heading3>
                     </div>
                     <div className="w-full sm:w-2/3">
                         <ABYAExploreCarousel />

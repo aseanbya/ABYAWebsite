@@ -12,9 +12,7 @@ import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
-
 export default function MeetTheTeam() {
-
     const { data: managementData } = api.team.getManagement.useQuery();
     const { data: executiveData } = api.team.getExecutives.useQuery();
     const { data: advisoryBoardData } = api.team.getAdvisoryBoard.useQuery();
@@ -39,7 +37,6 @@ export default function MeetTheTeam() {
             const handleResize = () => {
                 setSizeValue(getSizeValue());
             };
-
             if (typeof window !== 'undefined') {
                 window.addEventListener('resize', handleResize);
                 return () => {
@@ -47,20 +44,12 @@ export default function MeetTheTeam() {
                 };
             }
         }, []);
-
         return sizeValue;
     };
-
-
     return (
         <ContentContainer>
-            <Heading1 className="uppercase pb-6">
-                Meet The Team
-            </Heading1>
-
-            <Heading3 className='text-center'>
-                Management Committee
-            </Heading3>
+            <Heading1 className="uppercase pb-6">Meet The Team</Heading1>
+            <Heading3 className='text-center'>Management Committee</Heading3>
             <div>
                 <Swiper
                     slidesPerView={ScreenSizeComponent()}
@@ -84,10 +73,7 @@ export default function MeetTheTeam() {
                     ))}
                 </Swiper>
             </div>
-
-            <Heading3 className='text-center'>
-                Executives
-            </Heading3>
+            <Heading3 className='text-center'>Executives</Heading3>
             <div>
                 <Swiper
                     slidesPerView={ScreenSizeComponent()}
@@ -95,7 +81,13 @@ export default function MeetTheTeam() {
                     pagination={{
                         clickable: true,
                     }}
-                    modules={[Pagination]}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    navigation={true}
+                    modules={[Pagination, Navigation, Autoplay]}
                     className="mySwiper h-fit"
                 >
                     {executiveData?.map((data) => (
@@ -105,10 +97,7 @@ export default function MeetTheTeam() {
                     ))}
                 </Swiper>
             </div>
-
-            <Heading3 className='text-center'>
-                Advisory Board
-            </Heading3>
+            <Heading3 className='text-center'>Advisory Board</Heading3>
             <div>
                 <Swiper
                     slidesPerView={ScreenSizeComponent()}
@@ -116,7 +105,13 @@ export default function MeetTheTeam() {
                     pagination={{
                         clickable: true,
                     }}
-                    modules={[Pagination]}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    navigation={true}
+                    modules={[Pagination, Navigation, Autoplay]}
                     className="mySwiper h-fit"
                 >
                     {advisoryBoardData?.map((data) => (
@@ -145,12 +140,8 @@ function ProfileCard({ name, position, image }: ProfileCardProps) {
                         <Image src={image ?? ""} alt={''} width={1600} height={1600} className='object-cover card' />
                     </div>
                     <div className='py-3'>
-                        <p className='text-2xl capitalize'>
-                            {name}
-                        </p>
-                        <p className='capitalize text-neutral-500'>
-                            {position}
-                        </p>
+                        <p className='text-2xl capitalize'>{name}</p>
+                        <p className='capitalize text-neutral-500'>{position}</p>
                     </div>
                 </div>
             </div>

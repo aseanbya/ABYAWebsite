@@ -8,12 +8,8 @@ export default function AboutUsHero() {
             <div className="grid gap-3 py-9 sm:grid-cols-2">
                 <Image src={"https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/OurStory.png?alt=media&token=028dc58b-c1c7-4914-a239-1d2b479f7167"} width={1600} height={1600} alt={""} />
                 <div className="flex flex-col justify-center gap-2">
-                    <Heading1 className="py-4 text-5xl font-bold uppercase text-black sm:py-0 sm:text-7xl">
-                        Our Story
-                    </Heading1>
-                    <p>
-                        Founded in 2020 by a group of seven enthusiastic youth, the ASEAN Business Youth Association (ABYA) aims to be the bridge for youths to increase their knowledge and gain a foothold in ASEAN through participating in our programmes. Officially legalised as a society in 2021, ABYA has a burgeoning network of aspiring entrepreneurs and is focused on fostering sustainable businesses.
-                    </p>
+                    <Heading1 className="py-4 text-5xl font-bold uppercase text-black sm:py-0 sm:text-7xl">Our Story</Heading1>
+                    <p>Founded in 2020 by a group of seven enthusiastic youth, the ASEAN Business Youth Association (ABYA) aims to be the bridge for youths to increase their knowledge and gain a foothold in ASEAN through participating in our programmes. Officially legalised as a society in 2021, ABYA has a burgeoning network of aspiring entrepreneurs and is focused on fostering sustainable businesses.</p>
                 </div>
             </div>
             <div>

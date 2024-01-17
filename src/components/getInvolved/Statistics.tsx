@@ -1,9 +1,7 @@
 import Image from "next/image";
-
 import World from "src/assets/World.png";
 import Member from "src/assets/Member.png";
 import Building from "src/assets/Building.png";
-
 import Heading1 from "../common/textStyles/Heading1";
 import Heading4 from "../common/textStyles/Heading4";
 
