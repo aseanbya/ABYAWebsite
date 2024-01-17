@@ -40,11 +40,11 @@ export default function blog() {
                             <button className="btn">
                                 Another Time
                             </button>
-                            <button className="btn">
-                                <Link href={"https://airtable.com/appt5opZxZjWqQd1s/shrj1flTgvURknuKr"}>
+                            <Link href={"https://airtable.com/appt5opZxZjWqQd1s/shrj1flTgvURknuKr"}>
+                                <button className="btn">
                                     Subscribe
-                                </Link>
-                            </button>
+                                </button>
+                            </Link>
                         </form>
                     </div>
                 </div>
