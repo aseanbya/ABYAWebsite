@@ -20,7 +20,7 @@ export default function Statistics() {
                     <Heading2>With your support,<br />Here&apos;s what we have achieved!</Heading2>
                     <div className="flex justify-center">
                         <div className="flex flex-row w-fit items-center gap-3 border-b-2 border-b-white pb-3">
-                            <Heading2>3500+</Heading2>
+                            <Heading2>3600+</Heading2>
                             <Heading3 className="capitalize">ASEAN Youth<br />Impacted</Heading3>
                         </div>
                     </div>

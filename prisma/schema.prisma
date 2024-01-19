@@ -13,11 +13,11 @@ model Blog {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   author    String
-  summary   String?  @db.Text
   content   String?  @db.Text
   image     String?  @db.Text
   title     String   @unique
   views     Int      @default(0)
+  summary   String?  @db.Text
   tags      Tag[]
 
   @@index([title])
@@ -27,20 +27,6 @@ model Tag {
   id   String @id @default(cuid())
   tag  TagTag
   post Blog[]
-}
-
-enum TagTag {
-  EXPERIENCES
-  PR_ANNOUNCEMENT
-  A_FUTURE_IN_ASEAN_SERIES
-  ABYA_EXPLORE
-  ABYA_LEAPS
-}
-
-enum TeamLevel {
-  MANAGEMENT
-  ADVISORYBOARD
-  EXECUTIVES
 }
 
 model Team {
@@ -63,4 +49,27 @@ model HearFromOurCommunity {
   name     String @db.Text
   position String @db.Text
   quote    String @db.Text
+}
+
+model BlogToTag {
+  A Int
+  B String
+
+  @@unique([A, B], map: "_BlogToTag_AB_unique")
+  @@index([B], map: "_BlogToTag_B_index")
+  @@map("_BlogToTag")
+}
+
+enum TagTag {
+  EXPERIENCES
+  PR_ANNOUNCEMENT
+  A_FUTURE_IN_ASEAN_SERIES
+  ABYA_EXPLORE
+  ABYA_LEAPS
+}
+
+enum TeamLevel {
+  MANAGEMENT
+  ADVISORYBOARD
+  EXECUTIVES
 }
