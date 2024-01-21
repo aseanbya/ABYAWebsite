@@ -6,8 +6,8 @@ import Image from "next/image"
 
 const CARD_DETAILS = [
     {
-        title: "Advocacy",
-        quote: "Promote interest in business and professional opportunities across Southeast Asia",
+        title: "Cultural Awareness",
+        quote: "Exposure to peers across the region from culturally diverse backgrounds, enabling understanding and more synergised work environments",
     },
     {
         title: "Network Facilitation",
@@ -15,7 +15,7 @@ const CARD_DETAILS = [
     },
     {
         title: "COMPETENCY BUILDING",
-        quote: "Provide a platform for exposure surrounding business & cross-cultural competence in the ASEAN region",
+        quote: "Provide a platform to nurture surrounding business & cross-cultural competence in the ASEAN region",
     },
 ];
 
@@ -26,15 +26,15 @@ export default function AboutUs() {
                 <Image src={"https://firebasestorage.googleapis.com/v0/b/abyawebsite-11d1c.appspot.com/o/IndexEstablishedDate.png?alt=media&token=311fe441-2f50-4c38-93b3-fb4ecec1eaba"} width={1600} height={1600} alt={""} />
                 <div className="gap-3 flex flex-col justify-center">
                     <Heading2 className="font-semibold">
-                        Established in 2020
+                        Established in 2021
                     </Heading2>
                     <p>
-                        Proident nisi enim aute aliquip ullamco duis eiusmod
-                        sunt id et in voluptate laborum sint. Minim et nisi eu
-                        officia dolor. Fugiat exercitation veniam proident ex
-                        esse minim reprehenderit ex aute nostrud sunt mollit
-                        duis. Qui eiusmod exercitation aliquip magna aute ex
-                        dolor do proident excepteur.
+                        ABYA aims to be the bridge for youths to
+                        increase their knowledge and gain a foothold in ASEAN through participating 
+                        in our programmes. With a focus on three main pillars – Political, Economic and Cultural (PEC)
+                        , ABYA actively works with corporate partners and industry experts to provide opportunities for
+                        youths to learn about and work on projects according to the latest industry trends
+
                     </p>
                     <AboutUsButton />
                 </div>
