@@ -21,7 +21,7 @@ const maxWidth = 700;
 type PDFFile = string | File | null;
 
 export default function AnnualImpactReport2022() {
-    const [file, setFile] = useState<PDFFile>("/pdfs/report.pdf");
+    const [file, setFile] = useState<PDFFile>("/pdfs/2022.pdf");
     const [numPages, setNumPages] = useState<number>();
     const [pageNumber, setPageNumber] = useState(1);
     const [containerRef, setContainerRef] = useState<HTMLElement | null>(null);
