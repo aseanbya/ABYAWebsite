@@ -111,6 +111,7 @@ export const ProductItem = ({
 };
 
 export const HoveredLink = ({ children, ...rest }: any) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return (
     <Link
       {...rest}
