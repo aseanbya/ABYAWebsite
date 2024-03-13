@@ -1,7 +1,7 @@
-import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
 import { cn } from "~/utils/cn";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const HoverEffect = ({
   items,
@@ -27,14 +27,14 @@ export const HoverEffect = ({
         <Link
           href={item?.link}
           key={item?.link}
-          className="group relative  block h-full w-full p-2"
+          className="group relative block h-full w-full p-2"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 block h-full w-full rounded-3xl bg-neutral-200  dark:bg-slate-800/[0.8]"
+                className="absolute inset-0 block h-full w-full rounded-3xl bg-neutral-200"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -68,7 +68,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "relative z-20 h-full w-full overflow-hidden rounded-2xl border-2 border-brandYellow p-4 group-hover:border-brandYellow-80 dark:border-white/[0.2]",
+        "relative z-20 h-full w-full overflow-hidden rounded-2xl border-2 border-brandYellow p-4 group-hover:border-brandYellow-80",
         className,
       )}
     >
