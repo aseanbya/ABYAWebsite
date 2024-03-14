@@ -1,10 +1,11 @@
+import Testimonials from "~/components/Testomonials";
 import PageLayout from "~/components/common/PageLayout";
 import PageTitleSection from "~/components/common/PageTitleSection";
 
-export default function Experiences() {
+export default function OurSupporters() {
   return (
     <PageLayout>
-      <PageTitleSection title={"About Us"}>
+      <PageTitleSection title={"Our Partners"}>
         Excepteur id cupidatat esse adipisicing reprehenderit veniam occaecat
         amet fugiat id sit fugiat. Est elit excepteur commodo magna deserunt
         anim nisi irure. Elit magna non quis ipsum adipisicing consectetur et
@@ -14,6 +15,7 @@ export default function Experiences() {
         dolor id excepteur ea tempor nulla. Ullamco magna laborum labore aliqua
         incididunt cillum.
       </PageTitleSection>
+      <Testimonials />
     </PageLayout>
   );
 }

@@ -1,21 +1,37 @@
-import ContentContainer from "~/components/common/ContentContainer";
 import PageLayout from "~/components/common/PageLayout";
+import ContentContainer from "~/components/common/ContentContainer";
 import PageTitleSection from "~/components/common/PageTitleSection";
-import Heading3 from "~/components/common/textStyles/Heading3";
-import ExecutiveRoles from "~/components/getInvolved/executive/ExecutiveRoles";
-import ExecutiveStatistics from "~/components/getInvolved/executive/ExecutiveStatistics";
+import { Cog6ToothIcon, FaceSmileIcon } from "@heroicons/react/24/solid";
+import Heading2 from "~/components/textStyles/Heading2";
+import Heading4 from "~/components/textStyles/Heading4";
 
-export default function Home() {
-    return (
-        <PageLayout>
-            <PageTitleSection title={"Join ABYA Executive"}>
-                <h2>Amet ex ipsum adipisicing. Consectetur veniam officia pariatur officia in et dolor ex sint consectetur. Dolor aliqua ipsum et labore est. Enim ea tempor quis sint eu non commodo non id anim id non laborum labore. Veniam consequat pariatur duis. Dolor ut laborum in et esse anim commodo eu minim pariatur officia pariatur sit non. Sit aliquip anim sunt eiusmod proident labore Lorem est sit aliqua sunt minim minim occaecat ut.</h2>
-            </PageTitleSection>
-            <ContentContainer>
-                <ExecutiveStatistics />
-                <Heading3 className="">Get to know each role</Heading3>
-                <ExecutiveRoles />
-            </ContentContainer>
-        </PageLayout>
-    );
+export default function Executive() {
+  return (
+    <PageLayout>
+      <PageTitleSection title={"JOIN ABYA EXECUTIVE"}>
+        Excepteur id cupidatat esse adipisicing reprehenderit veniam occaecat
+        amet fugiat id sit fugiat. Est elit excepteur commodo magna deserunt
+        anim nisi irure. Elit magna non quis ipsum adipisicing consectetur et
+        excepteur. Nulla in elit amet exercitation officia ea fugiat sint.
+        Incididunt dolore irure consequat consequat amet minim aliqua excepteur.
+        Deserunt deserunt proident ipsum non cupidatat ex et laborum laboris
+        dolor id excepteur ea tempor nulla. Ullamco magna laborum labore aliqua
+        incididunt cillum.
+      </PageTitleSection>
+      <ContentContainer>
+        <div className="grid grid-cols-2 pb-32 pt-8">
+          <div className="justify-top flex flex-col items-center">
+            <FaceSmileIcon className="w-32" />
+            <Heading2 className="pb-2 font-bold text-brandBlue">37</Heading2>
+            <Heading4 className="text-center">Executives</Heading4>
+          </div>
+          <div className="justify-top flex flex-col items-center border-l-2 border-neutral-400">
+            <Cog6ToothIcon className="w-32" />
+            <Heading2 className="pb-2 font-bold text-brandBlue">4</Heading2>
+            <Heading4 className="text-center">Departments</Heading4>
+          </div>
+        </div>
+      </ContentContainer>
+    </PageLayout>
+  );
 }
