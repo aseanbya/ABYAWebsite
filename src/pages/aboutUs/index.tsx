@@ -124,7 +124,7 @@ export default function AboutUs() {
           ))}
         </BentoGrid>
       </ContentContainer>
-      <div className="max-h-fit bg-[url('/HaveAnyQuestion.jpg')] bg-cover bg-fixed  bg-center">
+      <div className="max-h-fit bg-[url('/HaveAnyQuestion.jpg')] bg-cover bg-fixed bg-center">
         <ContentContainer className="h-[32rem]">
           <div className="flex h-full flex-col items-center justify-center gap-5">
             <Heading1 className="text-brandYellow">

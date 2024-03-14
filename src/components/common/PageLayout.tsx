@@ -36,19 +36,20 @@ function Navbar({ className }: { className?: string }) {
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Our Events">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/GetInvolved">Our Events</HoveredLink>
-            <HoveredLink href="/GetInvolved/Member">ABYA Leaps</HoveredLink>
-            <HoveredLink href="/GetInvolved/Executive">
+            <HoveredLink href="/OurEvents">Our Events</HoveredLink>
+            <HoveredLink href="/OurEvents/ABYALeaps">ABYA Leaps</HoveredLink>
+            <HoveredLink href="/OurEvents/ABYAExplore">
               ABYA Explore
             </HoveredLink>
           </div>
         </MenuItem>
-        <HoveredLink href="/GetInvolved">Our Supporters</HoveredLink>
+        <HoveredLink href="/OurSupporters">Our Supporters</HoveredLink>
+
         <MenuItem setActive={setActive} active={active} item="Blog">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/GetInvolved/Executive">Blog</HoveredLink>
-            <HoveredLink href="/GetInvolved">Experiences</HoveredLink>
-            <HoveredLink href="/GetInvolved/Member">
+            <HoveredLink href="/Blog">Blog</HoveredLink>
+            <HoveredLink href="/Blog/Experiences">Experiences</HoveredLink>
+            <HoveredLink href="/Blog/FutureInAsean">
               Future In ASEAN Series
             </HoveredLink>
           </div>
