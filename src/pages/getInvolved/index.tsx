@@ -453,9 +453,9 @@ export default function GetInvolved() {
   return (
     <PageLayout>
       <PageTitleSection title={"Get Involved"}>
-        At the ASEAN Business Youth Association, we're always on the lookout for
-        synergies – whether you're an undergraduate, young professional, or in
-        senior management, we've got a place for you.
+        At the ASEAN Business Youth Association, we&apos;re always on the
+        lookout for synergies – whether you&apos;re an undergraduate, young
+        professional, or in senior management, we&apos;ve got a place for you.
       </PageTitleSection>
       <ContentContainer>
         <div className="grid grid-cols-1 grid-rows-3 py-8 sm:grid-cols-3 sm:grid-rows-1 sm:py-0">
@@ -463,7 +463,7 @@ export default function GetInvolved() {
             <GlobeEuropeAfricaIcon className="w-32" />
             <Heading1 className="pb-4 text-brandBlue">10</Heading1>
             <Heading4>
-              Member's <br /> Countries
+              Member&apos;s <br /> Countries
             </Heading4>
           </div>
           <div className="sm:border-x-2">
