@@ -20,36 +20,36 @@ function Navbar({ className }: { className?: string }) {
         </HoveredLink>
         <MenuItem setActive={setActive} active={active} item="About Us">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/AboutUs">About Us</HoveredLink>
-            <HoveredLink href="/AboutUs/OurImpact">Out Impact</HoveredLink>
+            <HoveredLink href="/aboutUs">About Us</HoveredLink>
+            <HoveredLink href="/aboutUs/ourImpact">Out Impact</HoveredLink>
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Get Involved">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/GetInvolved">Get Involved</HoveredLink>
-            <HoveredLink href="/GetInvolved/Member">As A Member</HoveredLink>
-            <HoveredLink href="/GetInvolved/Executive">
+            <HoveredLink href="/getInvolved">Get Involved</HoveredLink>
+            <HoveredLink href="/getInvolved/member">As A Member</HoveredLink>
+            <HoveredLink href="/getInvolved/executive">
               As An Executive
             </HoveredLink>
-            <HoveredLink href="/GetInvolved/Partner">As A Partner</HoveredLink>
+            <HoveredLink href="/getInvolved/partner">As A Partner</HoveredLink>
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Our Events">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/OurEvents">Our Events</HoveredLink>
-            <HoveredLink href="/OurEvents/ABYALeaps">ABYA Leaps</HoveredLink>
-            <HoveredLink href="/OurEvents/ABYAExplore">
+            <HoveredLink href="/ourEvents">Our Events</HoveredLink>
+            <HoveredLink href="/ourEvents/ABYALeaps">ABYA Leaps</HoveredLink>
+            <HoveredLink href="/ourEvents/ABYAExplore">
               ABYA Explore
             </HoveredLink>
           </div>
         </MenuItem>
-        <HoveredLink href="/OurPartners">Our Partners</HoveredLink>
+        <HoveredLink href="/ourPartners">Our Partners</HoveredLink>
 
         <MenuItem setActive={setActive} active={active} item="Blog">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/Blog">Blog</HoveredLink>
-            <HoveredLink href="/Blog/Experiences">Experiences</HoveredLink>
-            <HoveredLink href="/Blog/FutureInAsean">
+            <HoveredLink href="/blog">Blog</HoveredLink>
+            <HoveredLink href="/blog/experiences">Experiences</HoveredLink>
+            <HoveredLink href="/blog/futureInAsean">
               Future In ASEAN Series
             </HoveredLink>
           </div>
