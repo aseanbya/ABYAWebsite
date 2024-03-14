@@ -203,9 +203,12 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .ringColor((e: { color: (t: number) => string }) => (t) => e.color(t))
       .ringMaxRadius(defaultProps.maxRings)
       .ringPropagationSpeed(RING_PROPAGATION_SPEED)
-      .ringRepeatPeriod(
-        (defaultProps.arcTime * defaultProps.arcLength) / defaultProps.rings,
-      );
+      .ringRepeatPeriod(() => {
+        const arcTime = Number(defaultProps.arcTime) || 0;
+        const arcLength = Number(defaultProps.arcLength) || 0;
+        const rings = Number(defaultProps.rings) || 1;
+        return (arcTime * arcLength) / rings;
+      });
   };
 
   useEffect(() => {
