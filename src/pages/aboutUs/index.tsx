@@ -3,11 +3,11 @@ import { Button } from "~/components/ui/button";
 import Heading1 from "~/components/textStyles/Heading1";
 import PageLayout from "~/components/common/PageLayout";
 import Paragraph from "~/components/textStyles/Paragraph";
-import { ParallaxScroll } from "~/components/ui/parallax-scroll";
 import PageTitleSection from "~/components/common/PageTitleSection";
 import ContentContainer from "~/components/common/ContentContainer";
 import HearFromOurCommunity from "~/components/HearFromOurCommunity";
 import { CardContainer, CardBody, CardItem } from "~/components/ui/3d-card";
+import { BentoGrid, BentoGridItem } from "~/components/ui/bento-grid";
 
 export default function AboutUs() {
   return (
@@ -112,7 +112,16 @@ export default function AboutUs() {
       <HearFromOurCommunity />
       <ContentContainer>
         <Heading1 className="pb-8">Meet the team</Heading1>
-        <ParallaxScroll items={items} />
+        <BentoGrid className="mx-auto">
+          {items.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.name}
+              description={item.position}
+              header={item.image}
+            />
+          ))}
+        </BentoGrid>
       </ContentContainer>
       <div className="max-h-fit bg-[url('/HaveAnyQuestion.jpg')] bg-cover bg-fixed  bg-center">
         <ContentContainer className="h-[32rem]">
