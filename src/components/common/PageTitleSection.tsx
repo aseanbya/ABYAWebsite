@@ -9,7 +9,7 @@ export default function PageTitleSection({
 }: PageTitleSectionProps) {
   return (
     <ContentContainer>
-      <div className="flex items-center justify-center py-8 pt-24">
+      <div className="flex items-center justify-center pt-24">
         <div className="relative w-full max-w-7xl">
           <div className="absolute">
             <Heading1 className="justify pb-4 text-6xl font-bold uppercase ">

@@ -1,13 +1,13 @@
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
-export default function HearFromOurCommunity() {
+export default function Testimonials() {
   return (
     <div className="relative flex flex-col items-center justify-center overflow-hidden bg-neutral-600 antialiased">
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
         speed="slow"
-        header={"Hear From Our Community"}
+        header={"Testimonials"}
       />
     </div>
   );

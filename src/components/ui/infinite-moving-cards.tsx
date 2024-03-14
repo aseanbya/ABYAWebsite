@@ -9,6 +9,7 @@ export const InfiniteMovingCards = ({
   speed = "fast",
   pauseOnHover = true,
   className,
+  header,
 }: {
   items: {
     quote: string;
@@ -19,6 +20,7 @@ export const InfiniteMovingCards = ({
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
   className?: string;
+  header: string;
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
@@ -78,7 +80,7 @@ export const InfiniteMovingCards = ({
       )}
     >
       <h1 className="pb-4 text-center text-4xl font-bold text-brandYellow">
-        Hear from Our Community
+        {header}
       </h1>
       <ul
         ref={scrollerRef}

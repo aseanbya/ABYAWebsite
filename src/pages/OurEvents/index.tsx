@@ -41,26 +41,23 @@ export default function OurEvents() {
           </div>
         </div>
         <Heading2 className="pt-9 uppercase">ABYA Leaps</Heading2>
-        <div className="flex flex-col gap-4 py-6">
-          <p>
-            LEAPS (Leadership, Exploration and Progress) is an ASEAN-focused
-            industry immersion programme, designed to equip and groom students
-            to become industry-relevant future ASEAN- savvy talents.
-            <br />
-            <br />
-            Powered by Young NTUC and the National Youth Council, ABYA LEAPS
-            aims to provide a platform for ASEAN youths to deepen their interest
-            in the ASEAN market and sharpen their technical & soft skills that
-            would be relevant in ASEAN.
-            <br />
-            <br />
-            Any tertiary student/ institute of higher learning from all majors
-            who was a citizen of the ASEAN member countries (includes Brunei,
-            Cambodia, Laos, Malaysia, Myanmar, Philippines, Singapore, Thailand,
-            Indonesia and Vietnam) are invited to the challenge!
-          </p>
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-3"></div>
-        </div>
+        <p>
+          LEAPS (Leadership, Exploration and Progress) is an ASEAN-focused
+          industry immersion programme, designed to equip and groom students to
+          become industry-relevant future ASEAN- savvy talents.
+          <br />
+          <br />
+          Powered by Young NTUC and the National Youth Council, ABYA LEAPS aims
+          to provide a platform for ASEAN youths to deepen their interest in the
+          ASEAN market and sharpen their technical & soft skills that would be
+          relevant in ASEAN.
+          <br />
+          <br />
+          Any tertiary student/ institute of higher learning from all majors who
+          was a citizen of the ASEAN member countries (includes Brunei,
+          Cambodia, Laos, Malaysia, Myanmar, Philippines, Singapore, Thailand,
+          Indonesia and Vietnam) are invited to the challenge!
+        </p>
 
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <div className="w-full sm:w-1/3">
