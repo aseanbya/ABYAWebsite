@@ -118,28 +118,20 @@ export function Globe({ globeConfig, data }: WorldProps) {
   const _buildData = () => {
     const arcs = data;
     const points = [];
-    for (let i = 0; i < arcs.length; i++) {
-      const arc = arcs[i];
-      //@ts-expect-error
+    for (const arc of arcs) {
       const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
       points.push({
         size: defaultProps.pointSize,
-        //@ts-expect-error
         order: arc.order,
         color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
-        //@ts-expect-error
         lat: arc.startLat,
-        //@ts-expect-error
         lng: arc.startLng,
       });
       points.push({
         size: defaultProps.pointSize,
-        //@ts-expect-error
         order: arc.order,
         color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
-        //@ts-expect-error
         lat: arc.endLat,
-        //@ts-expect-error
         lng: arc.endLng,
       });
     }
@@ -177,19 +169,19 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
   const startAnimation = () => {
     if (!globeRef.current ?? !globeData) return;
-    //@ts-expect-error
+    //@ts-expect-error this code was from ace
     globeRef.current
       .arcsData(data)
       .arcStartLat((d) => (d as { startLat: number }).startLat * 1)
       .arcStartLng((d) => (d as { startLng: number }).startLng * 1)
       .arcEndLat((d) => (d as { endLat: number }).endLat * 1)
       .arcEndLng((d) => (d as { endLng: number }).endLng * 1)
-      //@ts-expect-error
+      //@ts-expect-error this code was from ace
       .arcColor((e) => (e as { color: string }).color)
       .arcAltitude((e) => {
         return (e as { arcAlt: number }).arcAlt * 1;
       })
-      //@ts-expect-error
+      //@ts-expect-error this code was from ace
       .arcStroke((e) => {
         return [0.32, 0.28, 0.3][Math.round(Math.random() * 2)];
       })
@@ -197,17 +189,17 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcDashInitialGap((e) => (e as { order: number }).order * 1)
       .arcDashGap(15)
       .arcDashAnimateTime((e) => defaultProps.arcTime);
-    //@ts-expect-error
+    //@ts-expect-error this code was from ace
     globeRef.current
       .pointsData(globeData)
       .pointColor((e) => (e as { color: string }).color)
       .pointsMerge(true)
       .pointAltitude(0.0)
       .pointRadius(2);
-    //@ts-expect-error
+    //@ts-expect-error this code was from ace
     globeRef.current
       .ringsData([])
-      //@ts-expect-error
+      //@ts-expect-error this code was from ace
       .ringColor((e) => (t) => e.color(t))
       .ringMaxRadius(defaultProps.maxRings)
       .ringPropagationSpeed(RING_PROPAGATION_SPEED)
@@ -226,7 +218,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
         data.length,
         Math.floor((data.length * 4) / 5),
       );
-      //@ts-expect-error
+      //@ts-expect-error this code was from ace
       globeRef.current.ringsData(
         globeData.filter((d, i) => numbersOfRings.includes(i)),
       );
@@ -301,11 +293,11 @@ export function hexToRgb(hex: string) {
   let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
-        //@ts-expect-error
+        //@ts-expect-error this code was from ace
         r: parseInt(result[1], 16),
-        //@ts-expect-error
+        //@ts-expect-error this code was from ace
         g: parseInt(result[2], 16),
-        //@ts-expect-error
+        //@ts-expect-error this code was from ace
         b: parseInt(result[3], 16),
       }
     : null;
