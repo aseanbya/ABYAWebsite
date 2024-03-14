@@ -111,35 +111,35 @@ export function Globe({ globeConfig, data }: WorldProps) {
     };
     globeMaterial.color = new Color(globeConfig.globeColor);
     globeMaterial.emissive = new Color(globeConfig.emissive);
-    globeMaterial.emissiveIntensity = globeConfig.emissiveIntensity || 0.1;
-    globeMaterial.shininess = globeConfig.shininess || 0.9;
+    globeMaterial.emissiveIntensity = globeConfig.emissiveIntensity ?? 0.1;
+    globeMaterial.shininess = globeConfig.shininess ?? 0.9;
   };
 
   const _buildData = () => {
     const arcs = data;
-    let points = [];
+    const points = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
-      // @ts-ignore
+      //@ts-expect-error
       const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
       points.push({
         size: defaultProps.pointSize,
-        // @ts-ignore
+        //@ts-expect-error
         order: arc.order,
         color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
-        // @ts-ignore
+        //@ts-expect-error
         lat: arc.startLat,
-        // @ts-ignore
+        //@ts-expect-error
         lng: arc.startLng,
       });
       points.push({
         size: defaultProps.pointSize,
-        // @ts-ignore
+        //@ts-expect-error
         order: arc.order,
         color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
-        // @ts-ignore
+        //@ts-expect-error
         lat: arc.endLat,
-        // @ts-ignore
+        //@ts-expect-error
         lng: arc.endLng,
       });
     }
@@ -176,19 +176,20 @@ export function Globe({ globeConfig, data }: WorldProps) {
   }, [globeData]);
 
   const startAnimation = () => {
-    if (!globeRef.current || !globeData) return;
-
+    if (!globeRef.current ?? !globeData) return;
+    //@ts-expect-error
     globeRef.current
       .arcsData(data)
       .arcStartLat((d) => (d as { startLat: number }).startLat * 1)
       .arcStartLng((d) => (d as { startLng: number }).startLng * 1)
       .arcEndLat((d) => (d as { endLat: number }).endLat * 1)
       .arcEndLng((d) => (d as { endLng: number }).endLng * 1)
-      .arcColor((e: any) => (e as { color: string }).color)
+      //@ts-expect-error
+      .arcColor((e) => (e as { color: string }).color)
       .arcAltitude((e) => {
         return (e as { arcAlt: number }).arcAlt * 1;
       })
-      // @ts-ignore
+      //@ts-expect-error
       .arcStroke((e) => {
         return [0.32, 0.28, 0.3][Math.round(Math.random() * 2)];
       })
@@ -196,17 +197,18 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcDashInitialGap((e) => (e as { order: number }).order * 1)
       .arcDashGap(15)
       .arcDashAnimateTime((e) => defaultProps.arcTime);
-
+    //@ts-expect-error
     globeRef.current
       .pointsData(globeData)
       .pointColor((e) => (e as { color: string }).color)
       .pointsMerge(true)
       .pointAltitude(0.0)
       .pointRadius(2);
-
+    //@ts-expect-error
     globeRef.current
       .ringsData([])
-      .ringColor((e: any) => (t: any) => e.color(t))
+      //@ts-expect-error
+      .ringColor((e) => (t) => e.color(t))
       .ringMaxRadius(defaultProps.maxRings)
       .ringPropagationSpeed(RING_PROPAGATION_SPEED)
       .ringRepeatPeriod(
@@ -215,16 +217,16 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   useEffect(() => {
-    if (!globeRef.current || !globeData) return;
+    if (!globeRef.current ?? !globeData) return;
 
     const interval = setInterval(() => {
-      if (!globeRef.current || !globeData) return;
+      if (!globeRef.current ?? !globeData) return;
       numbersOfRings = genRandomNumbers(
         0,
         data.length,
         Math.floor((data.length * 4) / 5),
       );
-
+      //@ts-expect-error
       globeRef.current.ringsData(
         globeData.filter((d, i) => numbersOfRings.includes(i)),
       );
@@ -291,19 +293,19 @@ export function World(props: WorldProps) {
 }
 
 export function hexToRgb(hex: string) {
-  var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  let shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   hex = hex.replace(shorthandRegex, function (m, r, g, b) {
     return r + r + g + g + b + b;
   });
 
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
-        // @ts-ignore
+        //@ts-expect-error
         r: parseInt(result[1], 16),
-        // @ts-ignore
+        //@ts-expect-error
         g: parseInt(result[2], 16),
-        // @ts-ignore
+        //@ts-expect-error
         b: parseInt(result[3], 16),
       }
     : null;
