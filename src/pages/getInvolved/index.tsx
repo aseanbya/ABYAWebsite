@@ -452,10 +452,11 @@ function GlobeDemo() {
 export default function GetInvolved() {
   return (
     <PageLayout>
-      <PageTitleSection
-        title={"Get Involved"}
-        children="At the ASEAN Business Youth Association, we're always on the lookout for synergies – whether you're an undergraduate, young professional, or in senior management, we've got a place for you."
-      />
+      <PageTitleSection title={"Get Involved"}>
+        At the ASEAN Business Youth Association, we're always on the lookout for
+        synergies – whether you're an undergraduate, young professional, or in
+        senior management, we've got a place for you.
+      </PageTitleSection>
       <ContentContainer>
         <div className="grid grid-cols-1 grid-rows-3 py-8 sm:grid-cols-3 sm:grid-rows-1 sm:py-0">
           <div className="flex flex-col items-center justify-start text-center duration-200 hover:scale-110">

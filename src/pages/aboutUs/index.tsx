@@ -12,15 +12,16 @@ import { BentoGrid, BentoGridItem } from "~/components/ui/bento-grid";
 export default function AboutUs() {
   return (
     <PageLayout>
-      <PageTitleSection
-        title={"About Us"}
-        children="Excepteur id cupidatat esse adipisicing reprehenderit veniam occaecat amet fugiat id sit fugiat. Est elit excepteur commodo magna deserunt anim nisi irure. Elit magna non quis ipsum adipisicing consectetur et
-          excepteur. Nulla in elit amet exercitation officia ea fugiat sint.
-          Incididunt dolore irure consequat consequat amet minim aliqua
-          excepteur. Deserunt deserunt proident ipsum non cupidatat ex et
-          laborum laboris dolor id excepteur ea tempor nulla. Ullamco magna
-          laborum labore aliqua incididunt cillum."
-      />
+      <PageTitleSection title={"About Us"}>
+        "Excepteur id cupidatat esse adipisicing reprehenderit veniam occaecat
+        amet fugiat id sit fugiat. Est elit excepteur commodo magna deserunt
+        anim nisi irure. Elit magna non quis ipsum adipisicing consectetur et
+        excepteur. Nulla in elit amet exercitation officia ea fugiat sint.
+        Incididunt dolore irure consequat consequat amet minim aliqua excepteur.
+        Deserunt deserunt proident ipsum non cupidatat ex et laborum laboris
+        dolor id excepteur ea tempor nulla. Ullamco magna laborum labore aliqua
+        incididunt cillum."
+      </PageTitleSection>
       <div className="max-h-fit bg-[url('/VisionMissionBackground.png')] bg-cover bg-fixed bg-center py-9">
         <ContentContainer>
           <div className="flex h-full flex-row flex-wrap items-center justify-center gap-4">
