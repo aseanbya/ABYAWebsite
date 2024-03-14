@@ -188,7 +188,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcDashLength(defaultProps.arcLength)
       .arcDashInitialGap((e) => (e as { order: number }).order * 1)
       .arcDashGap(15)
-      .arcDashAnimateTime((e) => defaultProps.arcTime);
+      .arcDashAnimateTime((e) => Number(defaultProps.arcTime));
     //@ts-expect-error this code was from ace
     globeRef.current
       .pointsData(globeData)
@@ -207,7 +207,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
         const arcTime = Number(defaultProps.arcTime) || 0;
         const arcLength = Number(defaultProps.arcLength) || 0;
         const rings = Number(defaultProps.rings) || 1;
-        return (arcTime * arcLength) / rings;
+        return ((arcTime * arcLength) / rings) as number;
       });
   };
 
@@ -290,6 +290,7 @@ export function World(props: WorldProps) {
 export function hexToRgb(hex: string) {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   hex = hex.replace(shorthandRegex, function (m, r, g, b) {
+    // @ts-ignore
     return r + r + g + g + b + b;
   });
 
