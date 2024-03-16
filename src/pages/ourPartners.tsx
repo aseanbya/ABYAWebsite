@@ -1,5 +1,9 @@
+import Image from "next/image";
 import Testimonials from "~/components/Testomonials";
 import PageLayout from "~/components/common/PageLayout";
+import Heading2 from "~/components/textStyles/Heading2";
+import Paragraph from "~/components/textStyles/Paragraph";
+import ContentContainer from "~/components/common/ContentContainer";
 import PageTitleSection from "~/components/common/PageTitleSection";
 
 export default function OurSupporters() {
@@ -15,6 +19,20 @@ export default function OurSupporters() {
         dolor id excepteur ea tempor nulla. Ullamco magna laborum labore aliqua
         incididunt cillum.
       </PageTitleSection>
+      <ContentContainer>
+        <Heading2>sadas</Heading2>
+        <Paragraph>
+          Labore sit ad dolore ea in ad.Qui laborum, culpa voluptate. Voluptate
+          amet dolor in mollit, est. In mollit est, est officia. Est officia ex
+          commodo incididunt anim quis. Ex commodo, incididunt anim quis sit
+          reprehenderit eiusmod. Anim, quis sit reprehenderit eiusmod.
+          Reprehenderit eiusmod amet pariatur, nostrud. Pariatur nostrud sit,
+          quis lorem dolor.
+        </Paragraph>
+        <div>
+          <Image src="" alt="" />
+        </div>
+      </ContentContainer>
       <Testimonials />
     </PageLayout>
   );

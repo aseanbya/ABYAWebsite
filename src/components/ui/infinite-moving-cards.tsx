@@ -2,6 +2,7 @@
 
 import { cn } from "~/utils/cn";
 import React, { useEffect, useState } from "react";
+import Heading2 from "../textStyles/Heading2";
 
 export const InfiniteMovingCards = ({
   items,
@@ -79,9 +80,9 @@ export const InfiniteMovingCards = ({
         className,
       )}
     >
-      <h1 className="pb-4 text-center text-4xl font-bold text-brandYellow">
+      <Heading2 className="pb-4 text-center text-brandYellow">
         {header}
-      </h1>
+      </Heading2>
       <ul
         ref={scrollerRef}
         className={cn(
