@@ -1,20 +1,21 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
+import Paragraph from "../textStyles/Paragraph";
 
 export default function Footer() {
   return (
-    <footer className="bg-brandBlue-70 flex flex-col items-center gap-3 p-10 text-white">
+    <footer className="flex flex-col items-center gap-3 bg-brandBlue-70 p-10 text-white">
       <div className="flex flex-col items-center md:flex-row md:justify-center">
         <div className="w-full md:w-2/3 md:pr-6">
-          <p className="mb-2 text-left text-3xl font-semibold">
+          <Paragraph className="mb-2 text-left text-3xl font-semibold">
             Make a <span className="text-brandYellow">difference</span> today.
-          </p>
-          <p className="text-left text-sm">
+          </Paragraph>
+          <Paragraph className="text-left text-sm">
             Subscribe to our mailing list for the latest news and updates.
-          </p>
+          </Paragraph>
         </div>
         <Link href={"https://airtable.com/appt5opZxZjWqQd1s/shrj1flTgvURknuKr"}>
-          <Button className="hover:border-brandYellow hover:bg-brandYellow border border-red-500 bg-red-500">
+          <Button className="border border-red-500 bg-red-500 hover:border-brandYellow hover:bg-brandYellow">
             Subscribe
           </Button>
         </Link>
@@ -23,7 +24,7 @@ export default function Footer() {
         <div className="grid grid-flow-col gap-4">
           <Link
             href="https://www.facebook.com/ASEANBYA/"
-            className="hover:text-brandYellow text-red-500 transition-colors duration-300"
+            className="text-red-500 transition-colors duration-300 hover:text-brandYellow"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +38,7 @@ export default function Footer() {
           </Link>
           <Link
             href="https://www.linkedin.com/company/aseanbya"
-            className="hover:text-brandYellow text-red-500 transition-colors duration-300"
+            className="text-red-500 transition-colors duration-300 hover:text-brandYellow"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +52,7 @@ export default function Footer() {
           </Link>
           <Link
             href="http://instagram.com/aseanbya/"
-            className="hover:text-brandYellow text-red-500 transition-colors duration-300"
+            className="text-red-500 transition-colors duration-300 hover:text-brandYellow"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +67,7 @@ export default function Footer() {
         </div>
       </div>
       <div>
-        <p>Copyright © 2023 - ABYA</p>
+        <Paragraph>Copyright © 2023 - ABYA</Paragraph>
       </div>
     </footer>
   );

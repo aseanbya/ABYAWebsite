@@ -13,7 +13,7 @@ export default function ABYAExplore() {
       </PageTitleSection>
       <ContentContainer>
         <Heading2 className="pb-9">What is ABYA Explore?</Heading2>
-        <p>
+        <Paragraph>
           ABYA Explore provides a series of sharing and networkingsessions that
           enable ASEAN youths to engage with, and be inspired, by industry
           professionals. In line with ABYA's commitment to its vision and
@@ -23,7 +23,7 @@ export default function ABYAExplore() {
           youth on current industry trends across ASEAN. By gaining different
           perspectives on these issues, ABYA hopes to broaden the youths'
           macro-knowledge of business and cultures of the region.
-        </p>
+        </Paragraph>
         <Heading2 className="pt-9">See Past Events</Heading2>
       </ContentContainer>
     </PageLayout>

@@ -8,8 +8,30 @@ import ContentContainer from "~/components/common/ContentContainer";
 import HearFromOurCommunity from "~/components/HearFromOurCommunity";
 import { CardContainer, CardBody, CardItem } from "~/components/ui/3d-card";
 import { BentoGrid, BentoGridItem } from "~/components/ui/bento-grid";
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "~/firebase";
 
 export default function AboutUs() {
+  const [teamList, setTeamList] = useState([]);
+
+  const teamColletionRef = collection(db, "Team");
+  useEffect(() => {
+    const getTeamList = async () => {
+      try {
+        const data = await getDocs(teamColletionRef);
+        const filteredData = data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setTeamList(filteredData);
+        console.log(filteredData);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    getTeamList();
+  }, []);
   return (
     <PageLayout>
       <PageTitleSection title={"About Us"}>
@@ -75,7 +97,7 @@ export default function AboutUs() {
           </div>
         </div>
         <div>
-          <p>
+          <Paragraph>
             Birthed in the inaugural Spark The Next&apos;s Youth Action
             Challenge, ABYA emerged as the runner-up team and was awarded with a
             seed grant to develop and run this initiative. Since then, the
@@ -107,19 +129,19 @@ export default function AboutUs() {
             importance of youths upskilling themselves in these trying times.
             Our programmes started off to focus on three main pillars —
             Political, Economic, and Culture (PEC) — of the region.
-          </p>
+          </Paragraph>
         </div>
       </ContentContainer>
       <HearFromOurCommunity />
       <ContentContainer>
         <Heading1 className="pb-8">Meet the team</Heading1>
         <BentoGrid className="mx-auto">
-          {items.map((item, i) => (
+          {teamList.map((item, i) => (
             <BentoGridItem
               key={i}
-              title={item.name}
-              description={item.position}
-              header={item.image}
+              title={item.Name}
+              description={item.Position}
+              header={item.Photo}
             />
           ))}
         </BentoGrid>
@@ -139,76 +161,3 @@ export default function AboutUs() {
     </PageLayout>
   );
 }
-
-const items = [
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-  {
-    image: "/OurStory.png",
-    name: "name",
-    position: "string",
-  },
-];

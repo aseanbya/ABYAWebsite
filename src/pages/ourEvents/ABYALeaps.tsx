@@ -12,7 +12,7 @@ export default function ABYALeaps() {
         connections with every new LEAP.
       </PageTitleSection>
       <ContentContainer>
-        <p>
+        <Paragraph>
           LEAPS (Leadership, Exploration and Progress) is an ASEAN-focused
           industry immersion programme, designed to equip and groom students to
           become industry-relevant future ASEAN- savvy talents.
@@ -28,7 +28,7 @@ export default function ABYALeaps() {
           was a citizen of the ASEAN member countries (includes Brunei,
           Cambodia, Laos, Malaysia, Myanmar, Philippines, Singapore, Thailand,
           Indonesia and Vietnam) are invited to the challenge!
-        </p>
+        </Paragraph>
         <Heading2 className="pt-9">Our Values</Heading2>
         <Heading2 className="pt-9">See the Previous Events</Heading2>
       </ContentContainer>

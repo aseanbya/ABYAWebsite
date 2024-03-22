@@ -127,14 +127,14 @@ export default function Home() {
                   <h2 className="text-4xl font-semibold">
                     Established in 2020
                   </h2>
-                  <p>
+                  <Paragraph>
                     Proident nisi enim aute aliquip ullamco duis eiusmod sunt id
                     et in voluptate laborum sint. Minim et nisi eu officia
                     dolor. Fugiat exercitation veniam proident ex esse minim
                     reprehenderit ex aute nostrud sunt mollit duis. Qui eiusmod
                     exercitation aliquip magna aute ex dolor do proident
                     excepteur.
-                  </p>
+                  </Paragraph>
                   <Link href={""}>
                     <Button>About Us</Button>
                   </Link>

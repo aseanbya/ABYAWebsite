@@ -43,7 +43,7 @@ export default function OurEvents() {
         <Heading2 className="pt-9 uppercase">
           <span id="ABYALEAP">ABYA Leaps</span>
         </Heading2>
-        <p>
+        <Paragraph>
           LEAPS (Leadership, Exploration and Progress) is an ASEAN-focused
           industry immersion programme, designed to equip and groom students to
           become industry-relevant future ASEAN- savvy talents.
@@ -59,7 +59,7 @@ export default function OurEvents() {
           was a citizen of the ASEAN member countries (includes Brunei,
           Cambodia, Laos, Malaysia, Myanmar, Philippines, Singapore, Thailand,
           Indonesia and Vietnam) are invited to the challenge!
-        </p>
+        </Paragraph>
 
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <div className="w-full sm:w-1/3">
@@ -131,7 +131,7 @@ export default function OurEvents() {
           <span id="ABYAEXPLORE">ABYA Explore</span>
         </Heading2>
         <div className="py-6">
-          <p>
+          <Paragraph>
             ABYA Explore provides a series of sharing and networking sessions
             that enable ASEAN youths to engage with, and be inspired, by
             industry professionals.
@@ -144,7 +144,7 @@ export default function OurEvents() {
             current industry trends across ASEAN. By gaining different
             perspectives on these issues, ABYA hopes to broaden the youths’
             macro-knowledge of business and cultures of the region.
-          </p>
+          </Paragraph>
         </div>
 
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">

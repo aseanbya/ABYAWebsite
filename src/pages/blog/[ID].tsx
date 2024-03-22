@@ -46,7 +46,7 @@ export default function BlogPost() {
           className="w-full"
           src={Blog.CoverImage ?? ""}
         />
-        <p>{Blog.BlogContent}</p>
+        <Paragraph>{Blog.BlogContent}</Paragraph>
       </ContentContainer>
     </PageLayout>
   );
