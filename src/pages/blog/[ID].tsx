@@ -27,5 +27,9 @@ export default function BlogPost() {
     getBlogList();
   }, [ID]);
 
-  return <div>{Blog.Test}</div>;
+  return (
+    <div>
+      <p>{Blog.Test}</p>
+    </div>
+  );
 }
