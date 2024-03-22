@@ -6,7 +6,7 @@ import Paragraph from "~/components/textStyles/Paragraph";
 import ContentContainer from "~/components/common/ContentContainer";
 import PageTitleSection from "~/components/common/PageTitleSection";
 
-export default function OurSupporters() {
+export default function OurPartners() {
   return (
     <PageLayout>
       <PageTitleSection title={"Our Partners"}>

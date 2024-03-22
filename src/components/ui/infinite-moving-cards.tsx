@@ -13,9 +13,9 @@ export const InfiniteMovingCards = ({
   header,
 }: {
   items: {
-    quote: string;
-    name: string;
-    title: string;
+    Quote: string;
+    Name: string;
+    Position: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -94,7 +94,7 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             className="relative w-[350px] max-w-full flex-shrink-0 rounded-2xl border-2 border-brandYellow px-8 py-6 md:w-[450px]"
-            key={item.name}
+            key={item.Name}
           >
             <blockquote>
               <div
@@ -103,15 +103,15 @@ export const InfiniteMovingCards = ({
               ></div>
               <div className="flex flex-col items-center">
                 <span className=" relative z-20 text-center text-sm font-normal leading-[1.6] text-white">
-                  {item.quote}
+                  {item.Quote}
                 </span>
                 <div className="relative z-20 mt-6 flex flex-row items-center">
                   <span className="flex flex-col">
                     <span className="text-md text-center font-semibold leading-[1.6] text-white">
-                      {item.name}
+                      {item.Name}
                     </span>
                     <span className="text-center text-sm font-medium leading-[1.6] text-brandYellow">
-                      {item.title}
+                      {item.Position}
                     </span>
                   </span>
                 </div>
