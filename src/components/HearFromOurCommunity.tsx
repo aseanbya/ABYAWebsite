@@ -5,7 +5,7 @@ import { db } from "../firebase";
 
 export default function HearFromOurCommunity() {
   const [hearFromOurCommunityColletionList, setHearFromOurCommunityList] =
-    useState([]);
+    useState<{ Name: string; Position: string; Quote: string }[]>([]);
 
   const hearFromOurCommunityColletionRef = collection(
     db,
@@ -15,10 +15,14 @@ export default function HearFromOurCommunity() {
     const getTestimonialList = async () => {
       try {
         const data = await getDocs(hearFromOurCommunityColletionRef);
-        const filteredData = data.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
+        const filteredData = data.docs.map((doc) => {
+          const docData = doc.data();
+          return {
+            Name: docData.Name,
+            Position: docData.Position,
+            Quote: docData.Quote,
+          };
+        });
         setHearFromOurCommunityList(filteredData);
         console.log(filteredData);
       } catch (err) {

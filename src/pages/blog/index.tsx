@@ -1,8 +1,10 @@
+import React, { useState, useEffect } from "react";
 import { db } from "~/firebase";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import Link from "next/link";
 import PageLayout from "~/components/common/PageLayout";
-import { collection, getDocs } from "firebase/firestore";
+import ContentContainer from "~/components/common/ContentContainer";
 import PageTitleSection from "~/components/common/PageTitleSection";
 import {
   Card,
@@ -12,31 +14,48 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
-import ContentContainer from "~/components/common/ContentContainer";
-import Link from "next/link";
 import { Button } from "~/components/ui/button";
 import { Badge } from "~/components/ui/badge";
 
 export default function Blog() {
   const [blogList, setBlogList] = useState([]);
 
-  const blogCollectionRef = collection(db, "Blog");
   useEffect(() => {
     const getBlogList = async () => {
       try {
-        const data = await getDocs(blogCollectionRef);
-        const filteredData = data.docs.map((doc) => ({
+        const blogCollectionRef = collection(db, "Blog");
+        const querySnapshot = await getDocs(blogCollectionRef);
+        const blogs = querySnapshot.docs.map((doc) => ({
           ...doc.data(),
           id: doc.id,
         }));
-        setBlogList(filteredData);
-        console.log(filteredData);
-      } catch (err) {
-        console.error(err);
+        setBlogList(blogs);
+      } catch (error) {
+        console.error("Error fetching blogs: ", error);
       }
     };
     getBlogList();
   }, []);
+
+  const filterByType = async (type) => {
+    try {
+      let q;
+      const blogCollectionRef = collection(db, "Blog");
+      if (type === "noFilter") {
+        q = blogCollectionRef;
+      } else {
+        q = query(blogCollectionRef, where("Type", "array-contains", type));
+      }
+      const querySnapshot = await getDocs(q);
+      const blogs = querySnapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setBlogList(blogs);
+    } catch (error) {
+      console.error("Error filtering blogs by type: ", error);
+    }
+  };
 
   return (
     <PageLayout>
@@ -46,6 +65,29 @@ export default function Blog() {
         roundups, as well as current affairs news within the ASEAN region.
       </PageTitleSection>
       <ContentContainer>
+        <div className="flex justify-center gap-4 pb-9">
+          <Button
+            onClick={() => filterByType("Experience")}
+            variant="ghost"
+            className="rounded-b-none border-b-2 border-brandYellow"
+          >
+            Experience
+          </Button>
+          <Button
+            onClick={() => filterByType("FutureInASEAN")}
+            variant="ghost"
+            className="rounded-b-none border-b-2 border-brandYellow"
+          >
+            Future In ASEAN
+          </Button>
+          <Button
+            onClick={() => filterByType("noFilter")}
+            variant="ghost"
+            className="rounded-b-none border-b-2 border-brandYellow"
+          >
+            Show All
+          </Button>
+        </div>
         <div className="flex flex-wrap">
           {blogList.map((blog, idx) => (
             <Card
@@ -60,7 +102,7 @@ export default function Blog() {
                   <span className="line-clamp-2">{blog.Description ?? ""}</span>
                 </CardDescription>
                 {blog.Type.map((tag, idx) => (
-                  <Badge className="w-fit bg-brandYellow text-black">
+                  <Badge key={idx} className="w-fit bg-brandYellow text-black">
                     {tag}
                   </Badge>
                 ))}
@@ -89,12 +131,8 @@ export default function Blog() {
   );
 }
 
-function formatDate(date: { seconds: number }) {
+function formatDate(date) {
   if (!date) return "";
   const options = { day: "numeric", month: "long", year: "numeric" };
-  return new Date(date.seconds * 1000).toLocaleDateString("en-US", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
+  return new Date(date.seconds * 1000).toLocaleDateString("en-US", options);
 }

@@ -4,17 +4,23 @@ import React, { useState, useEffect } from "react";
 import { db } from "../firebase";
 
 export default function Testimonials() {
-  const [testimonialList, setTestimonialList] = useState([]);
+  const [testimonialList, setTestimonialList] = useState<
+    { Name: string; Position: string; Quote: string }[]
+  >([]);
 
   const testimonialColletionRef = collection(db, "Testimonial");
   useEffect(() => {
     const getTestimonialList = async () => {
       try {
         const data = await getDocs(testimonialColletionRef);
-        const filteredData = data.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
+        const filteredData = data.docs.map((doc) => {
+          const docData = doc.data();
+          return {
+            Name: docData.Name,
+            Position: docData.Position,
+            Quote: docData.Quote,
+          };
+        });
         setTestimonialList(filteredData);
         console.log(filteredData);
       } catch (err) {

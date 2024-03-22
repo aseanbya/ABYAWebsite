@@ -1,12 +1,34 @@
 import Image from "next/image";
+import { db } from "~/firebase";
+import { useState, useEffect } from "react";
 import Testimonials from "~/components/Testomonials";
 import PageLayout from "~/components/common/PageLayout";
 import Heading2 from "~/components/textStyles/Heading2";
+import { collection, getDocs } from "firebase/firestore";
 import Paragraph from "~/components/textStyles/Paragraph";
 import ContentContainer from "~/components/common/ContentContainer";
 import PageTitleSection from "~/components/common/PageTitleSection";
 
 export default function OurPartners() {
+  const [partnersList, setPartnersList] = useState([]);
+  const partnersColletionRef = collection(db, "Partners");
+  useEffect(() => {
+    const getPartnersList = async () => {
+      try {
+        const data = await getDocs(partnersColletionRef);
+        const filteredData = data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setPartnersList(filteredData);
+        console.log(filteredData);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    getPartnersList();
+  }, []);
+
   return (
     <PageLayout>
       <PageTitleSection title={"Our Partners"}>
@@ -20,17 +42,27 @@ export default function OurPartners() {
         incididunt cillum.
       </PageTitleSection>
       <ContentContainer>
-        <Heading2>sadas</Heading2>
-        <Paragraph>
-          Labore sit ad dolore ea in ad.Qui laborum, culpa voluptate. Voluptate
-          amet dolor in mollit, est. In mollit est, est officia. Est officia ex
-          commodo incididunt anim quis. Ex commodo, incididunt anim quis sit
-          reprehenderit eiusmod. Anim, quis sit reprehenderit eiusmod.
-          Reprehenderit eiusmod amet pariatur, nostrud. Pariatur nostrud sit,
-          quis lorem dolor.
-        </Paragraph>
-        <div>
-          <Image src="" alt="" />
+        <div className="flex flex-col gap-3">
+          {partnersList.map((partners, idx) => (
+            <div className="flex flex-col gap-3" key={idx}>
+              <Heading2>{partners.Title}</Heading2>
+              <Paragraph>{partners.Description}</Paragraph>
+              <div className="flex flex-wrap">
+                {partners.Images.map((image, idx) => (
+                  <div className="h-36 w-fit overflow-hidden">
+                    <Image
+                      src={image}
+                      alt={""}
+                      width={100}
+                      height={100}
+                      key={idx}
+                      className="h-full w-full"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </ContentContainer>
       <Testimonials />

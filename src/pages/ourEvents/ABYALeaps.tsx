@@ -2,6 +2,7 @@ import Heading2 from "~/components/textStyles/Heading2";
 import PageLayout from "~/components/common/PageLayout";
 import ContentContainer from "~/components/common/ContentContainer";
 import PageTitleSection from "~/components/common/PageTitleSection";
+import Paragraph from "~/components/textStyles/Paragraph";
 
 export default function ABYALeaps() {
   return (

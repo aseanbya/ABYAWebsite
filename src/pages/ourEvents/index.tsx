@@ -13,6 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../components/ui/carousel";
+import Paragraph from "~/components/textStyles/Paragraph";
 
 export default function OurEvents() {
   return (
