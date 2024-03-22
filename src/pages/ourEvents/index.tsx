@@ -27,20 +27,22 @@ export default function OurEvents() {
         <div className="flex h-screen max-h-[36rem] min-h-96 justify-center rounded-xl bg-[url('/HaveAnyQuestion.jpg')] bg-cover bg-fixed bg-center">
           <div className="grid w-full grid-cols-2">
             <a
-              href=""
+              href="#ABYALEAP"
               className="flex items-center justify-center rounded-xl text-white duration-200 hover:bg-brandRed hover:bg-opacity-20"
             >
               <Heading2>ABYA Leaps</Heading2>
             </a>
             <a
-              href=""
+              href="#ABYAEXPLORE"
               className="flex items-center justify-center rounded-xl text-white duration-200 hover:bg-brandYellow hover:bg-opacity-20"
             >
               <Heading2>ABYA Explore</Heading2>
             </a>
           </div>
         </div>
-        <Heading2 className="pt-9 uppercase">ABYA Leaps</Heading2>
+        <Heading2 className="pt-9 uppercase">
+          <span id="ABYALEAP">ABYA Leaps</span>
+        </Heading2>
         <p>
           LEAPS (Leadership, Exploration and Progress) is an ASEAN-focused
           industry immersion programme, designed to equip and groom students to
@@ -125,7 +127,9 @@ export default function OurEvents() {
 
         <hr className="mt-8 border-neutral-950 py-4" />
 
-        <Heading2 className="uppercase">ABYA Explore</Heading2>
+        <Heading2 className="uppercase">
+          <span id="ABYAEXPLORE">ABYA Explore</span>
+        </Heading2>
         <div className="py-6">
           <p>
             ABYA Explore provides a series of sharing and networking sessions

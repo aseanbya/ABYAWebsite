@@ -12,6 +12,7 @@ import ContentContainer from "~/components/common/ContentContainer";
 import Image from "next/image";
 import Paragraph from "~/components/textStyles/Paragraph";
 import { Button } from "~/components/ui/button";
+import Link from "next/link";
 
 export default function GetInvolved() {
   return (
@@ -59,25 +60,29 @@ export default function GetInvolved() {
               />
             </div>
             <div className="flex w-2/3 flex-col gap-3">
-              <Heading4>As a member</Heading4>
+              <Heading4>As a Member</Heading4>
               <Paragraph>
                 Our community seeks to bring together youths who seek to develop
                 their competencies in becoming business savvy with a future in
                 ASEAN.
               </Paragraph>
-              <Button className="w-fit">Learn More</Button>
+              <Link href={"/getInvolved/member"}>
+                <Button className="w-fit">Learn More</Button>
+              </Link>
             </div>
           </div>
 
           <div className="group flex w-full items-center gap-4 rounded-xl border-2 border-brandYellow p-4 duration-200 hover:bg-brandYellow-10">
             <div className="flex w-2/3 flex-col items-end gap-3 text-end">
-              <Heading4>As an executive</Heading4>
+              <Heading4>As an Executive</Heading4>
               <Paragraph>
                 Our community seeks to bring together youths who seek to develop
                 their competencies in becoming business savvy with a future in
                 ASEAN.
               </Paragraph>
-              <Button className="w-fit">Learn More</Button>
+              <Link href={"/getInvolved/executive"}>
+                <Button className="w-fit">Learn More</Button>
+              </Link>
             </div>
             <div className="w-1/3 overflow-hidden object-cover">
               <Image
@@ -107,7 +112,9 @@ export default function GetInvolved() {
                 their competencies in becoming business savvy with a future in
                 ASEAN.
               </Paragraph>
-              <Button className="w-fit">Learn More</Button>
+              <Link href={"/getInvolved/partner"}>
+                <Button className="w-fit">Learn More</Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,11 +1,17 @@
-import { useEffect, useState } from "react";
+import Image from "next/image";
 import { db } from "../../firebase";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import PageLayout from "~/components/common/PageLayout";
+import ContentContainer from "~/components/common/ContentContainer";
+import PageTitleSection from "~/components/common/PageTitleSection";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
 interface BlogType {
   Title?: string;
-  Test?: string;
+  Description?: string;
+  BlogContent?: string;
+  CoverImage?: string;
 }
 
 export default function BlogPost() {
@@ -28,8 +34,20 @@ export default function BlogPost() {
   }, [ID]);
 
   return (
-    <div>
-      <p>{Blog.Test}</p>
-    </div>
+    <PageLayout>
+      <PageTitleSection title={Blog.Title ?? ""}>
+        {Blog.Description ?? ""}
+      </PageTitleSection>
+      <ContentContainer>
+        <Image
+          alt=""
+          width={300}
+          height={300}
+          className="w-full"
+          src={Blog.CoverImage ?? ""}
+        />
+        <p>{Blog.BlogContent}</p>
+      </ContentContainer>
+    </PageLayout>
   );
 }
